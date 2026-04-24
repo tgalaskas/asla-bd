@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/tgala/Downloads/are-aec-consultants%20(3).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARE — AEC Consultant Ecosystem</title>
+<link href="./ARE — AEC Consultant Ecosystem_files/css2" rel="stylesheet">
+<style>
+:root{--g:#81BC00;--gm:#6A9C00;--gd:#4A7A00;--gl:#EBF5D0;--bk:#1A1A1A;--md:#3D3D3D;--lt:#6B6B6B;--bd:#DDDDDD;--pl:#F4F4F4;--wh:#FFFFFF;--rd:#C0392B;--am:#E67E22;--bl:#2471A3;--navy:#1A3A5C;--pur:#7D3C98;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--pl);color:var(--bk);}
+
+header{background:var(--navy);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--g);}
+.hlogo{display:flex;align-items:center;gap:10px;}
+.hlogt{font-size:11px;color:rgba(255,255,255,0.7);line-height:1.4;}
+.hlogt strong{display:block;color:#fff;}
+.htitle{font-family:'Playfair Display',serif;font-size:20px;color:#fff;font-weight:600;}
+.htitle span{color:var(--g);}
+.hbadge{font-family:'DM Mono',monospace;font-size:10px;background:rgba(129,188,0,0.15);border:1px solid rgba(129,188,0,0.3);color:var(--g);padding:4px 10px;border-radius:2px;letter-spacing:0.06em;}
+
+.tabs{background:var(--bk);padding:0 48px;display:flex;border-bottom:1px solid rgba(255,255,255,0.08);overflow-x:auto;}
+.tab{padding:12px 20px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.4);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;display:flex;align-items:center;gap:7px;transition:all 0.2s;}
+.tab:hover{color:rgba(255,255,255,0.75);}
+.tab.on{color:#fff;border-bottom-color:var(--g);}
+
+main{padding:28px 48px 56px;max-width:1300px;margin:0 auto;}
+.pnl{display:none;}.pnl.on{display:block;}
+
+.seclbl{display:flex;align-items:center;gap:12px;margin-bottom:16px;margin-top:4px;}
+.seclbl h3{font-family:'Playfair Display',serif;font-size:16px;font-weight:600;color:var(--bk);white-space:nowrap;}
+.seclbl .ln{flex:1;height:1px;background:var(--bd);}
+
+/* FIRM CARDS */
+.firm-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px;margin-bottom:24px;}
+.firm-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
+.fc-hdr{padding:12px 16px;display:flex;align-items:flex-start;gap:10px;}
+.fc-hdr.arch{background:#1A3A5C;}
+.fc-hdr.la{background:var(--gd);}
+.fc-hdr.civil{background:#6B4226;}
+.fc-hdr.struct{background:#555;}
+.fc-hdr.gc{background:#7D3C98;}
+.fc-hdr.mep{background:#1A6B8A;}
+.fc-type{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;color:rgba(255,255,255,0.6);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:3px;}
+.fc-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.2;}
+.fc-hq{font-size:10px;color:rgba(255,255,255,0.55);margin-top:2px;}
+.fc-conf{font-family:'DM Mono',monospace;font-size:8px;padding:2px 6px;border-radius:2px;font-weight:600;white-space:nowrap;margin-top:4px;display:inline-block;}
+.conf-confirmed{background:rgba(129,188,0,0.2);color:var(--g);}
+.conf-likely{background:rgba(230,126,34,0.2);color:var(--am);}
+.fc-body{padding:14px 16px;}
+.fc-proj{font-size:11px;color:var(--md);line-height:1.6;margin-bottom:8px;}
+.fc-proj strong{color:var(--bk);display:block;margin-bottom:2px;}
+.fc-note{font-size:10px;color:var(--lt);font-style:italic;line-height:1.5;padding-top:8px;border-top:1px dashed var(--bd);}
+.fc-markets{display:flex;flex-wrap:wrap;gap:5px;margin-top:8px;}
+.mkt-tag{font-family:'DM Mono',monospace;font-size:9px;padding:2px 7px;border-radius:2px;background:var(--gl);color:var(--gd);font-weight:600;}
+
+/* PROJECT TABLE */
+.proj-table{width:100%;border-collapse:collapse;margin-bottom:20px;}
+.proj-table th{padding:9px 12px;font-size:10px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;text-align:left;background:var(--navy);color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.1);font-family:'DM Mono',monospace;}
+.proj-table td{padding:9px 12px;border-bottom:1px dashed var(--bd);font-size:11px;vertical-align:top;line-height:1.5;}
+.proj-table tr:last-child td{border-bottom:none;}
+.proj-table tr:hover td{background:var(--gl);}
+.conf-badge{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;padding:2px 7px;border-radius:2px;}
+.cb-yes{background:#EBF5D0;color:var(--gd);}
+.cb-likely{background:#FEF9E7;color:#7D6608;}
+.cb-sector{background:#EBF5FB;color:#154360;}
+
+.callout{background:var(--gl);border:1px solid var(--g);border-radius:6px;padding:14px 18px;font-size:12px;color:var(--gd);line-height:1.7;margin-bottom:20px;}
+.callout strong{color:var(--bk);display:block;margin-bottom:4px;font-size:11px;text-transform:uppercase;letter-spacing:0.07em;}
+
+.strategy-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:20px;}
+.strat-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:18px 20px;}
+.strat-icon{font-size:24px;margin-bottom:8px;}
+.strat-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--bk);margin-bottom:8px;}
+.strat-body{font-size:12px;color:var(--lt);line-height:1.7;}
+.strat-body strong{color:var(--bk);}
+
+.insight-box{background:var(--navy);border-radius:8px;padding:20px 24px;margin-bottom:20px;}
+.ib-title{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:600;margin-bottom:12px;}
+.ib-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:12px;color:rgba(255,255,255,0.75);line-height:1.6;}
+.ib-item:last-child{border-bottom:none;}
+.ib-bullet{color:var(--g);font-weight:700;flex-shrink:0;font-size:14px;}
+
+.legend{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:20px;padding:12px 16px;background:var(--wh);border:1px solid var(--bd);border-radius:6px;}
+.leg-item{display:flex;align-items:center;gap:6px;font-size:11px;color:var(--md);}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+
+footer{padding:12px 48px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;background:var(--wh);}
+.fl{font-family:'Playfair Display',serif;font-size:13px;color:var(--gd);font-weight:600;}
+.fr{font-size:10px;color:var(--lt);font-family:'DM Mono',monospace;}
+
+@media(max-width:1100px){.firm-grid{grid-template-columns:1fr 1fr;}.strategy-grid{grid-template-columns:1fr;}}
+@media(max-width:700px){main,header,footer,.tabs{padding-left:20px;padding-right:20px;}.firm-grid{grid-template-columns:1fr;}}
+
+  /* ── EVENTS TAB STYLES ── */
+  .people-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;}
+  .person-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:16px 18px;}
+  .pc-name{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:var(--bk);margin-bottom:2px;}
+  .pc-title{font-size:10px;font-family:'DM Mono',monospace;color:var(--g);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:8px;}
+  .pc-body{font-size:11px;color:var(--lt);line-height:1.65;}
+  .pc-events{margin-top:8px;display:flex;flex-wrap:wrap;gap:5px;}
+  .pe-tag{font-size:9px;font-family:'DM Mono',monospace;padding:2px 7px;border-radius:2px;background:var(--pl);border:1px solid var(--bd);color:var(--md);}
+  .event-table{width:100%;border-collapse:collapse;margin-bottom:24px;background:var(--wh);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
+  .event-table th{padding:10px 14px;font-size:10px;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;text-align:left;background:var(--navy);color:rgba(255,255,255,0.7);border-bottom:1px solid rgba(255,255,255,0.1);font-family:'DM Mono',monospace;}
+  .event-table td{padding:10px 14px;border-bottom:1px dashed var(--bd);font-size:11px;vertical-align:top;line-height:1.6;}
+  .event-table tr:last-child td{border-bottom:none;}
+  .event-table tr:hover td{background:var(--gl);}
+  .prio{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;padding:2px 7px;border-radius:2px;}
+  .p1{background:#FDEDEC;color:var(--rd);}
+  .p2{background:#FEF9E7;color:#7D6608;}
+  .p3{background:var(--gl);color:var(--gd);}
+  .etype{font-family:'DM Mono',monospace;font-size:9px;color:var(--lt);display:block;margin-top:2px;}
+  .venue-box{background:var(--bk);border-radius:8px;padding:20px 24px;margin-bottom:24px;}
+  .vb-title{font-family:'Playfair Display',serif;font-size:16px;color:#fff;font-weight:600;margin-bottom:12px;}
+  .vb-item{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:12px;color:rgba(255,255,255,0.75);line-height:1.6;}
+  .vb-item:last-child{border-bottom:none;}
+  .vb-bullet{color:var(--g);font-weight:700;flex-shrink:0;}
+  .own-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+  .own-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
+  .oc-hdr{padding:12px 16px;background:var(--g);display:flex;align-items:center;gap:8px;}
+  .oc-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#fff;}
+  .oc-body{padding:14px 16px;font-size:11px;color:var(--lt);line-height:1.7;}
+  .oc-body strong{color:var(--bk);}
+
+
+  /* ── SOCIAL MEDIA TAB STYLES ── */
+  .pillar-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:14px;margin-bottom:24px;}
+  .pillar-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
+  .pl-hdr{padding:11px 15px;display:flex;align-items:center;gap:8px;}
+  .pl-hdr.blue{background:var(--navy);}
+  .pl-hdr.green{background:var(--gd);}
+  .pl-hdr.amber{background:var(--am);}
+  .pl-hdr.red{background:var(--rd);}
+  .pl-hdr.purple{background:#7D3C98;}
+  .pl-hdr.teal{background:#1A7A6A;}
+  .pl-icon{font-size:16px;}
+  .pl-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#fff;}
+  .pl-freq{font-size:9px;font-family:'DM Mono',monospace;color:rgba(255,255,255,0.6);margin-top:1px;}
+  .pl-body{padding:12px 15px;font-size:11px;color:var(--lt);line-height:1.65;}
+  .pl-body strong{color:var(--bk);}
+  .pl-tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:8px;padding-top:8px;border-top:1px dashed var(--bd);}
+  .pl-tag{font-size:9px;font-family:'DM Mono',monospace;padding:2px 6px;border-radius:2px;background:var(--gl);color:var(--gd);}
+  .trend-box{background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:20px;overflow:hidden;}
+  .tb-hdr{padding:12px 18px;background:var(--navy);display:flex;align-items:center;gap:10px;}
+  .tb-hdr-title{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#fff;}
+  .tb-body{padding:16px 18px;}
+  .trend-item{display:flex;gap:12px;padding:10px 0;border-bottom:1px dashed var(--bd);align-items:flex-start;}
+  .trend-item:last-child{border-bottom:none;}
+  .trend-num{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--g);flex-shrink:0;width:28px;line-height:1;}
+  .trend-content{flex:1;}
+  .trend-title{font-size:12px;font-weight:600;color:var(--bk);margin-bottom:3px;}
+  .trend-body{font-size:11px;color:var(--lt);line-height:1.65;}
+  .post-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px;}
+  .post-card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:14px 16px;}
+  .post-meta{display:flex;align-items:center;gap:8px;margin-bottom:8px;}
+  .post-platform{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;padding:2px 7px;border-radius:2px;}
+  .pp-li{background:#0077B5;color:#fff;}
+  .pp-tw{background:#000;color:#fff;}
+  .pp-ig{background:#C13584;color:#fff;}
+  .post-date{font-size:10px;color:var(--lt);font-family:'DM Mono',monospace;}
+  .post-category{font-size:9px;font-family:'DM Mono',monospace;padding:2px 7px;border-radius:2px;background:var(--gl);color:var(--gd);margin-left:auto;}
+  .post-text{font-size:12px;color:var(--md);line-height:1.65;margin-bottom:8px;font-style:italic;}
+  .post-insight{font-size:11px;color:var(--lt);line-height:1.6;padding-top:8px;border-top:1px dashed var(--bd);}
+  .post-insight strong{color:var(--bk);}
+  .scorecard{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:14px;margin-bottom:20px;}
+  .sc-item{background:var(--wh);border:1px solid var(--bd);border-radius:8px;padding:14px;text-align:center;}
+  .sc-val{font-family:'Playfair Display',serif;font-size:26px;font-weight:700;color:var(--bk);line-height:1;}
+  .sc-val.green{color:var(--gd);}
+  .sc-label{font-size:10px;color:var(--lt);margin-top:4px;line-height:1.4;}
+
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hlogo">
+    <svg width="32" height="32" viewBox="0 0 44 44" fill="none">
+      <path d="M4 38 C8 28,16 20,26 16 C32 14,38 14,40 10" stroke="#81BC00" stroke-width="2.5" fill="none" stroke-linecap="round"></path>
+      <path d="M4 34 C10 24,20 18,30 14 C35 12,40 12,42 8" stroke="#81BC00" stroke-width="2" fill="none" stroke-linecap="round" opacity="0.6"></path>
+    </svg>
+    <div class="hlogt"><strong>ASLA BD Workshop</strong>Client Intelligence Series</div>
+  </div>
+  <div class="htitle">ARE — <span>AEC Consultant Ecosystem</span></div>
+  <div class="hbadge">Research · 2025</div>
+</header>
+
+<div class="tabs">
+  <div class="tab on" id="tb-overview">🏗️ Overview</div>
+  <div class="tab" id="tb-arch">🏢 Architects</div>
+  <div class="tab" id="tb-la">🌿 Landscape Architects</div>
+  <div class="tab" id="tb-eng">⚙️ Engineers</div>
+  <div class="tab" id="tb-strategy">🎯 BD Strategy</div>
+  <div class="tab" id="tb-events">📅 Events &amp; Conferences</div>
+  <div class="tab" id="tb-social">📱 Social Media Intel</div>
+</div>
+
+<main>
+
+<!-- OVERVIEW -->
+<div class="pnl on" id="pnl-overview">
+
+  <div class="callout"><strong>How to Read This Research</strong>This page documents AEC firms confirmed or likely to be engaged on Alexandria Real Estate Equities projects, based on public project records, press releases, award submissions, and industry sources. Confirmed firms have documented project credits. Likely firms are established in the relevant market and project type with a pattern of life science campus work. Use this to identify which primes to cultivate relationships with — and which landscape architecture firms are your direct competition.</div>
+
+  <div class="legend">
+    <div class="leg-item"><div class="leg-dot" style="background:#81BC00;"></div>Confirmed — documented project credit</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#E67E22;"></div>Likely — strong market presence + life science focus</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#1A3A5C;"></div>Architecture</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#4A7A00;"></div>Landscape Architecture</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#6B4226;"></div>Civil Engineering</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#555;"></div>Structural Engineering</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#7D3C98;"></div>General Contractor</div>
+    <div class="leg-item"><div class="leg-dot" style="background:#1A6B8A;"></div>MEP / Façade / Other</div>
+  </div>
+
+  <!-- CONFIRMED PROJECT TABLE -->
+  <div class="seclbl"><h3>Confirmed Project Teams — Documented Credits</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:24px;">
+    <table class="proj-table">
+      <thead><tr><th>Project</th><th>Market</th><th>Architect</th><th>Landscape Architect</th><th>Structural</th><th>Civil</th><th>GC</th><th>Other</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Pierpoint Lane / Uber HQ</strong><br><span style="font-size:10px;color:var(--lt);">1455–1725 Third St, Mission Bay</span></td>
+          <td>SF Bay Area</td>
+          <td>SHoP Architects<br><span style="font-size:10px;color:var(--lt);">Quezada Architecture (AOR)</span></td>
+          <td><strong style="color:var(--gd);">Surfacedesign, Inc.</strong><br><span style="font-size:10px;color:var(--lt);">LEED Gold · Award-winning</span></td>
+          <td>Thornton Tomasetti</td>
+          <td>Freyer &amp; Laureta</td>
+          <td>Truebeck Construction</td>
+          <td>Alfatech (MEP) · Niteo (Lighting)</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td><strong>1700 Owens St Life Science Center</strong><br><span style="font-size:10px;color:var(--lt);">Mission Bay · 215,000 SF · Opened 2024</span></td>
+          <td>SF Bay Area</td>
+          <td>IwamotoScott Architecture<br><span style="font-size:10px;color:var(--lt);">DGA + Powell Architecture (assoc)</span></td>
+          <td><strong style="color:var(--gd);">Bionic</strong><br><span style="font-size:10px;color:var(--lt);">LEED Gold target</span></td>
+          <td>Thornton Tomasetti</td>
+          <td>—</td>
+          <td>Truebeck Construction</td>
+          <td>Arup (Façade)</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td><strong>225 Binney Street (Biogen HQ)</strong><br><span style="font-size:10px;color:var(--lt);">Alexandria Center at Kendall Square</span></td>
+          <td>Greater Boston</td>
+          <td><strong>Spagnolo Gisness &amp; Associates (SGA)</strong><br><span style="font-size:10px;color:var(--lt);">Glass + terra cotta · Historic adaptive reuse</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>2.2-acre public park at Kendall campus</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td><strong>Ariad HQ on Binney Street</strong><br><span style="font-size:10px;color:var(--lt);">Alexandria Center at Kendall Square</span></td>
+          <td>Greater Boston</td>
+          <td><strong>Payette</strong><br><span style="font-size:10px;color:var(--lt);">Glass terraces · DNA-pattern facades</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td><strong>Perkins Eastman — Alexandria Center NYC</strong><br><span style="font-size:10px;color:var(--lt);">Alexandria Center for Life Science, Manhattan</span></td>
+          <td>New York City</td>
+          <td><strong>Perkins Eastman</strong><br><span style="font-size:10px;color:var(--lt);">740,972 SF · East River campus</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+        <tr>
+          <td><strong>One Kendall Square Adaptive Reuse</strong><br><span style="font-size:10px;color:var(--lt);">325 + 399 Binney St area · Historic conversion</span></td>
+          <td>Greater Boston</td>
+          <td><strong>Arrowstreet</strong><br><span style="font-size:10px;color:var(--lt);">Foundation + masonry restoration</span></td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td>—</td>
+          <td><span class="conf-badge cb-yes">Confirmed</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- SECTOR LEADERS TABLE -->
+  <div class="seclbl"><h3>Sector Leaders Regularly Engaged on Life Science Campus Work</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:24px;">
+    <table class="proj-table">
+      <thead><tr><th>Firm</th><th>Discipline</th><th>HQ / Key Offices</th><th>ARE Market Relevance</th><th>Confidence</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Gensler</strong></td><td>Architecture</td><td>SF / Boston / San Diego / Seattle</td><td>Dominant in all ARE markets — multiple life science campus projects confirmed across sector</td><td><span class="conf-badge cb-likely">Likely</span></td></tr>
+        <tr><td><strong>HOK Science + Technology</strong></td><td>Architecture</td><td>Boston (Kendall Square focus)</td><td>HOK's S+T practice leader is on Kendall Square Association board; confirmed presence in Cambridge life science ecosystem</td><td><span class="conf-badge cb-likely">Likely</span></td></tr>
+        <tr><td><strong>Flad Architects</strong></td><td>Architecture / AE</td><td>San Francisco / Madison / Others</td><td>#1 laboratory architecture firm in US (BD+C Giants 400); active in South San Francisco and Bay Area life science</td><td><span class="conf-badge cb-likely">Likely</span></td></tr>
+        <tr><td><strong>HDR</strong></td><td>Architecture / AE</td><td>San Diego / San Francisco / Boston</td><td>#2 lab AE firm nationally; strong San Diego presence near ARE's Torrey Pines and UTC campuses</td><td><span class="conf-badge cb-likely">Likely</span></td></tr>
+        <tr><td><strong>DGA (Eckert Wordell)</strong></td><td>Architecture</td><td>San Francisco</td><td>Confirmed associate architect on 1700 Owens (Mission Bay) project for ARE</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Payette</strong></td><td>Architecture</td><td>Boston</td><td>AIA Firm of the Year; confirmed on Ariad/Binney Street ARE project; specializes in science + healthcare</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Thornton Tomasetti</strong></td><td>Structural Engineering</td><td>SF / Boston / NYC / San Diego</td><td>Confirmed structural engineer on two Mission Bay ARE projects; dominant life science structural firm</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Truebeck Construction</strong></td><td>General Contractor</td><td>San Francisco Bay Area</td><td>Confirmed GC on two ARE Mission Bay projects (Pierpoint Lane and 1700 Owens); top Bay Area life science builder</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Surfacedesign, Inc.</strong></td><td>Landscape Architecture</td><td>San Francisco</td><td>Confirmed LA on Pierpoint Lane (Mission Bay) — ARE + Uber joint project. Award-winning. Active in ARE's core SF market.</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Bionic</strong></td><td>Landscape Architecture</td><td>San Francisco</td><td>Confirmed LA on 1700 Owens Street (Mission Bay, 2024). Bay Area life science specialist.</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Freyer &amp; Laureta</strong></td><td>Civil Engineering</td><td>San Francisco</td><td>Confirmed civil on Pierpoint Lane (Mission Bay). Active in SF Bay Area commercial development.</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+        <tr><td><strong>Arup</strong></td><td>Façade / MEP Engineering</td><td>SF / Boston / NYC / San Diego</td><td>Confirmed façade engineer on 1700 Owens (Mission Bay). Global engineering firm active on high-performance lab buildings.</td><td><span class="conf-badge cb-yes">Confirmed</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</div><!-- /overview -->
+
+
+<!-- ARCHITECTS -->
+<div class="pnl" id="pnl-arch">
+
+  <div class="callout"><strong>Architect Relationship Strategy</strong>These are the prime architects of record you need relationships with. A landscape architect's highest-leverage BD move at Alexandria is NOT going direct to ARE — it's being the preferred subconsultant for these firms when they are assembled on ARE projects. Build the relationship before the RFP, so you're already on the team.</div>
+
+  <div class="seclbl"><h3>Confirmed Architecture Firms</h3><div class="ln"></div></div>
+  <div class="firm-grid">
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · Boston</div><div class="fc-name">Spagnolo Gisness &amp; Associates (SGA)</div><div class="fc-hq">Boston, MA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>225 Binney Street (Biogen Idec HQ) — Alexandria Center at Kendall Square, Cambridge. Glass + terra cotta façade integrating two historic buildings. 307,000 SF build-to-suit.</div>
+        <div class="fc-markets"><span class="mkt-tag">Greater Boston</span><span class="mkt-tag">Kendall Square</span></div>
+        <div class="fc-note">SGA specializes in mixed-use, life science, and higher education in the Northeast. They are a key Kendall Square player. Also active in Seaport (Two Drydock with Skanska). BD contact: Adam Spagnolo (Director of Marketing + BD, NYC).</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · Boston</div><div class="fc-name">Payette</div><div class="fc-hq">Boston, MA · AIA Firm of the Year</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Ariad Pharmaceuticals HQ on Binney Street, Cambridge. Glass terraces + DNA-pattern façade panels. Build-to-suit for ARE.</div>
+        <div class="fc-markets"><span class="mkt-tag">Greater Boston</span><span class="mkt-tag">Science + Healthcare</span></div>
+        <div class="fc-note">Payette is one of Boston's top science and healthcare architecture firms. AIA Firm of the Year. Deep relationships in Cambridge biotech. Strong LEED focus — critical for ARE's sustainability platform.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · NYC / SF</div><div class="fc-name">SHoP Architects</div><div class="fc-hq">New York, NY</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Uber HQ (Lead Architect) — 1455–1725 Third Street, Mission Bay, San Francisco. Client: Alexandria Real Estate Equities + Uber. Eleven-story + six-story transparent façade towers. Pierpoint Lane public park designed by Surfacedesign.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Mission Bay</span></div>
+        <div class="fc-note">SHoP is a major national firm active in complex urban infill. Their Mission Bay relationship with ARE is confirmed and active. Are they working on other ARE Bay Area projects? High priority for outreach.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · SF Bay Area</div><div class="fc-name">IwamotoScott Architecture</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>1700 Owens Street, Mission Bay — 215,000 SF life sciences center opened 2024. 133,000 SF Class A lab + 50,000 SF office. LEED Gold target. Vertical aluminum fins for solar control.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Mission Bay</span></div>
+        <div class="fc-note">IwamotoScott is a boutique SF architecture firm known for technically sophisticated life science work. Smaller firm — easier to cultivate a direct relationship. Bionic was their landscape architect on this project.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · NYC</div><div class="fc-name">Perkins Eastman</div><div class="fc-hq">New York, NY</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Alexandria Center for Life Science, Manhattan — 740,972 SF campus on the East River waterfront. One of ARE's two NYC properties.</div>
+        <div class="fc-markets"><span class="mkt-tag">New York City</span><span class="mkt-tag">East River</span></div>
+        <div class="fc-note">Perkins Eastman is a global firm with strong urban life science campus expertise. Their NYC ARE work makes them a key relationship for any firm pursuing ARE's East River campus or future NYC development.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · Boston</div><div class="fc-name">Arrowstreet</div><div class="fc-hq">Boston, MA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>One Kendall Square adaptive reuse — historic masonry restoration, foundation reconstruction, carriageway preservation. Complex historic conversion for ARE's Cambridge campus.</div>
+        <div class="fc-markets"><span class="mkt-tag">Greater Boston</span><span class="mkt-tag">Cambridge</span></div>
+        <div class="fc-note">Arrowstreet is a Boston firm specializing in adaptive reuse and commercial architecture. Active across ARE's Cambridge and Boston portfolio. Also confirmed in mixed-use residential (VYV, Jersey City).</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="seclbl"><h3>Likely Architecture Firms — Dominant in ARE Markets</h3><div class="ln"></div></div>
+  <div class="firm-grid">
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · Global</div><div class="fc-name">Gensler</div><div class="fc-hq">SF / Boston / San Diego / Seattle / LA</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>The largest architecture firm in the world with offices in every ARE market. Gensler's life science and corporate campus practice is dominant across Boston, SF Bay Area, and San Diego. Virtually certain to be engaged on some ARE project.</div>
+        <div class="fc-markets"><span class="mkt-tag">All Markets</span><span class="mkt-tag">Life Science</span><span class="mkt-tag">Corporate Campus</span></div>
+        <div class="fc-note">Gensler Boston has a specific focus on research environments for higher education and life science. Their San Diego and SF offices are major players in the biotech campus space. 3,000+ projects annually — very likely ARE overlap.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture · Global</div><div class="fc-name">HOK Science + Technology</div><div class="fc-hq">Boston · St. Louis · DC · Global</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>HOK's S+T practice leader Chris is on the Kendall Square Association Board of Directors — deeply embedded in the ARE ecosystem. HOK is a primary life science architect nationally with recognized expertise in lab buildings and innovation districts.</div>
+        <div class="fc-markets"><span class="mkt-tag">Greater Boston</span><span class="mkt-tag">San Diego</span><span class="mkt-tag">Maryland</span></div>
+        <div class="fc-note">HOK's relationship with the Kendall Square ecosystem (where ARE dominates) makes them a near-certain collaborator. Their innovation district expertise aligns perfectly with ARE's Megacampus strategy.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr arch">
+        <div><div class="fc-type">Architecture/AE · National</div><div class="fc-name">Flad Architects</div><div class="fc-hq">SF / Madison / Tampa / Others</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>Ranked #1 laboratory architecture firm in the US by BD+C Giants 400. South San Francisco office serves ARE's largest SF Bay Area submarket. Life science is their entire practice — not a specialty, it's all they do.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Research Triangle</span><span class="mkt-tag">Maryland</span></div>
+        <div class="fc-note">Flad's South San Francisco office is a few blocks from several ARE South SF campuses. Their focus on lab buildings — reinforced concrete, HVAC systems, generic reusable lab space — mirrors exactly what ARE builds. Almost certain overlap.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /arch -->
+
+
+<!-- LANDSCAPE ARCHITECTS -->
+<div class="pnl" id="pnl-la">
+
+  <div class="callout"><strong>Your Competitive Landscape</strong>Two landscape architecture firms are confirmed on ARE projects. Surfacedesign (SF) and Bionic (SF) are both Bay Area firms embedded in the Mission Bay ARE ecosystem. For a Southern California firm, San Diego is your clearest entry point — where ARE has active development and no confirmed LA on record. The question is: who are the landscape architects on their San Diego projects?</div>
+
+  <div class="seclbl"><h3>Confirmed Landscape Architecture Firms</h3><div class="ln"></div></div>
+  <div class="firm-grid">
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · SF Bay Area</div><div class="fc-name">Surfacedesign, Inc.</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED — DIRECT ARE CLIENT</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Pierpoint Lane — Uber HQ Campus, Mission Bay, San Francisco. Client: <strong>Alexandria Real Estate Equities + Uber Technologies</strong>. 97,300 SF public park, streetscape, and roof terrace. LEED Gold. 2021 completion. 2022 Chicago Athenaeum Award.</div>
+        <div class="fc-proj" style="margin-top:10px;"><strong>Project Team</strong>Architect: SHoP Architects · GC: Truebeck · Structural: Thornton Tomasetti · Civil: Freyer &amp; Laureta · MEP: Alfatech · Lighting: Niteo</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Mission Bay</span><span class="mkt-tag">Confirmed Client</span></div>
+        <div class="fc-note"><strong>Key principals:</strong> James A. Lord (FASLA, Harvard GSD MLA), Roderick Wyllie (FASLA), Geoff di Girolamo. Founded in SF — embedded in Bay Area tech and life science campus ecosystem. Also designed Uber's rooftop terrace and full streetscape. This is a primary ARE competitor in their Bay Area market.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · SF Bay Area</div><div class="fc-name">Bionic</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>1700 Owens Street, Mission Bay — 215,000 SF life science center (2024). LEED Gold target. Associated with IwamotoScott Architecture, DGA, and Powell Architecture. Truebeck Construction as GC.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Mission Bay</span></div>
+        <div class="fc-note">Bionic is a San Francisco landscape architecture and urban design firm active in the Bay Area tech and life science campus ecosystem. Two ARE Mission Bay projects now have confirmed SF-based landscape architects — Surfacedesign and Bionic. These are your direct Bay Area competitors.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · National</div><div class="fc-name">OLIN</div><div class="fc-hq">Philadelphia, PA · Los Angeles, CA</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>OLIN is one of the most respected LA firms in the country with a strong campus and urban district portfolio. Their LA office serves the Southern California market. Known for large-scale public realm and campus work at a scale that matches ARE's Megacampus developments.</div>
+        <div class="fc-markets"><span class="mkt-tag">Greater Boston</span><span class="mkt-tag">NYC</span><span class="mkt-tag">San Diego</span></div>
+        <div class="fc-note">OLIN's campus, civic, and placemaking portfolio aligns with ARE's outdoor environment strategy. Their scale (25–50+ acre campus projects) matches ARE's Megacampus footprint. No confirmed ARE project found, but consistent with the quality level ARE seeks.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · SF / Boston</div><div class="fc-name">Hargreaves Jones</div><div class="fc-hq">San Francisco, CA · Boston, MA</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>30+ years transforming urban sites and campuses. Active in San Francisco waterfront and Mission Bay vicinity. Boston office serves Kendall Square and Seaport. Their scale of campus and waterfront work aligns with ARE's largest Megacampus projects.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Greater Boston</span></div>
+        <div class="fc-note">Hargreaves is a primary competitor for large-scale life science campus landscape work. Their urban/waterfront portfolio is especially relevant to ARE's Mission Bay and Seaport Boston campuses. Direct competitor to watch.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · National</div><div class="fc-name">SWA Group</div><div class="fc-hq">San Francisco · Los Angeles · Dallas · Houston</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>SWA is a dominant corporate and tech campus landscape firm. Strong presence in all ARE markets — especially SF Bay Area and San Diego. Their Los Angeles office is closest to ARE's Pasadena HQ. Employee-owned, large project capacity.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">San Diego</span><span class="mkt-tag">Texas</span></div>
+        <div class="fc-note">SWA does extensive corporate campus and life science work. Their Southern California presence makes them a competitor for San Diego ARE projects — which is the highest-activity development market with no confirmed LA on record.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr la">
+        <div><div class="fc-type">Landscape Architecture · Boston</div><div class="fc-name">CMG Landscape Architecture</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-likely">◐ LIKELY</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Why Likely</strong>CMG is a SF-based landscape firm focused on community, campus, and urban design with a strong sustainability platform. Active in Bay Area tech and life science campus projects. Smaller firm — strong design reputation, known for LEED-focused work.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span></div>
+        <div class="fc-note">CMG's focus on "improving the public realm and connecting people to nature" aligns with Alexandria's Megacampus amenity strategy. They may be engaged on ARE projects where the outdoor amenity is a primary design focus.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="insight-box">
+    <div class="ib-title">🌿 The Gap: San Diego Landscape Architects on ARE Projects</div>
+    <div class="ib-item"><span class="ib-bullet">→</span>Both confirmed LA firms (Surfacedesign and Bionic) are San Francisco-based, serving ARE's Mission Bay campus. No landscape architect is publicly confirmed on ARE's San Diego projects — which include their most active development (Campus Point expansion, One Alexandria Square, SD Tech by Alexandria).</div>
+    <div class="ib-item"><span class="ib-bullet">→</span>San Diego is ARE's second-largest market by property count (59 properties), has the highest occupancy (97.2%), and has the most active near-term pipeline (Campus Point BMS expansion). This creates a direct opening for a Southern California landscape architecture firm.</div>
+    <div class="ib-item"><span class="ib-bullet">→</span>The prime architects for San Diego ARE projects are not yet publicly confirmed. The likely candidates include Gensler San Diego, HDR's San Diego office, and potentially ZGF (active in biotech/lab nationally). Building a relationship with these primes in San Diego gives you a path to the ARE project team without cold outreach to ARE directly.</div>
+    <div class="ib-item"><span class="ib-bullet">→</span>ARE's San Diego development contact is based locally — attend NAIOP San Diego, Biocom, and UCSD real estate events where ARE development staff participate. One warm introduction to an ARE San Diego development manager is worth more than 10 email pitches.</div>
+  </div>
+
+</div><!-- /la -->
+
+
+<!-- ENGINEERS -->
+<div class="pnl" id="pnl-eng">
+
+  <div class="seclbl"><h3>Confirmed Engineers &amp; Specialty Consultants</h3><div class="ln"></div></div>
+  <div class="firm-grid">
+
+    <div class="firm-card">
+      <div class="fc-hdr struct">
+        <div><div class="fc-type">Structural Engineering · Global</div><div class="fc-name">Thornton Tomasetti</div><div class="fc-hq">SF / NYC / Boston / San Diego</div><div class="fc-conf conf-confirmed">✓ CONFIRMED × 2</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Projects (2)</strong>1. Pierpoint Lane / Uber HQ, Mission Bay (structural). 2. 1700 Owens Street Life Science Center, Mission Bay (structural). Confirmed on both major Mission Bay ARE projects.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">High Repeat</span></div>
+        <div class="fc-note">Thornton Tomasetti is a dominant structural engineering firm for complex commercial and lab buildings. Their repeat engagement on ARE projects suggests a preferred vendor relationship. Offices in all ARE markets. Also a potential subconsultant relationship path — if you're on their team, you're on ARE's team.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr mep">
+        <div><div class="fc-type">Façade Engineering · Global</div><div class="fc-name">Arup</div><div class="fc-hq">SF / NYC / Boston / San Diego</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>1700 Owens Street Life Science Center, Mission Bay — façade engineer for the sophisticated vertical aluminum fin curtain wall system targeting LEED Gold and solar control.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">High Performance Buildings</span></div>
+        <div class="fc-note">Arup is engaged on ARE's highest-performance building envelopes. Their presence signals sophisticated sustainable design goals — which creates landscape architecture opportunities around LEED site credits, stormwater, and outdoor comfort.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr civil">
+        <div><div class="fc-type">Civil Engineering · SF Bay Area</div><div class="fc-name">Freyer &amp; Laureta</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Pierpoint Lane / Uber HQ, Mission Bay — civil engineering. Part of the same integrated project team with SHoP, Surfacedesign, and Thornton Tomasetti.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Mission Bay</span></div>
+        <div class="fc-note">Freyer &amp; Laureta is a SF Bay Area civil firm. Their Mission Bay relationship with ARE could extend to other SF projects. A key civil engineering contact for the SF Bay Area market — landscape and civil work are tightly coordinated on stormwater management.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr gc">
+        <div><div class="fc-type">General Contractor · SF Bay Area</div><div class="fc-name">Truebeck Construction</div><div class="fc-hq">San Francisco Bay Area</div><div class="fc-conf conf-confirmed">✓ CONFIRMED × 2</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Projects (2)</strong>1. Pierpoint Lane / Uber HQ, Mission Bay (GC). 2. 1700 Owens Street Life Science Center, Mission Bay (GC). Two-time GC for ARE in Mission Bay — suggests preferred contractor status.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">Life Science</span></div>
+        <div class="fc-note">Truebeck is one of the Bay Area's top commercial general contractors, specializing in complex life science and technology campuses. Their repeat ARE work is significant. General contractors often influence subconsultant selection — a Truebeck relationship is a path to ARE project work.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr mep">
+        <div><div class="fc-type">Lighting Design · SF Bay Area</div><div class="fc-name">Niteo</div><div class="fc-hq">San Francisco, CA</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Pierpoint Lane / Uber HQ, Mission Bay — lighting design for the public park and campus. Outdoor lighting integrated into Surfacedesign's landscape design.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span></div>
+        <div class="fc-note">Outdoor lighting and landscape design are often coordinated closely. Niteo's ARE relationship could be an entry point — if you're working on ARE campus lighting, you're working alongside the landscape architect.</div>
+      </div>
+    </div>
+
+    <div class="firm-card">
+      <div class="fc-hdr gc">
+        <div><div class="fc-type">Landscape Contractor · National</div><div class="fc-name">BrightView Landscape Development</div><div class="fc-hq">National · Bay Area Division</div><div class="fc-conf conf-confirmed">✓ CONFIRMED</div></div>
+      </div>
+      <div class="fc-body">
+        <div class="fc-proj"><strong>Confirmed ARE Project</strong>Pierpoint Lane / Uber HQ, Mission Bay — landscape contractor executing Surfacedesign's design. BrightView is one of the largest commercial landscape contractors in the US.</div>
+        <div class="fc-markets"><span class="mkt-tag">SF Bay Area</span><span class="mkt-tag">National</span></div>
+        <div class="fc-note">BrightView is both a maintenance contractor and a design-build contractor. Their ARE relationship on the landscape side is worth noting — they execute what landscape architects design, and they operate in all ARE markets.</div>
+      </div>
+    </div>
+
+  </div>
+
+</div><!-- /eng -->
+
+
+<!-- BD STRATEGY -->
+<div class="pnl" id="pnl-strategy">
+
+  <div class="callout"><strong>The Core Insight</strong>Alexandria Real Estate does not directly hire landscape architects through a public RFP process for most campus projects. The landscape architect is almost always engaged by the prime architect of record — who is already engaged by ARE. Your path to ARE work runs through the architects on this list.</div>
+
+  <div class="seclbl"><h3>Four Paths to an ARE Project</h3><div class="ln"></div></div>
+  <div class="strategy-grid">
+    <div class="strat-card">
+      <div class="strat-icon">🤝</div>
+      <div class="strat-title">Path 1 — Cultivate the Prime Architects</div>
+      <div class="strat-body">The highest-leverage move. Build relationships with <strong>SGA, Payette, Gensler, HOK, Flad, and SHoP</strong> before they are engaged on ARE projects. These firms assemble the project team — including the landscape architect — before or shortly after receiving the commission. If you're already known and trusted by these primes, you're on the shortlist before the conversation with ARE even happens.<br><br><strong>Action:</strong> Identify the science + technology practice leaders at Gensler San Diego, HOK Boston, and Flad SF. Invite them to coffee. Ask about their life science pipeline. Establish a working relationship.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">📍</div>
+      <div class="strat-title">Path 2 — Target San Diego Specifically</div>
+      <div class="strat-body">Both confirmed ARE landscape architects (Surfacedesign, Bionic) are SF-based serving the Mission Bay campus. <strong>No LA firm is publicly confirmed on ARE's San Diego projects</strong> — which include the most active near-term development pipeline (Campus Point BMS expansion, Torrey Pines, UTC). San Diego is ARE's second-largest market and the most geographically accessible for a Southern California firm.<br><br><strong>Action:</strong> Research which architects are working on Campus Point expansion. Attend NAIOP San Diego events where ARE development staff participate. Connect with the ARE San Diego regional team directly at industry events.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">⚙️</div>
+      <div class="strat-title">Path 3 — Build the GC Relationship</div>
+      <div class="strat-body"><strong>Truebeck Construction</strong> has been GC on two confirmed ARE Mission Bay projects. General contractors influence subconsultant selection — especially for landscape, which is often bid and awarded during construction, not during design. A Truebeck relationship is a direct path to ARE landscape work in the Bay Area. BrightView (landscape contractor) executes the installed work — knowing who they work with tells you who designs it.<br><br><strong>Action:</strong> Reach out to Truebeck's pre-construction team. Ask about their upcoming life science project pipeline. Being listed as an approved landscape architecture subconsultant puts you in their bid list for future ARE projects.</div>
+    </div>
+    <div class="strat-card">
+      <div class="strat-icon">🌱</div>
+      <div class="strat-title">Path 4 — LEED and Sustainability as the Entry Point</div>
+      <div class="strat-body">ARE actively pursues LEED certification — 54% of rental revenue comes from LEED-certified or targeting properties. They won the 2024 Nareit Sustainable Design Impact Award. Landscape architects contribute critical LEED credits: stormwater management, heat island reduction, site ecology, outdoor quality. <strong>Frame your services as LEED site credit delivery, not landscape design.</strong><br><br><strong>Action:</strong> Develop a one-page summary of LEED credits your firm delivers on life science campuses, with specific examples. Use this as a conversation starter with ARE's sustainability team (SVP Eleni Reed) and with LEED-focused architects like Payette and HOK.</div>
+    </div>
+  </div>
+
+  <div class="seclbl" style="margin-top:8px;"><h3>Priority Target Firms — Ranked by BD Opportunity</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:20px;">
+    <table class="proj-table">
+      <thead><tr><th>Priority</th><th>Firm</th><th>Type</th><th>Key ARE Markets</th><th>Why They Matter</th><th>Your In</th></tr></thead>
+      <tbody>
+        <tr><td><strong style="color:var(--rd);">🔴 1</strong></td><td><strong>Gensler (San Diego + SF)</strong></td><td>Architecture</td><td>San Diego · SF Bay Area · All</td><td>Largest firm, in every ARE market, certain overlap</td><td>NAIOP, BIOCOM, direct outreach to Life Science Studio lead</td></tr>
+        <tr><td><strong style="color:var(--rd);">🔴 2</strong></td><td><strong>HOK Science + Technology (Boston)</strong></td><td>Architecture</td><td>Boston · San Diego · Maryland</td><td>On Kendall Square Association board; embedded in ARE ecosystem</td><td>Kendall Square Association events, I2SL conference</td></tr>
+        <tr><td><strong style="color:var(--am);">🟡 3</strong></td><td><strong>Truebeck Construction</strong></td><td>General Contractor</td><td>SF Bay Area</td><td>2× confirmed GC for ARE Mission Bay — preferred contractor</td><td>Pre-construction outreach, bid list registration</td></tr>
+        <tr><td><strong style="color:var(--am);">🟡 4</strong></td><td><strong>Flad Architects (SF)</strong></td><td>Architecture/AE</td><td>SF Bay Area · Research Triangle</td><td>#1 lab architecture firm; South SF office near ARE campuses</td><td>Direct outreach to SSF studio; AIA SF events</td></tr>
+        <tr><td><strong style="color:var(--am);">🟡 5</strong></td><td><strong>SHoP Architects</strong></td><td>Architecture</td><td>SF Bay Area (Mission Bay)</td><td>Confirmed lead architect on ARE's Uber HQ campus</td><td>SHoP's SF office; architecture industry events</td></tr>
+        <tr><td><strong style="color:var(--g);">🟢 6</strong></td><td><strong>Payette (Boston)</strong></td><td>Architecture</td><td>Greater Boston</td><td>Confirmed on Binney Street ARE project; AIA Firm of the Year</td><td>AIA Boston; science + healthcare conference circuit</td></tr>
+        <tr><td><strong style="color:var(--g);">🟢 7</strong></td><td><strong>IwamotoScott Architecture</strong></td><td>Architecture</td><td>SF Bay Area</td><td>Confirmed on 2024 ARE Mission Bay project; boutique firm</td><td>Easier to build direct relationship; SF design events</td></tr>
+        <tr><td><strong style="color:var(--g);">🟢 8</strong></td><td><strong>ARE San Diego Development Team</strong></td><td>Client — Direct</td><td>San Diego</td><td>No confirmed LA on SD projects — direct client opportunity</td><td>NAIOP San Diego, Biocom, UC San Diego real estate events</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div style="background:var(--pl);border:1px solid var(--bd);border-radius:6px;padding:14px 18px;">
+    <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:10px;color:var(--gd);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Research Methodology &amp; Limitations</div>
+    <div style="font-size:11px;color:var(--lt);line-height:1.8;">Confirmed firms are documented through public press releases, award submissions (Chicago Athenaeum, LILA), trade press (Tradeline, Metropolis, Bisnow), and project credit databases (mooool.com, The Plan). Likely firms are identified based on market presence, life science specialization, geographic proximity to ARE campuses, and known relationships within the ARE ecosystem (e.g., Kendall Square Association membership). This research represents publicly available information and may not capture private/undisclosed project teams, NDA-protected relationships, or projects that predate digital press coverage. Project teams for ARE's active 2025–2026 development pipeline are not yet publicly documented. Updated: April 2026.</div>
+  </div>
+
+</div><!-- /strategy -->
+
+
+
+<!-- EVENTS -->
+<div class="pnl" id="pnl-events">
+<div class="callout"><strong>How to Use This</strong>Alexandria's senior executives appear regularly at a predictable set of industry events. This page maps WHERE they show up, WHO goes, and HOW to turn a conference encounter into a real relationship. The goal is not to pitch — it's to be known before you need to be.</div>
+
+  <!-- KEY PEOPLE -->
+  <div class="seclbl"><h3>Key ARE People to Know</h3><div class="ln"></div></div>
+  <div class="people-grid">
+    <div class="person-card">
+      <div class="pc-name">Joel Marcus</div>
+      <div class="pc-title">Executive Chairman &amp; Founder · Pasadena HQ</div>
+      <div class="pc-body">The face of Alexandria. Keynotes, earnings calls, major industry conferences. Vocal on biotech policy, NIH funding, FDA reform. Won inaugural Bisnow Life Sciences Icon Award (Sept 2024). Named Commercial Observer Power 100. Regularly quoted in Bisnow, Bloomberg, WSJ on life science real estate outlook.</div>
+      <div class="pc-events"><span class="pe-tag">Bisnow ILS</span><span class="pe-tag">Nareit REITworld</span><span class="pe-tag">JPMorgan HC</span><span class="pe-tag">Earnings Calls</span></div>
+    </div>
+    <div class="person-card">
+      <div class="pc-name">Peter Moglia</div>
+      <div class="pc-title">CEO &amp; Chief Investment Officer</div>
+      <div class="pc-body">Operational CEO. Discusses development pipeline, leasing strategy, market conditions. Present on every quarterly earnings call. Named Commercial Observer Power 100 alongside Marcus. Active voice on supply/demand dynamics, construction costs, and capital allocation.</div>
+      <div class="pc-events"><span class="pe-tag">Nareit REITweek</span><span class="pe-tag">Bisnow Life Science</span><span class="pe-tag">Earnings Calls</span><span class="pe-tag">Investor Day</span></div>
+    </div>
+    <div class="person-card">
+      <div class="pc-name">Hallie Kuhn, PhD</div>
+      <div class="pc-title">EVP – Capital Markets &amp; Co-Lead Life Science</div>
+      <div class="pc-body">The science voice of ARE. Presents life science industry data (VC funding, M&amp;A activity, tenant demand) at every earnings call. San Diego regional ecosystem focus. PhD credentials — speaks the language of biotech scientists and institutional investors. Key for biotech industry events in San Diego.</div>
+      <div class="pc-events"><span class="pe-tag">Biocom San Diego</span><span class="pe-tag">SCUP</span><span class="pe-tag">Earnings Calls</span><span class="pe-tag">ULI SD</span></div>
+    </div>
+    <div class="person-card">
+      <div class="pc-name">Eleni Reed</div>
+      <div class="pc-title">SVP &amp; Head of Sustainability</div>
+      <div class="pc-body">Leads ARE's LEED, ESG, and corporate responsibility strategy. 54% of rental revenue from LEED-certified properties. Won 2024 Nareit Sustainable Design Impact Award. Collaborates with BMS, Eikon, and Lilly on sustainability goals. <strong>Most accessible for landscape architects</strong> — sustainability is the intersection point.</div>
+      <div class="pc-events"><span class="pe-tag">Nareit Sustainability</span><span class="pe-tag">USGBC</span><span class="pe-tag">I2SL</span><span class="pe-tag">GreenBuild</span></div>
+    </div>
+    <div class="person-card">
+      <div class="pc-name">Regional Market Directors</div>
+      <div class="pc-title">SVPs by Market — Boston, SF Bay Area, San Diego, Seattle</div>
+      <div class="pc-body">The development staff you actually need to meet. In Greater Boston: Shay Sims (SVP Asset Services, 11M+ RSF). In Seattle: Hart Cole (Co-President &amp; Co-RMD). These are the people managing day-to-day campus operations and vendor relationships. Most accessible at local market events — NAIOP chapters, ULI chapters, Bisnow local events.</div>
+      <div class="pc-events"><span class="pe-tag">NAIOP Local</span><span class="pe-tag">ULI Local</span><span class="pe-tag">Bisnow Local</span><span class="pe-tag">MassBio</span></div>
+    </div>
+    <div class="person-card">
+      <div class="pc-name">Marc Binda</div>
+      <div class="pc-title">CFO &amp; Treasurer · Pasadena HQ</div>
+      <div class="pc-body">Finance and risk management. Present on earnings calls. Oversees cybersecurity risk and internal controls. Less relevant for BD from an LA firm — focus on operational and development staff. However, present at REIT investor conferences where ARE presents to institutional investors.</div>
+      <div class="pc-events"><span class="pe-tag">Nareit REITworld</span><span class="pe-tag">REITweek</span><span class="pe-tag">Bank Conferences</span></div>
+    </div>
+  </div>
+
+  <!-- CONFIRMED EVENTS -->
+  <div class="seclbl"><h3>Confirmed Events Where ARE Appears — 2024–2026</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;">
+  <table class="event-table">
+    <thead><tr><th>Event</th><th>Organizer</th><th>Where / When</th><th>ARE Presence</th><th>Who Attends</th><th>Priority for BD</th></tr></thead>
+    <tbody>
+      <tr>
+        <td><strong>Bisnow International Life Sciences &amp; Biotech Conference</strong><div class="etype">Annual · 2-Day · Flagship Event</div></td>
+        <td>Bisnow</td>
+        <td>San Diego (Sept 2025, Sept 2026) · Maryland (2024)</td>
+        <td>ARE confirmed attendee/speaker. Joel Marcus featured as speaker at 2024 Maryland event. ARE listed as confirmed company for 2026 San Diego. Hallie Kuhn participates in tenant demand discussions.</td>
+        <td>Owners, developers, investors, architects, construction, designers, brokers, biotech firms, universities</td>
+        <td><span class="prio p1">🔴 Top Priority</span></td>
+      </tr>
+      <tr>
+        <td><strong>Bisnow Southern California Life Sciences Conference</strong><div class="etype">Annual · San Diego</div></td>
+        <td>Bisnow</td>
+        <td>San Diego · Pacific Center, 9925 Pacific Heights Blvd · April 2025</td>
+        <td>ARE confirmed in attendance alongside BioMed Realty, IQHQ, Longfellow, Healthpeak, Oxford. Mix of speakers and attendees from regional development teams.</td>
+        <td>Owners, developers, investors, architects, construction, designers, brokers, lawyers, financial institutions, universities, tenants, biotech firms, government officials</td>
+        <td><span class="prio p1">🔴 Top Priority</span></td>
+      </tr>
+      <tr>
+        <td><strong>Bisnow Boston Life Sciences Conference</strong><div class="etype">Annual · Cambridge/Boston</div></td>
+        <td>Bisnow</td>
+        <td>Boston/Cambridge · Dec 2024, ongoing annually</td>
+        <td>ARE confirmed in attendee list. SGA's John Sullivan (ARE architect on 50+60 Binney St) is a speaker — direct connection to ARE project team. Wise Construction (ARE GC) Alex Main also confirmed speaker with ARE credit.</td>
+        <td>Boston life science ecosystem — developers, architects, GCs, brokers, tenants, investors</td>
+        <td><span class="prio p1">🔴 Top Priority</span></td>
+      </tr>
+      <tr>
+        <td><strong>Bisnow Boston Biotech Summit</strong><div class="etype">Annual · Boston</div></td>
+        <td>Bisnow</td>
+        <td>Boston · 2025</td>
+        <td>Siena Construction's Director of Life Sciences (confirmed ARE client) is a speaker. Direct line to ARE Boston project team via construction relationships.</td>
+        <td>Boston biotech + real estate ecosystem</td>
+        <td><span class="prio p2">🟡 High Value</span></td>
+      </tr>
+      <tr>
+        <td><strong>Nareit REITworld Annual Conference</strong><div class="etype">Annual · November · National</div></td>
+        <td>Nareit</td>
+        <td>Las Vegas (2024: Nov 18–21) · Rotating annually</td>
+        <td>ARE management team (Marcus, Moglia, Binda) present every year. Private investor meetings, panels, networking. ARE won 2024 Nareit Sustainable Design Impact Award — Eleni Reed likely presented.</td>
+        <td>REIT executives, institutional investors, analysts — less LA-relevant but Eleni Reed (sustainability) is valuable</td>
+        <td><span class="prio p2">🟡 High Value</span></td>
+      </tr>
+      <tr>
+        <td><strong>Nareit REITweek Investor Conference</strong><div class="etype">Annual · June · New York City</div></td>
+        <td>Nareit</td>
+        <td>New York City · June 2025</td>
+        <td>ARE management team presents to institutional investors. Private 1:1 meetings + panels. Not directly relevant for LA firms unless attending for industry intelligence.</td>
+        <td>REIT executives and institutional investors — finance-focused</td>
+        <td><span class="prio p3">🟢 Intelligence Only</span></td>
+      </tr>
+      <tr>
+        <td><strong>JPMorgan Healthcare Conference</strong><div class="etype">Annual · January · San Francisco</div></td>
+        <td>JPMorgan</td>
+        <td>San Francisco · January annually</td>
+        <td>ARE executives attend as the largest life science REIT — meeting with investors and life science company CEOs. Hallie Kuhn particularly active in biotech/pharma circles connected to this conference ecosystem.</td>
+        <td>Biotech/pharma executives + investors — not directly open to AEC firms but creates secondary networking in SF</td>
+        <td><span class="prio p3">🟢 Intelligence Only</span></td>
+      </tr>
+      <tr>
+        <td><strong>ARE Investor Day</strong><div class="etype">Annual · December · Pasadena HQ</div></td>
+        <td>Alexandria Real Estate</td>
+        <td>Pasadena, CA · December 2025</td>
+        <td>ARE presents full year strategy to institutional investors. Key strategic announcements about markets, pipeline, and priorities. Not open to AEC firms — but materials are published and provide deep intelligence on where ARE is heading.</td>
+        <td>Institutional investors and analysts — public materials are valuable intelligence</td>
+        <td><span class="prio p3">🟢 Watch for Materials</span></td>
+      </tr>
+      <tr>
+        <td><strong>Life Sciences Summit (held AT Alexandria Center NYC)</strong><div class="etype">Annual · October · New York City</div></td>
+        <td>Center for Biotechnology / Stony Brook</td>
+        <td>Alexandria Center for Life Science, NYC · Oct 8–9, 2024 &amp; 2025</td>
+        <td>ARE hosts this event AT their NYC campus — direct client relationship. Early-stage biotech investor/BD conference. ARE staff interact with attendees as the venue host.</td>
+        <td>Early-stage biotech founders, investors, BD professionals. Unique because ARE is the venue host.</td>
+        <td><span class="prio p2">🟡 High Value — ARE is Host</span></td>
+      </tr>
+      <tr>
+        <td><strong>ULI (Urban Land Institute) — All Chapters</strong><div class="etype">Year-Round · Local + National Events</div></td>
+        <td>Urban Land Institute</td>
+        <td>San Diego · Boston · SF · Seattle · National events</td>
+        <td>ARE staff confirmed at ULI events (Patricia Washington cited meeting ARE at "ULI Event Feb 2026" in their lead tracker). ARE's Inglewood/Olympics pipeline emerged from ULI networking. Regional market directors attend local ULI chapters.</td>
+        <td>Developers, architects, planners, investors, public agencies — broad cross-section of ARE's stakeholder ecosystem</td>
+        <td><span class="prio p1">🔴 Top Priority</span></td>
+      </tr>
+      <tr>
+        <td><strong>NAIOP — Life Science Chapters &amp; Events</strong><div class="etype">Year-Round · Local Chapters</div></td>
+        <td>NAIOP</td>
+        <td>Boston (MassBio partnership), San Diego, San Francisco, Seattle chapters</td>
+        <td>ARE staff participate in NAIOP local chapter events particularly in Boston and San Diego. MassBio works directly with ARE's Boston development team. NAIOP SD events confirmed in ARE's lead tracker data.</td>
+        <td>Commercial real estate developers, investors, architects, engineers, contractors — highest density of ARE-adjacent firms</td>
+        <td><span class="prio p1">🔴 Top Priority</span></td>
+      </tr>
+      <tr>
+        <td><strong>Biocom — San Diego Life Science Events</strong><div class="etype">Year-Round · San Diego</div></td>
+        <td>Biocom / Biocom California</td>
+        <td>San Diego · Multiple events annually</td>
+        <td>Hallie Kuhn and ARE's San Diego team are embedded in the Biocom ecosystem. ARE is a primary real estate partner for San Diego biotech. This is the most direct access point to ARE's San Diego development and leasing staff.</td>
+        <td>San Diego biotech companies, investors, service providers, real estate — ARE's core tenant sourcing community</td>
+        <td><span class="prio p1">🔴 Top Priority (San Diego firms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>Kendall Square Association Events</strong><div class="etype">Year-Round · Cambridge, MA</div></td>
+        <td>Kendall Square Association</td>
+        <td>Cambridge, MA</td>
+        <td>ARE's Shay Sims (SVP Asset Services, Boston) is on the KSA Board. HOK's Boston S+T lead is also on the board. Direct access to ARE's Boston team and their prime architect ecosystem in a single membership organization.</td>
+        <td>Cambridge life science ecosystem — tenants, developers, city officials, service providers, architects</td>
+        <td><span class="prio p2">🟡 High Value (Boston firms)</span></td>
+      </tr>
+      <tr>
+        <td><strong>I2SL (International Institute for Sustainable Laboratories)</strong><div class="etype">Annual Conference · September</div></td>
+        <td>I2SL</td>
+        <td>Rotating US cities · Annual conference</td>
+        <td>HOK's Boston S+T practice leader is a confirmed I2SL speaker. ARE's sustainability team (Eleni Reed) would logically participate in this lab sustainability circuit. LEED lab buildings are a primary ARE focus.</td>
+        <td>Lab facility designers, engineers, owners, sustainability professionals — prime overlap with ARE's LEED program</td>
+        <td><span class="prio p2">🟡 High Value</span></td>
+      </tr>
+      <tr>
+        <td><strong>GreenBuild / USGBC Events</strong><div class="etype">Annual · National</div></td>
+        <td>USGBC</td>
+        <td>Rotating US cities · Annual</td>
+        <td>ARE's 54% LEED revenue base and Nareit Sustainable Design Impact Award suggest active USGBC participation. Eleni Reed (SVP Sustainability) is the likely ARE representative at LEED-focused events.</td>
+        <td>Sustainability professionals, architects, engineers, developers — strong overlap with ARE's ESG commitments</td>
+        <td><span class="prio p2">🟡 High Value</span></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+
+  <!-- ARE'S OWN EVENTS -->
+  <div class="seclbl"><h3>Events ARE Hosts Themselves</h3><div class="ln"></div></div>
+  <div class="own-grid">
+    <div class="own-card">
+      <div class="oc-hdr"><span style="font-size:16px;">🏛️</span><div class="oc-title">Alexandria Center as Event Venue</div></div>
+      <div class="oc-body">ARE's campus buildings serve as event venues for industry gatherings. <strong>The Life Sciences Summit (Oct 2024, Oct 2025) is held AT Alexandria Center for Life Science in New York City.</strong> ARE is the venue host — staff interact with all attendees as landlords and collaborators. Their Mission Bay campus in SF hosts similar events. Being a regular attendee at events held in ARE buildings creates organic relationship opportunities with ARE facility managers and development staff who are physically present.</div>
+    </div>
+    <div class="own-card">
+      <div class="oc-hdr"><span style="font-size:16px;">📊</span><div class="oc-title">ARE Investor Day</div></div>
+      <div class="oc-body">Annual investor presentation held in December at ARE's Pasadena HQ. Not open to AEC firms, but the <strong>full presentation deck is published publicly</strong> on their investor relations page. The 2025 Investor Day materials are a gold mine of strategic intent — which markets they're prioritizing, which campuses are being repositioned, where future development is planned. Reading this before any client meeting signals that you understand their business at a strategic level.</div>
+    </div>
+    <div class="own-card">
+      <div class="oc-hdr"><span style="font-size:16px;">🔬</span><div class="oc-title">Alexandria Summit® (ARE-hosted)</div></div>
+      <div class="oc-body">Alexandria hosts proprietary thought leadership events under the <strong>Alexandria Summit®</strong> trademark. These are closed, curated gatherings of life science leaders, scientists, and investors. Not open to AEC firms. However, knowing that ARE operates in the thought leadership space helps you understand their brand — they position themselves as intellectual partners to the life science ecosystem, not just landlords. This shapes what they value in their campus environment.</div>
+    </div>
+    <div class="own-card">
+      <div class="oc-hdr"><span style="font-size:16px;">📣</span><div class="oc-title">Earnings Calls — Public &amp; Quarterly</div></div>
+      <div class="oc-body">ARE's quarterly earnings calls are <strong>public, free, and broadcast</strong> via webcast. Joel Marcus, Peter Moglia, and Hallie Kuhn speak for 60+ minutes each quarter about ARE's market outlook, pipeline priorities, and leasing strategy. <strong>This is the highest-quality free intelligence available.</strong> Listen to the Q1 and Q4 calls before any ARE meeting — Marcus's specific language about markets, risks, and strategy gives you direct talking points. Replays are archived at investor.are.com.</div>
+    </div>
+  </div>
+
+  <!-- TACTICAL GUIDANCE -->
+  <div class="venue-box">
+    <div class="vb-title">🎯 Conference Tactics — How to Turn an Encounter Into a Relationship</div>
+    <div class="vb-item"><span class="vb-bullet">1</span><span><strong style="color:var(--g);">Never cold-pitch at an ARE event.</strong> ARE people hear pitches constantly. The opening is to ask a smart question about something they said, or reference something from their earnings call or investor deck. "I heard Hallie mention on the Q4 call that preclinical biotech demand is the soft spot — how is that showing up in your San Diego pipeline?" opens a real conversation.</span></div>
+    <div class="vb-item"><span class="vb-bullet">2</span><span><strong style="color:var(--g);">Bisnow ILS San Diego (Sept annually) is your highest-priority event.</strong> ARE is a confirmed attendee. It's in San Diego — their most active development market. It brings together biotech companies, developers, and AEC firms in one room. Register early. Attend the cocktail reception (2-hour networking). Spend the morning sessions building context for afternoon conversations.</span></div>
+    <div class="vb-item"><span class="vb-bullet">3</span><span><strong style="color:var(--g);">ULI San Diego is the most accessible local access point.</strong> ARE's San Diego development staff attend ULI chapter events. Unlike Bisnow (transactional), ULI feels more collegial and educational. Join the ULI San Diego Life Sciences product council or volunteer for a committee — ARE staff serve on these committees and you'll build working relationships over months, not minutes.</span></div>
+    <div class="vb-item"><span class="vb-bullet">4</span><span><strong style="color:var(--g);">Target Eleni Reed (SVP Sustainability) as your most accessible ARE contact.</strong> ARE's sustainability focus is where landscape architecture has the clearest value proposition. USGBC, I2SL, and Nareit sustainability events are her circuit. LEED site credits, stormwater, wildfire-resistant planting, and heat island reduction are the language of her work — and yours.</span></div>
+    <div class="vb-item"><span class="vb-bullet">5</span><span><strong style="color:var(--g);">Listen to the Q4 earnings call every year before the new year begins.</strong> It takes 90 minutes and costs nothing. Marcus's language about which markets are priorities, which campuses are being repositioned, and what headwinds they're facing is more useful than any research report. You'll know what they're worried about before you walk into any meeting with their team.</span></div>
+    <div class="vb-item"><span class="vb-bullet">6</span><span><strong style="color:var(--g);">The Boston pathway runs through MassBio and Kendall Square Association.</strong> ARE's Boston SVP Shay Sims is on the KSA Board. These are membership organizations — join them. Attend their breakfasts, working groups, and site tours. The ARE team shows up to these regularly because they are deeply embedded in the Cambridge civic ecosystem, not just the real estate market.</span></div>
+  </div>
+
+  <div style="background:var(--pl);border:1px solid var(--bd);border-radius:6px;padding:14px 18px;margin-top:4px;">
+    <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:10px;color:var(--gd);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Research Methodology</div>
+    <div style="font-size:11px;color:var(--lt);line-height:1.8;">Event presence confirmed through: Bisnow speaker/attendee lists (Bisnow.com), Nareit event archives, Kendall Square Association board listings, Stony Brook Life Sciences Summit venue records, ARE investor relations event calendar (investor.are.com), and Bisnow news coverage of ARE executives at named events. Likely event appearances are based on ARE's documented focus on LEED (I2SL, GreenBuild), biotech industry (JPMorgan HC, Biocom), and commercial real estate (NAIOP, ULI). April 2026.</div>
+  </div>
+</div><!-- /events -->
+
+
+
+<!-- SOCIAL MEDIA INTEL -->
+<div class="pnl" id="pnl-social">
+
+  <div class="callout"><strong>Research Approach</strong>LinkedIn blocks direct scraping, so this analysis draws from: publicly visible LinkedIn post snippets in Google search results, ARE's full press release archive (investor.are.com), their 2024 Corporate Responsibility Report, their 2025 home page banner messaging, and recurring content patterns across all channels. The result is a content strategy map — what ARE posts, how often, and why — reconstructed from observable public signals.</div>
+
+  <!-- PLATFORM SCORECARD -->
+  <div class="seclbl"><h3>Platform Presence &amp; Posture</h3><div class="ln"></div></div>
+  <div class="scorecard">
+    <div class="sc-item">
+      <div class="sc-val green">Primary</div>
+      <div class="sc-label">LinkedIn<br>Main corporate channel · ~30K+ followers</div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-val">Secondary</div>
+      <div class="sc-label">Twitter/X<br>Lower activity · Press release amplification</div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-val">Limited</div>
+      <div class="sc-label">Instagram<br>Campus imagery, community events, milestone moments</div>
+    </div>
+    <div class="sc-item">
+      <div class="sc-val green">Active</div>
+      <div class="sc-label">YouTube<br>Thought leadership panels, Summit recordings, campus tours</div>
+    </div>
+  </div>
+
+  <!-- CONTENT PILLARS -->
+  <div class="seclbl"><h3>6 Content Pillars — What They Post and Why</h3><div class="ln"></div></div>
+  <div class="pillar-grid">
+
+    <div class="pillar-card">
+      <div class="pl-hdr blue"><span class="pl-icon">🔬</span><div><div class="pl-title">Life Science Mission &amp; Impact</div><div class="pl-freq">High Frequency · Evergreen</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> Posts celebrating tenant milestones (FDA approvals, drug discoveries, clinical data), announcements about which ARE tenant developed a new therapy, and broad statements about life science's role in solving disease. Joel Marcus quotes about "10,000 known diseases" and the mission to advance human health appear frequently.<br><br><strong>Why:</strong> ARE positions itself as a mission-driven partner to science, not just a landlord. Every tenant win is reframed as an ARE contribution to human health. This is their core brand narrative.</div>
+      <div class="pl-tags"><span class="pl-tag">#LifeScience</span><span class="pl-tag">#Innovation</span><span class="pl-tag">#HumanHealth</span><span class="pl-tag">#Biotech</span></div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pl-hdr green"><span class="pl-icon">🌱</span><div><div class="pl-title">Sustainability &amp; ESG Performance</div><div class="pl-freq">Monthly · Award-driven</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> LEED certification announcements (Platinum at 325 Binney + 15 Necco Street in 2024–25), GHG reduction progress updates (18% reduction 2022–2024), GRESB Green Star designation posts (8 consecutive years), Nareit Sustainable Design Impact Award announcements, and renewable electricity milestones (30% in 2024, 100% in Greater Boston).<br><br><strong>Why:</strong> 90% of their top 20 tenants have net-zero goals. Sustainability posts directly support leasing by signaling ESG alignment with major pharma companies.</div>
+      <div class="pl-tags"><span class="pl-tag">#LEED</span><span class="pl-tag">#Sustainability</span><span class="pl-tag">#ESG</span><span class="pl-tag">#GHG</span><span class="pl-tag">#Renewable</span></div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pl-hdr amber"><span class="pl-icon">🧠</span><div><div class="pl-title">Mental Health &amp; Social Responsibility</div><div class="pl-freq">Recurring · Campaign-Driven</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> Mental Health Awareness Month (May) is a major annual content moment — multiple posts, press releases, and event content. Alexandria Summit on Mental Health panels in Washington DC (with Patrick Kennedy), biomarker research partnerships with NIH Foundation, and OneFifteen addiction recovery center updates. Heavy use of statistics (1 in 5 adults, 50,000 suicides/year).<br><br><strong>Why:</strong> Their 8th corporate responsibility pillar, active since 2021. Mental health is their signature social cause — differentiating them from every other REIT on the planet.</div>
+      <div class="pl-tags"><span class="pl-tag">#MentalHealth</span><span class="pl-tag">#MentalHealthMonth</span><span class="pl-tag">#OneFifteen</span><span class="pl-tag">#PublicHealth</span></div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pl-hdr purple"><span class="pl-icon">🏗️</span><div><div class="pl-title">Campus &amp; Megacampus Development</div><div class="pl-freq">Event-Driven · Milestone Posts</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> Topping-off ceremonies (Campus Point BMS building cover of CR report), project delivery announcements (4 Kingsbury Ave Arsenal on the Charles achieving LEED Gold, Lilly Seaport Innovation Center delivery), leasing milestone announcements (largest lease in company history — Campus Point 466K RSF), and campus expansion imagery with architect renderings.<br><br><strong>Why:</strong> Development announcements build investor confidence and attract prospective tenants. The visual nature of construction imagery performs well on LinkedIn.</div>
+      <div class="pl-tags"><span class="pl-tag">#Megacampus</span><span class="pl-tag">#LifeScienceRE</span><span class="pl-tag">#CampusPoint</span><span class="pl-tag">#Development</span></div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pl-hdr teal"><span class="pl-icon">🤝</span><div><div class="pl-title">Community, Culture &amp; Campus Life</div><div class="pl-freq">Regular · Human-interest</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> NYC campus solar eclipse viewing party ("an amazing shared experience of awe and wonder"), employee wellness programs, Fred Hutch STEM learning lab opening, campus events and programming content, team member spotlights, and community engagement posts. Warm, conversational tone — often in first person plural ("our community").<br><br><strong>Why:</strong> Humanizes the brand. These posts get high engagement because they show the living, breathing campus ecosystem — not just buildings. This is also the content most relevant to outdoor space design.</div>
+      <div class="pl-tags"><span class="pl-tag">#CommunityImpact</span><span class="pl-tag">#CampusLife</span><span class="pl-tag">#STEM</span><span class="pl-tag">#Wellness</span></div>
+    </div>
+
+    <div class="pillar-card">
+      <div class="pl-hdr red"><span class="pl-icon">🏆</span><div><div class="pl-title">Awards, Recognition &amp; Trust</div><div class="pl-freq">Occasional · Amplification</div></div></div>
+      <div class="pl-body"><strong>What it looks like:</strong> Newsweek Most Trustworthy Companies (3× consecutive in America, 2× worldwide), Bisnow Life Sciences Icon &amp; Influencer Award to Joel Marcus (Sept 2024), Commercial Observer Power 100, GRESB/Nareit/I2SL award announcements. Always tied back to mission — never just trophy-posting.<br><br><strong>Why:</strong> Trust-signaling for institutional investors and prospective tenants. The consistent "Newsweek Trustworthy" angle is a deliberate credibility anchor for a company navigating occupancy headwinds.</div>
+      <div class="pl-tags"><span class="pl-tag">#Awards</span><span class="pl-tag">#MostTrusted</span><span class="pl-tag">#REITLeadership</span></div>
+    </div>
+
+  </div>
+
+  <!-- REPRESENTATIVE POSTS -->
+  <div class="seclbl"><h3>Representative Post Examples — Reconstructed from Public Sources</h3><div class="ln"></div></div>
+  <div class="post-grid">
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">Sept 2024</span><span class="post-category">Award · Leadership</span></div>
+      <div class="post-text">"Congratulations to our Executive Chairman and Founder Joel Marcus — a true pioneer and visionary — on this incredibly well-deserved honor! This award reflects our entire team's passion and dedication to our mission-driven business."</div>
+      <div class="post-insight"><strong>Context:</strong> Announcing Joel Marcus receiving the inaugural Bisnow Life Sciences Icon &amp; Influencer Award. Warm, team-first framing — never just about the individual. Pattern: ARE credits team over individual consistently.</div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">April 2024</span><span class="post-category">Community · Fun</span></div>
+      <div class="post-text">"This afternoon, our Alexandria Center for Life Science – New York City community gathered for a #solareclipse viewing party. An amazing shared experience of awe and wonder."</div>
+      <div class="post-insight"><strong>Context:</strong> Spontaneous campus community moment — the 2024 solar eclipse. Shows ARE posting about outdoor, sky-gazing, shared experiences. The outdoor and natural environment is content they engage with organically. High engagement post.</div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">June 2024</span><span class="post-category">ESG · Report Launch</span></div>
+      <div class="post-text">"We are very proud to announce the release of our 2022 ESG Report... We continue to partner with our innovative life science tenants to help advance their strategic sustainability goals while enabling them to pursue their lifesaving work. A huge thank-you to all who contributed..."</div>
+      <div class="post-insight"><strong>Context:</strong> Annual CR Report drop — always a major multi-post content moment. Pattern: the ESG report generates several days of content across platforms. Watch for the 2025 report (typically released June–July). Prime engagement window.</div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">Feb 2024</span><span class="post-category">Thought Leadership · Mental Health</span></div>
+      <div class="post-text">Alexandria Summit on Mental Health in Washington DC — partnering with Patrick Kennedy &amp; The Kennedy Forum, convening members of Congress, FDA executives, and life science leaders to drive forward psychiatric medicine innovation.</div>
+      <div class="post-insight"><strong>Context:</strong> Annual mental health summit generates multiple posts before, during, and after the event. ARE is one of very few REITs with a sustained, multi-year cause platform. This signals how seriously they treat thought leadership as a brand pillar.</div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">July 2025</span><span class="post-category">Leasing · Milestone</span></div>
+      <div class="post-text">Largest life science lease in Alexandria's 31-year history — 466,598 RSF build-to-suit at Campus Point in San Diego. "Campus Point is a crown jewel of Alexandria's Megacampus platform... its distinctive design embraces natural light, optimizes shared space to promote connectivity and features an expansive terrace that serves as a central gathering place."</div>
+      <div class="post-insight"><strong>BD Insight:</strong> The press release specifically calls out "expansive terrace," "indoor-outdoor connection," and "elevated amenity experience." Outdoor space is explicitly named as a competitive differentiator in their largest-ever deal announcement.</div>
+    </div>
+
+    <div class="post-card">
+      <div class="post-meta"><span class="post-platform pp-li">LinkedIn</span><span class="post-date">Sept 2025</span><span class="post-category">Partnership · Campus</span></div>
+      <div class="post-text">Lilly Gateway Labs San Diego — new amenities include "a nutritious grab-and-go café with garden seating, a destination restaurant, large event lawn, high-tech meeting venues, and a restorative walking path."</div>
+      <div class="post-insight"><strong>BD Insight:</strong> ARE specifically named "garden seating," "event lawn," and "restorative walking path" as headline amenities in a major press release — and this language almost certainly appeared verbatim in the LinkedIn post. Outdoor design = competitive weapon in their own words.</div>
+    </div>
+
+  </div>
+
+  <!-- KEY TRENDS -->
+  <div class="seclbl"><h3>5 Trends Shaping Their Content Strategy Right Now</h3><div class="ln"></div></div>
+  <div class="trend-box">
+    <div class="tb-hdr"><span style="font-size:16px;">📈</span><div class="tb-hdr-title">Emerging Trends in ARE's Social &amp; Communications Posture — 2024–2026</div></div>
+    <div class="tb-body">
+      <div class="trend-item">
+        <div class="trend-num">1</div>
+        <div class="trend-content">
+          <div class="trend-title">Outdoor Amenities Are Now a Headline Differentiator — Not a Footnote</div>
+          <div class="trend-body">In both major 2025 press releases (Campus Point BMS build-to-suit and Lilly Gateway Labs SD), ARE named outdoor elements explicitly: "expansive terrace," "large event lawn," "garden seating," "restorative walking path," and "seamlessly blending indoor and outdoor spaces." These aren't afterthoughts buried in specs — they're in the headline announcement copy. The shift from "we have a park" to "our outdoor experience helps you recruit the world's best scientists" is complete and accelerating.</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">2</div>
+        <div class="trend-content">
+          <div class="trend-title">Mental Health Is Their Signature Cause — And It's Intensifying</div>
+          <div class="trend-body">From a 2021 CR pillar to a multi-year, multi-front campaign: Alexandria Summit on Mental Health (DC, annual), public-private NIH partnership on depression biomarkers (design phase complete 2025, clinical launch targeted May 2026), OneFifteen addiction recovery center (7,500+ patients treated). No other REIT is doing anything close to this. Their mental health commitment generates regular earned media, congressional relationships, and brand differentiation that directly supports leasing by attracting mission-driven tenants.</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">3</div>
+        <div class="trend-content">
+          <div class="trend-title">Trustworthiness as a Strategic Narrative — Counter-Programming Against Adversity</div>
+          <div class="trend-body">With occupancy declining and a 2023 short-seller attack still in their 10-K disclosures, ARE has doubled down on trust-signaling. Three consecutive Newsweek Most Trustworthy Company designations, plus the second consecutive global recognition in 2025. This is deliberate counter-programming — the more the stock faces pressure, the more they invest in reputation content. For an LA firm: being associated with a "trustworthy" client is itself a credential. Their credibility rubs off on their design team.</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">4</div>
+        <div class="trend-content">
+          <div class="trend-title">LEED Platinum Is the New Floor — Ultra-High-Performance Buildings Are the Story</div>
+          <div class="trend-body">ARE earned LEED Platinum (highest level) for 325 Binney Street AND 15 Necco Street in Greater Boston in 2024–25. The 2024 CR report tracks 11 recent development designs showing modeled energy intensity 44% below their own operating portfolio. Their content increasingly spotlights all-electric buildings (3 completed, 4 under construction), ground-source heat pumps, and geothermal systems. This performance level creates a direct demand for landscape architecture that delivers measurable LEED site credits — not just pretty plantings.</div>
+        </div>
+      </div>
+      <div class="trend-item">
+        <div class="trend-num">5</div>
+        <div class="trend-content">
+          <div class="trend-title">The "Talent Recruitment" Frame Has Replaced "Amenity" Language</div>
+          <div class="trend-body">A consistent shift across all ARE content: outdoor spaces, wellness centers, and campus programming are no longer described as "amenities." They're framed as "tools for recruiting and retaining mission-critical talent." The Campus Point press release: "campus is positioned to provide tenants with critical expansion space and an elevated amenity experience that enables the recruitment and retention of mission-critical talent to advance next-generation discoveries." Landscape architects who frame their work in this language will resonate immediately with ARE development staff.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BD APPLICATION -->
+  <div class="seclbl"><h3>Applying This Intelligence — What to Say and When</h3><div class="ln"></div></div>
+  <div class="venue-box">
+    <div class="vb-title">🎯 How to Use ARE's Social Content for BD</div>
+    <div class="vb-item"><span class="vb-bullet">→</span><span><strong style="color:var(--g);">Follow ARE on LinkedIn and engage meaningfully — don't just like.</strong> Comment on their sustainability posts with a relevant observation ("The LEED Platinum at 15 Necco is remarkable — the ground-source heat pump integration makes the stormwater management strategy even more complex. How did you approach the site credit coordination?"). One thoughtful comment is worth more than 50 likes.</span></div>
+    <div class="vb-item"><span class="vb-bullet">→</span><span><strong style="color:var(--g);">Time your outreach around their annual content peaks.</strong> The CR Report drops June–July annually — ARE's team is in "mission and values" mode. Mental Health Month (May) is another high-engagement moment. Reaching out with content that connects to their active content pillars increases the odds of a response.</span></div>
+    <div class="vb-item"><span class="vb-bullet">→</span><span><strong style="color:var(--g);">Use their own language back to them.</strong> "Restorative walking path," "seamlessly blending indoor and outdoor spaces," "elevated amenity experience that enables recruitment and retention" — these exact phrases appear in ARE's own press releases. Using this language in proposals or introductory emails signals you understand their world, not just your own.</span></div>
+    <div class="vb-item"><span class="vb-bullet">→</span><span><strong style="color:var(--g);">Share content that overlaps with their pillars — don't pitch, contribute.</strong> If you publish a piece on LEED Platinum site credits, wildfire-resilient campus planting, or biophilic design research, share it to LinkedIn and tag ARE's sustainability team. You become part of their content ecosystem before you're ever part of their project team.</span></div>
+    <div class="vb-item"><span class="vb-bullet">→</span><span><strong style="color:var(--g);">Monitor their campus announcement posts for project timing intelligence.</strong> When ARE posts a topping-off ceremony or LEED certification for a campus, the landscape architect is typically engaged 12–18 months earlier. If you see a groundbreaking announcement, the design team is already locked. Track these backward to understand lead times and identify which projects are still in pre-design.</span></div>
+  </div>
+
+  <div style="background:var(--pl);border:1px solid var(--bd);border-radius:6px;padding:14px 18px;margin-top:4px;">
+    <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:10px;color:var(--gd);letter-spacing:0.1em;text-transform:uppercase;margin-bottom:8px;">Research Methodology</div>
+    <div style="font-size:11px;color:var(--lt);line-height:1.8;">Social media content sourced from: publicly visible LinkedIn post snippets in Google search result snippets (LinkedIn.com search index); Alexandria's full press release archive at investor.are.com (2023–2026); the 2024 Corporate Responsibility Report (PDF, 62 pages); ARE homepage banner messaging (are.com, April 2026); and Bisnow/Commercial Observer coverage of ARE social and media presence. Direct LinkedIn scraping was blocked by robots.txt; all content reconstructed from publicly indexed and cached sources. Hashtag analysis based on observed tags in Google-indexed LinkedIn posts. April 2026.</div>
+  </div>
+
+</div><!-- /social -->
+
+
+</main>
+
+<footer>
+  <div class="fl">ARE — AEC Consultant Ecosystem · ASLA BD Workshop</div>
+  <div class="fr">Research compiled from public sources · April 2026 · For workshop use only</div>
+</footer>
+
+<script>
+document.getElementById('tb-overview').addEventListener('click', function(){ showTab('overview'); });
+document.getElementById('tb-arch').addEventListener('click', function(){ showTab('arch'); });
+document.getElementById('tb-la').addEventListener('click', function(){ showTab('la'); });
+document.getElementById('tb-eng').addEventListener('click', function(){ showTab('eng'); });
+document.getElementById('tb-strategy').addEventListener('click', function(){ showTab('strategy'); });
+document.getElementById('tb-events').addEventListener('click', function(){ showTab('events'); });
+document.getElementById('tb-social').addEventListener('click', function(){ showTab('social'); });
+
+function showTab(id) {
+  document.querySelectorAll('.pnl').forEach(function(p){ p.classList.remove('on'); });
+  document.querySelectorAll('.tab').forEach(function(t){ t.classList.remove('on'); });
+  document.getElementById('pnl-'+id).classList.add('on');
+  document.getElementById('tb-'+id).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+</script>
+
+
+</body></html>

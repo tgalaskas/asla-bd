@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)file:///C:/Users/tgala/Downloads/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Intelligence — ASLA Business Development Platform</title>
+<link href="./BD Intelligence — ASLA Business Development Platform_files/css2" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --g: #81BC00; --gd: #5A8A00;
+  --bk: #111111; --md: #555555; --lt: #999999;
+  --bd: #E6E6E6; --wh: #FFFFFF; --off: #F8F8F8;
+}
+html { scroll-behavior: smooth; }
+body { font-family: 'DM Sans', sans-serif; background: var(--wh); color: var(--bk); -webkit-font-smoothing: antialiased; }
+
+/* NAV */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(255,255,255,0.96); backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--bd);
+  padding: 0 64px; height: 60px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo { font-family: 'DM Mono', monospace; font-size: 11px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--bk); }
+.nav-logo span { color: var(--g); }
+.nav-links { display: flex; align-items: center; gap: 40px; list-style: none; }
+.nav-links a { font-size: 12px; color: var(--lt); text-decoration: none; transition: color 0.15s; }
+.nav-links a:hover { color: var(--bk); }
+.nav-enter { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--wh); background: var(--bk); padding: 9px 22px; border-radius: 2px; text-decoration: none; transition: background 0.15s; }
+.nav-enter:hover { background: var(--g); }
+
+/* HERO */
+.hero {
+  padding: 160px 64px 120px;
+  display: grid; grid-template-columns: 7fr 5fr;
+  gap: 100px; align-items: end;
+  border-bottom: 1px solid var(--bd);
+}
+.hero-kicker { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--g); margin-bottom: 28px; }
+.hero-title { font-family: 'Playfair Display', serif; font-size: clamp(44px, 5.5vw, 70px); font-weight: 700; line-height: 1.06; letter-spacing: -0.025em; color: var(--bk); margin-bottom: 32px; }
+.hero-title em { font-style: italic; color: var(--g); }
+.hero-body { font-size: 16px; font-weight: 300; line-height: 1.85; color: var(--md); max-width: 480px; margin-bottom: 44px; }
+.hero-actions { display: flex; align-items: center; gap: 28px; }
+.btn { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; padding: 13px 28px; border-radius: 2px; text-decoration: none; transition: background 0.15s; display: inline-block; }
+.btn-dark { color: var(--wh); background: var(--bk); }
+.btn-dark:hover { background: var(--g); }
+.btn-ghost { color: var(--lt); font-size: 12px; padding: 0; border-radius: 0; background: none; font-family: 'DM Sans', sans-serif; font-weight: 400; letter-spacing: 0; border-bottom: 1px solid transparent; }
+.btn-ghost:hover { color: var(--bk); border-bottom-color: var(--bk); }
+
+/* HERO RIGHT */
+.hero-right { padding-bottom: 8px; }
+.case-label { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--lt); margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--bd); }
+.case-title { font-family: 'Playfair Display', serif; font-size: 20px; font-weight: 700; color: var(--bk); line-height: 1.25; margin-bottom: 22px; }
+.cm-row { display: flex; justify-content: space-between; align-items: baseline; padding: 10px 0; border-bottom: 1px solid var(--bd); font-size: 12px; }
+.cm-row:last-of-type { border-bottom: none; margin-bottom: 24px; }
+.cm-key { color: var(--lt); }
+.cm-val { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--bk); font-weight: 500; text-align: right; }
+.cm-val.green { color: var(--g); }
+.case-note { font-size: 11px; font-weight: 300; color: var(--lt); line-height: 1.7; font-style: italic; border-left: 2px solid var(--g); padding-left: 14px; }
+
+/* STATS */
+.stats { display: grid; grid-template-columns: repeat(4, 1fr); border-bottom: 1px solid var(--bd); }
+.stat { padding: 56px 64px; border-right: 1px solid var(--bd); }
+.stat:last-child { border-right: none; }
+.stat-val { font-family: 'Playfair Display', serif; font-size: 50px; font-weight: 700; color: var(--bk); line-height: 1; margin-bottom: 10px; letter-spacing: -0.02em; }
+.stat-val span { color: var(--g); }
+.stat-desc { font-size: 12px; color: var(--lt); line-height: 1.6; font-weight: 300; max-width: 160px; }
+
+/* TOOLS */
+.tools { padding: 100px 64px; border-bottom: 1px solid var(--bd); }
+.section-hdr { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: end; margin-bottom: 56px; }
+.section-kicker { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--g); margin-bottom: 20px; }
+.section-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--bk); }
+.section-desc { font-size: 14px; font-weight: 300; line-height: 1.85; color: var(--md); }
+
+.tools-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--bd); border: 1px solid var(--bd); border-radius: 4px; overflow: hidden; }
+.tool-item { background: var(--wh); padding: 36px 30px; text-decoration: none; display: block; transition: background 0.15s; }
+.tool-item:hover { background: var(--off); }
+.tool-item:hover .t-arrow { transform: translateX(5px); }
+.t-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--g); margin-bottom: 18px; display: block; }
+.t-name { font-family: 'Playfair Display', serif; font-size: 17px; font-weight: 700; color: var(--bk); line-height: 1.25; margin-bottom: 10px; }
+.t-desc { font-size: 12px; font-weight: 300; color: var(--lt); line-height: 1.7; margin-bottom: 22px; }
+.t-arrow { font-family: 'DM Mono', monospace; font-size: 12px; color: var(--g); transition: transform 0.2s; display: inline-block; }
+
+/* CASE SECTION */
+.case-section { padding: 100px 64px; border-bottom: 1px solid var(--bd); display: grid; grid-template-columns: 4fr 6fr; gap: 100px; align-items: start; }
+.case-big-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--bk); margin-bottom: 22px; margin-top: 20px; }
+.case-body { font-size: 14px; font-weight: 300; color: var(--md); line-height: 1.85; margin-bottom: 32px; }
+.ct { width: 100%; border-collapse: collapse; }
+.ct tr { border-bottom: 1px solid var(--bd); }
+.ct td { padding: 14px 0; font-size: 12px; vertical-align: top; }
+.ct-k { color: var(--lt); width: 36%; line-height: 1.5; }
+.ct-v { color: var(--bk); line-height: 1.65; }
+.ct-v strong { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--g); font-weight: 500; display: block; margin-bottom: 1px; }
+
+/* PHASES */
+.phases { padding: 100px 64px; border-bottom: 1px solid var(--bd); }
+.phases-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 1px; background: var(--bd); border: 1px solid var(--bd); border-radius: 4px; overflow: hidden; margin-top: 52px; }
+.phase-col { padding: 32px 24px; background: var(--wh); border-bottom: 3px solid transparent; }
+.phase-col.active { background: var(--bk); border-bottom-color: var(--g); }
+.p-num { font-family: 'DM Mono', monospace; font-size: 9px; letter-spacing: 0.1em; color: var(--g); margin-bottom: 14px; display: block; }
+.p-name { font-family: 'Playfair Display', serif; font-size: 16px; font-weight: 700; color: var(--bk); margin-bottom: 10px; }
+.phase-col.active .p-name { color: var(--wh); }
+.p-q { font-size: 11px; font-weight: 300; color: var(--lt); line-height: 1.65; font-style: italic; }
+.phase-col.active .p-q { color: rgba(255,255,255,0.45); }
+
+/* MARKET */
+.market { padding: 100px 64px; border-bottom: 1px solid var(--bd); display: grid; grid-template-columns: 1fr 1fr; gap: 100px; }
+.market-title { font-family: 'Playfair Display', serif; font-size: clamp(24px, 2.6vw, 36px); font-weight: 700; line-height: 1.15; letter-spacing: -0.02em; color: var(--bk); margin-bottom: 22px; margin-top: 20px; }
+.market-body { font-size: 14px; font-weight: 300; color: var(--md); line-height: 1.85; }
+.mt-row { display: grid; grid-template-columns: 72px 1fr; gap: 24px; padding: 24px 0; border-bottom: 1px solid var(--bd); align-items: baseline; }
+.mt-row:last-child { border-bottom: none; }
+.mt-yr { font-family: 'DM Mono', monospace; font-size: 10px; font-weight: 500; }
+.mt-yr.dn { color: #C0392B; } .mt-yr.fl { color: #E67E22; } .mt-yr.up { color: var(--g); }
+.mt-h { font-family: 'Playfair Display', serif; font-size: 15px; font-weight: 700; color: var(--bk); margin-bottom: 5px; }
+.mt-d { font-size: 12px; font-weight: 300; color: var(--lt); line-height: 1.7; }
+.mt-sd { font-size: 11px; color: var(--g); font-weight: 500; margin-top: 4px; }
+
+/* CTA */
+.cta { padding: 120px 64px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; border-bottom: 1px solid var(--bd); }
+.cta-title { font-family: 'Playfair Display', serif; font-size: clamp(30px, 3.5vw, 48px); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; color: var(--bk); }
+.cta-title em { font-style: italic; color: var(--g); }
+.cta-body { font-size: 14px; font-weight: 300; color: var(--md); line-height: 1.85; margin-bottom: 32px; }
+.cta-actions { display: flex; align-items: center; gap: 24px; }
+
+/* FOOTER */
+footer { padding: 36px 64px; display: flex; align-items: center; justify-content: space-between; }
+.ft-l { font-family: 'DM Mono', monospace; font-size: 10px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--lt); }
+.ft-l span { color: var(--g); }
+.ft-r { font-size: 11px; color: var(--lt); font-weight: 300; }
+
+/* ANIMATIONS */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(18px); } to { opacity: 1; transform: translateY(0); } }
+.hero-kicker { animation: fadeUp 0.5s ease both; }
+.hero-title   { animation: fadeUp 0.5s 0.08s ease both; }
+.hero-body    { animation: fadeUp 0.5s 0.16s ease both; }
+.hero-actions { animation: fadeUp 0.5s 0.24s ease both; }
+.hero-right   { animation: fadeUp 0.5s 0.12s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 1100px) {
+  .hero { grid-template-columns: 1fr; gap: 56px; padding: 140px 40px 80px; }
+  .stats { grid-template-columns: 1fr 1fr; }
+  .stat:nth-child(2) { border-right: none; }
+  .stat:nth-child(3), .stat:nth-child(4) { border-top: 1px solid var(--bd); }
+  .stat:nth-child(3) { border-right: 1px solid var(--bd); }
+  .tools-list { grid-template-columns: 1fr 1fr; }
+  .case-section, .market, .cta { grid-template-columns: 1fr; gap: 48px; }
+  .phases-grid { grid-template-columns: 1fr 1fr 1fr; }
+  .section-hdr { grid-template-columns: 1fr; gap: 16px; }
+}
+@media (max-width: 700px) {
+  nav { padding: 0 24px; }
+  .nav-links { display: none; }
+  .hero, .tools, .case-section, .phases, .market, .cta { padding-left: 24px; padding-right: 24px; }
+  .stat { padding: 36px 24px; }
+  .tools-list, .phases-grid { grid-template-columns: 1fr; }
+  footer { padding: 28px 24px; flex-direction: column; gap: 10px; text-align: center; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">BD<span>.</span>Intelligence</div>
+  <ul class="nav-links">
+    <li><a href="file:///C:/Users/tgala/Downloads/index.html#tools">Tools</a></li>
+    <li><a href="file:///C:/Users/tgala/Downloads/index.html#case">Case Study</a></li>
+    <li><a href="file:///C:/Users/tgala/Downloads/index.html#method">Method</a></li>
+    <li><a href="file:///C:/Users/tgala/Downloads/index.html#market">Market</a></li>
+  </ul>
+  <a href="file:///C:/Users/tgala/Downloads/index.html#tools" class="nav-enter">Enter Platform</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-kicker">ASLA Business Development · 2026</div>
+    <h1 class="hero-title">Win life science<br>work in <em>San Diego.</em></h1>
+    <p class="hero-body">A research-grounded BD framework built for landscape architecture firms pursuing life science campus clients — with Alexandria Real Estate Equities as the live case study throughout.</p>
+    <div class="hero-actions">
+      <a href="file:///C:/Users/tgala/Downloads/ls-sd-playbook-2026.html" class="btn btn-dark">Open the Playbook</a>
+      <a href="file:///C:/Users/tgala/Downloads/index.html#case" class="btn-ghost">View the case study</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="case-label">Live Case Study · FY 2025 10-K</div>
+    <div class="case-title">Alexandria Real Estate Equities</div>
+    <div class="cm-row"><span class="cm-key">San Diego occupancy</span><span class="cm-val green">97.2%</span></div>
+    <div class="cm-row"><span class="cm-key">Active pipeline</span><span class="cm-val">$6.35B committed</span></div>
+    <div class="cm-row"><span class="cm-key">Target opportunity</span><span class="cm-val">466,598 RSF · BMS</span></div>
+    <div class="cm-row"><span class="cm-key">Construction · Delivery</span><span class="cm-val">2026 · 2028</span></div>
+    <div class="cm-row"><span class="cm-key">Confirmed LA on SD projects</span><span class="cm-val green">None — gap open</span></div>
+    <div class="case-note">No landscape architect is publicly confirmed on any Alexandria Real Estate San Diego project. That is the opening this playbook is built around.</div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stat"><div class="stat-val">5<span>→</span></div><div class="stat-desc">BD phases, each answered with real ARE intelligence from public filings</div></div>
+  <div class="stat"><div class="stat-val">97<span>%</span></div><div class="stat-desc">ARE San Diego occupancy — highest of any market in their portfolio</div></div>
+  <div class="stat"><div class="stat-val">19<span>M</span></div><div class="stat-desc">RSF of future entitled Megacampus pipeline across ARE markets</div></div>
+  <div class="stat"><div class="stat-val">0</div><div class="stat-desc">Confirmed landscape architects on ARE San Diego projects right now</div></div>
+</div>
+
+<!-- TOOLS -->
+<div class="tools" id="tools">
+  <div class="section-hdr">
+    <div>
+      <div class="section-kicker">Platform Tools</div>
+      <h2 class="section-title">Six tools. One client target. Real intelligence.</h2>
+    </div>
+    <p class="section-desc">Every tool is built around publicly verifiable data from ARE's 10-K, press releases, earnings calls, and CR report. No generic advice — specific, sourced, actionable research your competitors don't have.</p>
+  </div>
+  <div class="tools-list">
+    <a href="file:///C:/Users/tgala/Downloads/are-client-profile.html" class="tool-item">
+      <span class="t-num">01 — Client Profile</span>
+      <div class="t-name">Annual Report Analysis</div>
+      <p class="t-desc">Complete breakdown of ARE's FY 2025 10-K — portfolio by market, development pipeline, tenant mix, key risks, and BD opportunity map.</p>
+      <span class="t-arrow">→</span>
+    </a>
+    <a href="file:///C:/Users/tgala/Downloads/are-aec-consultants.html" class="tool-item">
+      <span class="t-num">02 — AEC Ecosystem</span>
+      <div class="t-name">Consultants &amp; Partners</div>
+      <p class="t-desc">Confirmed architects, landscape architects, engineers, and GCs on ARE projects — plus social media intelligence and events where ARE leadership appears.</p>
+      <span class="t-arrow">→</span>
+    </a>
+    <a href="file:///C:/Users/tgala/Downloads/ls-sd-playbook-2026.html" class="tool-item">
+      <span class="t-num">03 — BD Playbook</span>
+      <div class="t-name">San Diego Pursuit Guide</div>
+      <p class="t-desc">Five-phase BD framework worked through the Campus Point opportunity — Scout, Engage, Position, Capture, Retain — with presenter notes throughout.</p>
+      <span class="t-arrow">→</span>
+    </a>
+    <a href="file:///C:/Users/tgala/Downloads/asla-market-dashboard.html" class="tool-item">
+      <span class="t-num">04 — Market Dashboard</span>
+      <div class="t-name">Sector Priority Analysis</div>
+      <p class="t-desc">Local market sector priorities by revenue potential, competition level, and strategic fit — calibrated for a 5-person Southern California LA firm.</p>
+      <span class="t-arrow">→</span>
+    </a>
+    <a href="file:///C:/Users/tgala/Downloads/asla-pipeline-projection.html" class="tool-item">
+      <span class="t-num">05 — Pipeline Projection</span>
+      <div class="t-name">Revenue &amp; Growth Model</div>
+      <p class="t-desc">4-year pipeline projection with conservative and optimistic scenarios, life science revenue downshift factored in for 2026–2027, and staffing curve.</p>
+      <span class="t-arrow">→</span>
+    </a>
+    <a href="file:///C:/Users/tgala/Downloads/asla-pursuing-winning-work-LS.html" class="tool-item">
+      <span class="t-num">06 — BD Field Guide</span>
+      <div class="t-name">Pursuing &amp; Winning Work</div>
+      <p class="t-desc">The complete BD field guide with life science market context, fee strategy, go/no-go frameworks, proposal tactics, and retention discipline.</p>
+      <span class="t-arrow">→</span>
+    </a>
+  </div>
+</div>
+
+<!-- CASE STUDY -->
+<div class="case-section" id="case">
+  <div>
+    <div class="section-kicker">Case Study</div>
+    <h2 class="case-big-title">Alexandria Real Estate — worked through every phase.</h2>
+    <p class="case-body">Every question in the BD framework is answered for a real client, a real opportunity, and a real market gap. The Campus Point BMS build-to-suit is the most confirmed, funded, and documented life science construction opportunity available to a Southern California landscape architecture firm right now.</p>
+    <a href="file:///C:/Users/tgala/Downloads/are-client-profile.html" class="btn btn-dark">Open the Client Profile</a>
+  </div>
+  <div>
+    <table class="ct">
+      <tbody><tr><td class="ct-k">NYSE</td><td class="ct-v"><strong>ARE</strong>Alexandria Real Estate Equities, Inc.</td></tr>
+      <tr><td class="ct-k">Headquarters</td><td class="ct-v">26 N. Euclid Ave, Pasadena, CA — 2 hours from Torrance</td></tr>
+      <tr><td class="ct-k">Target project</td><td class="ct-v"><strong>466,598 RSF</strong>Campus Point by Alexandria · University Town Center, San Diego · BMS build-to-suit</td></tr>
+      <tr><td class="ct-k">Lease executed</td><td class="ct-v">July 2025 · 16-year term · Largest in ARE's 31-year history</td></tr>
+      <tr><td class="ct-k">Timeline</td><td class="ct-v">Construction commences 2026 · Delivery 2028</td></tr>
+      <tr><td class="ct-k">Certifications</td><td class="ct-v">LEED Gold · Fitwel · 100% electrification</td></tr>
+      <tr><td class="ct-k">ARE's own language</td><td class="ct-v" style="font-style:italic;color:var(--md);">"Elevated amenity experience that enables the recruitment and retention of mission-critical talent."</td></tr>
+      <tr><td class="ct-k">Confirmed LA on SD</td><td class="ct-v" style="color:var(--g);font-weight:500;">None. The gap this playbook is built to help you fill.</td></tr>
+    </tbody></table>
+  </div>
+</div>
+
+<!-- METHOD -->
+<div class="phases" id="method">
+  <div class="section-kicker">The Method</div>
+  <h2 class="section-title">Five phases. Each one answered for ARE.</h2>
+  <div class="phases-grid">
+    <div class="phase-col">
+      <span class="p-num">Phase 01</span>
+      <div class="p-name">Scout</div>
+      <p class="p-q">Is it real? Is it funded? Is the scope right for your firm?</p>
+    </div>
+    <div class="phase-col active">
+      <span class="p-num">Phase 02</span>
+      <div class="p-name">Engage</div>
+      <p class="p-q">Who are you talking to — and how do you show up as a resource?</p>
+    </div>
+    <div class="phase-col">
+      <span class="p-num">Phase 03</span>
+      <div class="p-name">Position</div>
+      <p class="p-q">What is your win statement? Where are your competitors weak?</p>
+    </div>
+    <div class="phase-col">
+      <span class="p-num">Phase 04</span>
+      <div class="p-name">Capture</div>
+      <p class="p-q">Does your proposal use ARE's exact language? Does it name the LEED credits?</p>
+    </div>
+    <div class="phase-col">
+      <span class="p-num">Phase 05</span>
+      <div class="p-name">Retain</div>
+      <p class="p-q">How do you stay connected through the 19.9M RSF future pipeline?</p>
+    </div>
+  </div>
+</div>
+
+<!-- MARKET -->
+<div class="market" id="market">
+  <div>
+    <div class="section-kicker">Market Context</div>
+    <h2 class="market-title">Headwinds nationally. San Diego is the exception.</h2>
+    <p class="market-body">Lab space vacancy sits at 21.4% nationally. NIH funding is under pressure. Most developers are pausing speculative starts — and most of your competitors have gone quiet with them.<br><br>San Diego did not follow that script. ARE's San Diego occupancy held at 97.2%. Campus Point is at 98.8%. The largest lease in Alexandria's history just executed and breaks ground in 2026.<br><br>The firms that plant seeds in a headwind market are the ones that harvest the recovery. The 2028 uptick is coming. The question is whether your firm will have the relationships in place to capture it.</p>
+  </div>
+  <div>
+    <div class="mt-row"><div class="mt-yr dn">2026</div><div><div class="mt-h">Contraction</div><div class="mt-d">Speculative starts pause. Committed pipelines continue. Maximum relationship-building window — competitors are quiet.</div><div class="mt-sd">San Diego: 97.2% occupied. Campus Point groundbreaking.</div></div></div>
+    <div class="mt-row"><div class="mt-yr fl">2027</div><div><div class="mt-h">Stabilization</div><div class="mt-d">Vacancy absorbs. Pharma M&amp;A accelerates. Developers begin assembling 2028 project teams. Relationships built in 2026 start receiving calls.</div></div></div>
+    <div class="mt-row"><div class="mt-yr up">2028</div><div><div class="mt-h">Recovery</div><div class="mt-d">Campus Point BMS delivers. Ground-up starts accelerate. ARE's future pipeline activates. Firms with established relationships win this work.</div></div></div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+  <h2 class="cta-title">The gap is open.<br><em>Move now.</em></h2>
+  <div>
+    <p class="cta-body">No landscape architect is confirmed on any Alexandria Real Estate San Diego project. Campus Point breaks ground in 2026. The prime architects who will assemble the project team are reachable right now. The Biocom SD and ULI San Diego events where ARE's development staff appear are scheduled. This platform gives you the intelligence and the specific actions to use this window.</p>
+    <div class="cta-actions">
+      <a href="file:///C:/Users/tgala/Downloads/ls-sd-playbook-2026.html" class="btn btn-dark">Open the BD Playbook</a>
+      <a href="file:///C:/Users/tgala/Downloads/are-client-profile.html" class="btn-ghost">Read the client profile</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="ft-l">BD<span>.</span>Intelligence — ASLA Workshop 2026</div>
+  <div class="ft-r">All data sourced from public filings, press releases, and industry records.</div>
+</footer>
+
+
+
+</body></html>

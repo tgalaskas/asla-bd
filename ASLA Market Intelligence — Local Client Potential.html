@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)file:///C:/Users/tgala/Downloads/asla-market-dashboard%20(4).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASLA Market Intelligence — Local Client Potential</title>
+<link href="./ASLA Market Intelligence — Local Client Potential_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --green-deep: #81BC00;
+    --green-mid: #6A9C00;
+    --green-accent: #4A7A00;
+    --green-light: #ffffff;
+    --green-pale: #EBF5D0;
+    --gold: #1A1A1A;
+    --gold-light: #444444;
+    --cream: #F4F4F4;
+    --warm-white: #FFFFFF;
+    --charcoal: #1A1A1A;
+    --text-mid: #3D3D3D;
+    --text-light: #6B6B6B;
+    --border: #DDDDDD;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #FFFFFF;
+    color: var(--charcoal);
+    min-height: 100vh;
+  }
+
+  /* ── HEADER ── */
+  header {
+    background: var(--green-deep);
+    padding: 32px 48px 28px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    border-bottom: 3px solid var(--gold);
+    position: relative;
+    overflow: hidden;
+  }
+  header::before {
+    content: '';
+    position: absolute;
+    top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(82,183,136,0.12) 0%, transparent 70%);
+  }
+  header::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 40%;
+    width: 100%; height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(201,168,76,0.3), transparent);
+  }
+
+  .header-left h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cream);
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+  }
+  .header-left h1 span {
+    color: var(--green-light);
+  }
+  .header-left p {
+    font-size: 12px;
+    color: var(--green-light);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    margin-top: 6px;
+    font-weight: 500;
+  }
+  .header-right {
+    text-align: right;
+    font-family: 'DM Mono', monospace;
+    font-size: 11px;
+    color: var(--green-light);
+    opacity: 0.7;
+    line-height: 1.7;
+  }
+  .header-right .tag {
+    display: inline-block;
+    background: rgba(82,183,136,0.15);
+    border: 1px solid rgba(82,183,136,0.3);
+    padding: 3px 10px;
+    border-radius: 2px;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    margin-bottom: 6px;
+    color: var(--green-light);
+  }
+
+  /* ── LEGEND BAR ── */
+  .legend-bar {
+    background: var(--green-deep);
+    padding: 10px 48px 14px;
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  .legend-label {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-right: 4px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    font-weight: 500;
+  }
+  .legend-dot {
+    width: 10px; height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  .dot-high { background: var(--green-accent); }
+  .dot-mid  { background: var(--gold); }
+  .dot-low  { background: #888; }
+
+  /* ── MAIN LAYOUT ── */
+  main {
+    padding: 36px 48px 48px;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+  }
+  .section-label h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--green-deep);
+  }
+  .section-label .line {
+    flex: 1;
+    height: 1px;
+    background: var(--border);
+  }
+  .section-label .scope-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    padding: 3px 10px;
+    background: var(--green-deep);
+    color: var(--green-light);
+    border-radius: 2px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── SECTOR GRID ── */
+  .sector-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+  }
+
+  /* ── SECTOR CARD ── */
+  .sector-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    position: relative;
+  }
+  .sector-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(29,61,46,0.12);
+    border-color: var(--green-accent);
+  }
+  .sector-card.active {
+    border-color: var(--green-mid);
+    box-shadow: 0 8px 24px rgba(29,61,46,0.14);
+  }
+
+  .card-header {
+    padding: 16px 18px 12px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--border);
+    background: var(--cream);
+  }
+  .card-icon {
+    font-size: 22px;
+    line-height: 1;
+  }
+  .priority-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    padding: 2px 8px;
+    border-radius: 2px;
+    text-transform: uppercase;
+  }
+  .badge-high {
+    background: rgba(82,183,136,0.18);
+    color: var(--green-mid);
+    border: 1px solid rgba(82,183,136,0.3);
+  }
+  .badge-mid {
+    background: rgba(201,168,76,0.15);
+    color: #8a6d1e;
+    border: 1px solid rgba(201,168,76,0.3);
+  }
+  .badge-low {
+    background: rgba(120,120,120,0.1);
+    color: #666;
+    border: 1px solid rgba(120,120,120,0.2);
+  }
+
+  .card-body {
+    padding: 14px 18px;
+  }
+  .sector-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--green-deep);
+    margin-bottom: 6px;
+  }
+  .sector-tagline {
+    font-size: 11px;
+    color: var(--text-light);
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  /* Bars */
+  .metric-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+  .metric-label {
+    font-size: 10px;
+    color: var(--text-light);
+    width: 66px;
+    flex-shrink: 0;
+    text-align: right;
+  }
+  .bar-track {
+    flex: 1;
+    height: 5px;
+    background: var(--green-pale);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    transition: width 0.6s cubic-bezier(.4,0,.2,1);
+  }
+  .bar-high { background: var(--green-accent); }
+  .bar-mid  { background: var(--gold); }
+  .bar-low  { background: #b0b0b0; }
+  .metric-val {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--text-mid);
+    width: 24px;
+    text-align: right;
+  }
+
+  /* Expandable detail */
+  .card-detail {
+    display: none;
+    padding: 0 18px 16px;
+    border-top: 1px dashed var(--border);
+    margin-top: 2px;
+    animation: fadeIn 0.2s ease;
+  }
+  .card-detail.open { display: block; }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .detail-section-title {
+    font-size: 10px;
+    font-weight: 600;
+    color: var(--green-mid);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin: 12px 0 6px;
+  }
+  .detail-list {
+    list-style: none;
+  }
+  .detail-list li {
+    font-size: 11px;
+    color: var(--text-mid);
+    padding: 3px 0;
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    line-height: 1.4;
+  }
+  .detail-list li::before {
+    content: '→';
+    color: var(--green-accent);
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+  .project-types {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 8px;
+  }
+  .proj-tag {
+    font-size: 10px;
+    padding: 2px 8px;
+    background: var(--green-pale);
+    color: var(--green-mid);
+    border-radius: 2px;
+    border: 1px solid rgba(82,183,136,0.2);
+  }
+
+  .toggle-btn {
+    width: 100%;
+    padding: 8px;
+    background: none;
+    border: none;
+    border-top: 1px solid var(--border);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    color: var(--green-mid);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    transition: background 0.15s;
+    font-weight: 500;
+  }
+  .toggle-btn:hover { background: var(--green-pale); }
+  .toggle-arrow { transition: transform 0.2s; display: inline-block; }
+  .toggle-arrow.rotated { transform: rotate(180deg); }
+
+  /* ── SUMMARY STRIP ── */
+  .summary-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    margin-bottom: 36px;
+    padding: 22px 24px;
+    background: var(--green-deep);
+    border-radius: 8px;
+  }
+  .stat-block { text-align: center; }
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    color: var(--green-light);
+    line-height: 1;
+    font-weight: 600;
+  }
+  .stat-num span {
+    font-size: 16px;
+    color: var(--gold);
+  }
+  .stat-lbl {
+    font-size: 11px;
+    color: rgba(255,255,255,0.5);
+    margin-top: 5px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+  .stat-divider {
+    width: 1px;
+    background: rgba(255,255,255,0.1);
+    margin: 0 auto;
+    display: none;
+  }
+
+  /* ── PATH FORWARD ── */
+  .path-section {
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 24px 28px;
+    margin-bottom: 28px;
+  }
+  .path-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 16px;
+    color: var(--green-deep);
+    margin-bottom: 16px;
+    font-weight: 600;
+  }
+  .path-steps {
+    display: flex;
+    gap: 0;
+    position: relative;
+  }
+  .path-steps::before {
+    content: '';
+    position: absolute;
+    top: 18px;
+    left: 24px;
+    right: 24px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--green-accent), var(--gold), #aaa, #ccc);
+    z-index: 0;
+  }
+  .path-step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+  .step-dot {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 14px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  .step-1 .step-dot { background: var(--green-mid); }
+  .step-2 .step-dot { background: var(--gold); }
+  .step-3 .step-dot { background: #78909C; }
+  .step-4 .step-dot { background: #5C6BC0; }
+
+  .step-scope {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    color: var(--text-light);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 3px;
+  }
+  .step-name {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .step-desc {
+    font-size: 10px;
+    color: var(--text-light);
+    line-height: 1.5;
+    padding: 0 8px;
+  }
+
+  /* ── FOOTER ── */
+  footer {
+    padding: 16px 48px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer-asla {
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    color: var(--green-mid);
+    font-weight: 600;
+    letter-spacing: 0.06em;
+  }
+  .footer-note {
+    font-size: 10px;
+    color: var(--text-light);
+    font-family: 'DM Mono', monospace;
+    letter-spacing: 0.05em;
+  }
+
+  /* ── Responsiveness ── */
+  @media (max-width: 1024px) {
+    .sector-grid { grid-template-columns: repeat(2, 1fr); }
+    .summary-strip { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 640px) {
+    header, main, footer { padding-left: 20px; padding-right: 20px; }
+    .legend-bar { padding: 10px 20px 14px; flex-wrap: wrap; gap: 12px; }
+    .sector-grid { grid-template-columns: 1fr; }
+    .summary-strip { grid-template-columns: repeat(2, 1fr); }
+    .path-steps { flex-direction: column; gap: 16px; }
+    .path-steps::before { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-left">
+    <h1>Local Client <span>Potential</span> Dashboard</h1>
+  </div>
+  <div class="header-right">
+    <div class="tag">Phase 1 of 4 — Local</div><br>
+    Landscape Architecture<br>
+    Marketing Strategy Session<br>
+    2026
+  </div>
+</header>
+
+<div class="legend-bar">
+  <span class="legend-label">Priority:</span>
+  <div class="legend-item"><div class="legend-dot dot-high"></div>High — Pursue Now</div>
+  <div class="legend-item"><div class="legend-dot dot-mid"></div>Medium — Nurture Pipeline</div>
+  <div class="legend-item"><div class="legend-dot dot-low"></div>Emerging — Build Awareness</div>
+</div>
+
+<main>
+
+  <!-- Summary Stats -->
+  <div class="summary-strip">
+    <div class="stat-block">
+      <div class="stat-num">8<span> sectors</span></div>
+      <div class="stat-lbl">Local Market Areas</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">3<span> high</span></div>
+      <div class="stat-lbl">Priority Sectors</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">3<span> mid</span></div>
+      <div class="stat-lbl">Pipeline Sectors</div>
+    </div>
+    <div class="stat-block">
+      <div class="stat-num">4<span> phases</span></div>
+      <div class="stat-lbl">Scale-Up Roadmap</div>
+    </div>
+  </div>
+
+  <!-- Sector Heading -->
+  <div class="section-label">
+    <h2>Local Sector Analysis</h2>
+    <div class="line"></div>
+    <div class="scope-badge">Phase 1 · Local</div>
+  </div>
+
+  <!-- Sector Cards Grid -->
+  <div class="sector-grid">
+
+    <!-- 1. Schools -->
+    <div class="sector-card" id="card-schools">
+      <div class="card-header">
+        <div class="card-icon">🏫</div>
+        <span class="priority-badge badge-high">High Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">K–12 Schools</div>
+        <div class="sector-tagline">Bond-funded campuses driving continuous landscape upgrades and outdoor learning environments.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 88%;"></div></div>
+          <span class="metric-val">88</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 80%;"></div></div>
+          <span class="metric-val">80</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 55%;"></div></div>
+          <span class="metric-val">55</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 82%;"></div></div>
+          <span class="metric-val">82</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;schools&#39;)">Explore sector <span class="toggle-arrow" id="arrow-schools">▾</span></button>
+      <div class="card-detail" id="detail-schools">
+        <div class="detail-section-title">Why Pursue</div>
+        <ul class="detail-list">
+          <li>Measure AA, J, and similar bonds fund exterior campus improvements</li>
+          <li>Strong advocacy for outdoor classrooms, native landscapes, stormwater gardens</li>
+          <li>Districts often repeat with same firm if outcomes are positive</li>
+          <li>DSA approval process rewards firms with established track records</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>LAUSD, LBUSD, Long Beach Unified, Compton USD</li>
+          <li>Prequalification lists — get on them early</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Outdoor Classrooms</span>
+          <span class="proj-tag">Playgrounds</span>
+          <span class="proj-tag">Shade Structures</span>
+          <span class="proj-tag">Stormwater</span>
+          <span class="proj-tag">Native Planting</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2. Colleges / Universities -->
+    <div class="sector-card" id="card-colleges">
+      <div class="card-header">
+        <div class="card-icon">🎓</div>
+        <span class="priority-badge badge-high">High Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Colleges &amp; Universities</div>
+        <div class="sector-tagline">Master plan implementation, sustainability mandates, and campus identity through landscape.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 82%;"></div></div>
+          <span class="metric-val">82</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 90%;"></div></div>
+          <span class="metric-val">90</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 72%;"></div></div>
+          <span class="metric-val">72</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 60%;"></div></div>
+          <span class="metric-val">60</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;colleges&#39;)">Explore sector <span class="toggle-arrow" id="arrow-colleges">▾</span></button>
+      <div class="card-detail" id="detail-colleges">
+        <div class="detail-section-title">Why Pursue</div>
+        <ul class="detail-list">
+          <li>CSU and UC campuses have active capital programs with LA offices</li>
+          <li>Sustainability goals align perfectly with LA practice expertise</li>
+          <li>Multi-year master plan relationships = steady project pipeline</li>
+          <li>Community colleges (LACCD) are active and bond-funded</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Cal State Dominguez Hills, El Camino College, Harbor College</li>
+          <li>LACCD Prop A/AA/CC bond program contacts</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Campus Master Plans</span>
+          <span class="proj-tag">Quad Redesign</span>
+          <span class="proj-tag">Stormwater BMPS</span>
+          <span class="proj-tag">Wayfinding Landscape</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3. Parks -->
+    <div class="sector-card" id="card-parks">
+      <div class="card-header">
+        <div class="card-icon">🌳</div>
+        <span class="priority-badge badge-high">High Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Parks &amp; Recreation</div>
+        <div class="sector-tagline">Core LA discipline — urban park equity, active recreation, and green infrastructure funding are surging.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 92%;"></div></div>
+          <span class="metric-val">92</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 85%;"></div></div>
+          <span class="metric-val">85</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 78%;"></div></div>
+          <span class="metric-val">78</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 75%;"></div></div>
+          <span class="metric-val">75</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;parks&#39;)">Explore sector <span class="toggle-arrow" id="arrow-parks">▾</span></button>
+      <div class="card-detail" id="detail-parks">
+        <div class="detail-section-title">Why Pursue</div>
+        <ul class="detail-list">
+          <li>LA County Measure A + Safe, Clean Water Program = major pipeline</li>
+          <li>Park equity initiatives target underserved communities in South Bay</li>
+          <li>City of Long Beach, Carson, Compton, and LA Rec &amp; Parks all active</li>
+          <li>Grant-funded projects often sole-source or limited competition</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>City of Long Beach Parks &amp; Rec capital projects list</li>
+          <li>LA County Measure A grant recipients — build relationships now</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Neighborhood Parks</span>
+          <span class="proj-tag">Trail Systems</span>
+          <span class="proj-tag">Dog Parks</span>
+          <span class="proj-tag">Playgrounds</span>
+          <span class="proj-tag">Urban Greening</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. Non-Profits -->
+    <div class="sector-card" id="card-nonprofits">
+      <div class="card-header">
+        <div class="card-icon">🤝</div>
+        <span class="priority-badge badge-mid">Mid Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Non-Profits</div>
+        <div class="sector-tagline">Mission-aligned partnerships, grant-leveraged work, and community visibility through pro-bono or reduced-fee engagements.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 60%;"></div></div>
+          <span class="metric-val">60</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-low" style="width: 38%;"></div></div>
+          <span class="metric-val">38</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-low" style="width: 28%;"></div></div>
+          <span class="metric-val">28</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 86%;"></div></div>
+          <span class="metric-val">86</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;nonprofits&#39;)">Explore sector <span class="toggle-arrow" id="arrow-nonprofits">▾</span></button>
+      <div class="card-detail" id="detail-nonprofits">
+        <div class="detail-section-title">Strategic Value</div>
+        <ul class="detail-list">
+          <li>Portfolio-building in community/social impact design — differentiates firm</li>
+          <li>Relationships lead to referrals into municipal and institutional work</li>
+          <li>Press coverage for high-visibility pro-bono or reduced-fee projects</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Tree People, LA Conservation Corps, Trust for Public Land</li>
+          <li>Local community gardens, food forests, and habitat restoration groups</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Community Gardens</span>
+          <span class="proj-tag">Habitat Restoration</span>
+          <span class="proj-tag">Healing Gardens</span>
+          <span class="proj-tag">Youth Programs</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5. Cultural -->
+    <div class="sector-card" id="card-cultural">
+      <div class="card-header">
+        <div class="card-icon">🏛️</div>
+        <span class="priority-badge badge-mid">Mid Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Cultural Institutions</div>
+        <div class="sector-tagline">Museums, libraries, historic sites, and arts centers seeking signature landscape to elevate visitor experience.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 55%;"></div></div>
+          <span class="metric-val">55</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 62%;"></div></div>
+          <span class="metric-val">62</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 50%;"></div></div>
+          <span class="metric-val">50</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 58%;"></div></div>
+          <span class="metric-val">58</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;cultural&#39;)">Explore sector <span class="toggle-arrow" id="arrow-cultural">▾</span></button>
+      <div class="card-detail" id="detail-cultural">
+        <div class="detail-section-title">Why Pursue</div>
+        <ul class="detail-list">
+          <li>High design visibility — completed projects become portfolio showcases</li>
+          <li>Public libraries are municipally funded with smaller-scope entry points</li>
+          <li>Long Beach Cultural Arts Center and area museums are accessible locally</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Long Beach Public Library, El Dorado Nature Center</li>
+          <li>LACMA, Autry Museum campus landscape initiatives (larger pipeline)</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Entry Plazas</span>
+          <span class="proj-tag">Sculpture Gardens</span>
+          <span class="proj-tag">Interpretive Landscapes</span>
+          <span class="proj-tag">Courtyard Design</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6. Institutional -->
+    <div class="sector-card" id="card-institutional">
+      <div class="card-header">
+        <div class="card-icon">🏢</div>
+        <span class="priority-badge badge-mid">Mid Priority</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Institutional</div>
+        <div class="sector-tagline">Hospitals, healthcare systems, and government facilities with capital budgets and long procurement cycles.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 65%;"></div></div>
+          <span class="metric-val">65</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 78%;"></div></div>
+          <span class="metric-val">78</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 68%;"></div></div>
+          <span class="metric-val">68</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-low" style="width: 42%;"></div></div>
+          <span class="metric-val">42</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;institutional&#39;)">Explore sector <span class="toggle-arrow" id="arrow-institutional">▾</span></button>
+      <div class="card-detail" id="detail-institutional">
+        <div class="detail-section-title">Why Pursue</div>
+        <ul class="detail-list">
+          <li>Hospitals invest in healing gardens, biophilic design, and wayfinding landscapes</li>
+          <li>Courthouse, civic center, and government campus projects are ongoing</li>
+          <li>Once on approved vendor list, multi-project relationships are common</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Harbor-UCLA, Providence South Bay, Long Beach Memorial Medical Center</li>
+          <li>LA County Public Works — minor projects are good for relationship-building</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Healing Gardens</span>
+          <span class="proj-tag">Civic Plazas</span>
+          <span class="proj-tag">Parking Lots / Green Infra</span>
+          <span class="proj-tag">Entry Landscapes</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7. Corporate -->
+    <div class="sector-card" id="card-corporate">
+      <div class="card-header">
+        <div class="card-icon">🏙️</div>
+        <span class="priority-badge badge-low">Emerging</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Corporate</div>
+        <div class="sector-tagline">Tech campuses, aerospace HQs, and life science facilities — high budgets, but ESG and amenity-driven landscape demands.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 58%;"></div></div>
+          <span class="metric-val">58</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 88%;"></div></div>
+          <span class="metric-val">88</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 82%;"></div></div>
+          <span class="metric-val">82</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-low" style="width: 35%;"></div></div>
+          <span class="metric-val">35</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;corporate&#39;)">Explore sector <span class="toggle-arrow" id="arrow-corporate">▾</span></button>
+      <div class="card-detail" id="detail-corporate">
+        <div class="detail-section-title">Why Pursue (Long Game)</div>
+        <ul class="detail-list">
+          <li>South Bay aerospace (SpaceX, Northrop, Boeing) and tech campuses</li>
+          <li>ESG reporting requirements are driving corporate landscape investment</li>
+          <li>High-fee potential — these projects rarely go to lowest bidder</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Corporate real estate managers and facility directors are the decision makers</li>
+          <li>Developer relationships often lead to corporate tenant work</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Campus Amenities</span>
+          <span class="proj-tag">Rooftop Gardens</span>
+          <span class="proj-tag">Biophilic Interiors</span>
+          <span class="proj-tag">LEED Site Design</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8. Mixed-Use / Residential Developer -->
+    <div class="sector-card" id="card-developer">
+      <div class="card-header">
+        <div class="card-icon">🏗️</div>
+        <span class="priority-badge badge-low">Emerging</span>
+      </div>
+      <div class="card-body">
+        <div class="sector-name">Mixed-Use / Developer</div>
+        <div class="sector-tagline">Infill housing, transit-oriented developments, and mixed-use projects mandating landscape under local and state policy.</div>
+        <div class="metric-row">
+          <span class="metric-label">Volume</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 80%;"></div></div>
+          <span class="metric-val">80</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Budget Avail.</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 65%;"></div></div>
+          <span class="metric-val">65</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Competition</span>
+          <div class="bar-track"><div class="bar-fill bar-high" style="width: 85%;"></div></div>
+          <span class="metric-val">85</span>
+        </div>
+        <div class="metric-row">
+          <span class="metric-label">Entry Ease</span>
+          <div class="bar-track"><div class="bar-fill bar-mid" style="width: 55%;"></div></div>
+          <span class="metric-val">55</span>
+        </div>
+      </div>
+      <button class="toggle-btn" onclick="toggle(&#39;developer&#39;)">Explore sector <span class="toggle-arrow" id="arrow-developer">▾</span></button>
+      <div class="card-detail" id="detail-developer">
+        <div class="detail-section-title">Why Pursue (Volume Play)</div>
+        <ul class="detail-list">
+          <li>AB 2011 and SB 9 are driving rapid infill — landscape is required</li>
+          <li>Repeat developer relationships = multiple projects per client</li>
+          <li>Entry at smaller scale (10–50 unit projects) before competing for large</li>
+        </ul>
+        <div class="detail-section-title">Entry Points</div>
+        <ul class="detail-list">
+          <li>Local developers active in Long Beach, Signal Hill, Hawthorne, Carson</li>
+          <li>Architect and civil engineering referrals are most reliable pathway</li>
+        </ul>
+        <div class="detail-section-title">Project Types</div>
+        <div class="project-types">
+          <span class="proj-tag">Podium Decks</span>
+          <span class="proj-tag">Courtyard Amenities</span>
+          <span class="proj-tag">Streetscape</span>
+          <span class="proj-tag">Common Areas</span>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /sector-grid -->
+
+  <!-- Scale-Up Pathway -->
+  <div class="section-label">
+    <h2>Market Scale-Up Roadmap</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="path-section">
+    <div class="path-title">From Local Anchor to National Practice</div>
+    <div class="path-steps">
+      <div class="path-step step-1">
+        <div class="step-dot">📍</div>
+        <div class="step-scope">Phase 1</div>
+        <div class="step-name">Local</div>
+        <div class="step-desc">Build portfolio in schools, parks, colleges. Establish reference clients. Win sub-regional recognition.</div>
+      </div>
+      <div class="path-step step-2">
+        <div class="step-dot">🗺️</div>
+        <div class="step-scope">Phase 2</div>
+        <div class="step-name">County</div>
+        <div class="step-desc">LA County Measure A projects. Regional park authorities. County-wide master plans and green infrastructure.</div>
+      </div>
+      <div class="path-step step-3">
+        <div class="step-dot">🌲</div>
+        <div class="step-scope">Phase 3</div>
+        <div class="step-name">State</div>
+        <div class="step-desc">Caltrans landscapes, CDFW habitat projects, state college system, and CalRecycle-funded programs.</div>
+      </div>
+      <div class="path-step step-4">
+        <div class="step-dot">🇺🇸</div>
+        <div class="step-scope">Phase 4</div>
+        <div class="step-name">National + Federal</div>
+        <div class="step-desc">NPS, USACE, federal campus work, GSA projects, and national practice through ASLA national network.</div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="footer-asla">ASLA — American Society of Landscape Architects</div>
+  <div class="footer-note">Marketing Intelligence Session · Local Phase · Click any sector to expand</div>
+</footer>
+
+<script>
+  function toggle(id) {
+    const detail = document.getElementById('detail-' + id);
+    const arrow  = document.getElementById('arrow-' + id);
+    const card   = document.getElementById('card-' + id);
+    const isOpen = detail.classList.contains('open');
+
+    detail.classList.toggle('open', !isOpen);
+    arrow.classList.toggle('rotated', !isOpen);
+    card.classList.toggle('active', !isOpen);
+  }
+
+  // Animate bars on load
+  window.addEventListener('load', () => {
+    const bars = document.querySelectorAll('.bar-fill');
+    bars.forEach(bar => {
+      const w = bar.style.width;
+      bar.style.width = '0';
+      setTimeout(() => { bar.style.width = w; }, 200);
+    });
+  });
+</script>
+
+
+
+</body></html>

@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<!-- saved from url=(0068)file:///C:/Users/tgala/Downloads/asla-pipeline-projection%20(8).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ASLA — 4-Year Pipeline Projection</title>
+<link href="./ASLA — 4-Year Pipeline Projection_files/css2" rel="stylesheet">
+<style>
+  :root {
+    --dark: #81BC00;
+    --mid: #6A9C00;
+    --light-grey: #ffffff;
+    --gold: #1A1A1A;
+    --gold-light: #444444;
+    --cream: #F4F4F4;
+    --charcoal: #1A1A1A;
+    --text-mid: #3D3D3D;
+    --text-light: #6B6B6B;
+    --border: #DDDDDD;
+    --con: #5B8DB8;
+    --opt: #52A471;
+    --con-pale: #E8F0F7;
+    --opt-pale: #E6F4EC;
+  }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:'DM Sans',sans-serif; background:#fff; color:var(--charcoal); }
+
+  header {
+    background:var(--dark); padding:24px 48px;
+    display:flex; align-items:flex-start; justify-content:space-between; gap:32px;
+    border-bottom:3px solid var(--gold);
+  }
+  .h-left { flex-shrink:0; }
+  .h-left p { font-size:11px; color:var(--light-grey); letter-spacing:0.1em; text-transform:uppercase; margin-bottom:6px; }
+  .h-left h1 { font-family:'Playfair Display',serif; font-size:24px; color:#fff; font-weight:700; line-height:1.2; }
+  .h-left h1 span { color:var(--gold); }
+  .h-right { max-width:390px; }
+  .h-tag { display:inline-block; background:rgba(201,168,76,0.15); border:1px solid rgba(201,168,76,0.3); padding:3px 10px; border-radius:2px; font-family:'DM Mono',monospace; font-size:10px; color:var(--gold); letter-spacing:0.08em; margin-bottom:10px; }
+  .cost-list { list-style:none; }
+  .cost-list li { font-size:10.5px; color:rgba(255,255,255,0.72); line-height:1.55; padding:4px 0; border-bottom:1px solid rgba(255,255,255,0.07); display:flex; gap:8px; align-items:baseline; }
+  .cost-list li:last-child { border-bottom:none; }
+  .cost-list .bul { color:var(--gold); flex-shrink:0; font-size:8px; }
+  .cost-list strong { color:#fff; }
+  .cost-list .src { color:rgba(255,255,255,0.3); font-size:9px; font-style:italic; margin-left:3px; }
+
+  .scenario-bar { background:var(--cream); padding:12px 48px; display:flex; align-items:center; gap:16px; border-bottom:1px solid var(--border); flex-wrap:wrap; }
+  .scen-label { font-size:11px; color:var(--text-light); text-transform:uppercase; letter-spacing:0.1em; font-weight:600; }
+  .scen-btns { display:flex; gap:8px; }
+  .scen-btn { padding:6px 18px; border-radius:3px; border:1.5px solid var(--border); font-family:'DM Sans',sans-serif; font-size:12px; font-weight:600; cursor:pointer; transition:all 0.2s; background:#fff; color:var(--text-mid); }
+  .scen-btn.act-con { background:var(--con); border-color:var(--con); color:#fff; }
+  .scen-btn.act-opt { background:var(--opt); border-color:var(--opt); color:#fff; }
+  .scen-btn.act-both { background:var(--dark); border-color:var(--dark); color:#fff; }
+  .scen-note { font-size:11px; color:var(--text-light); font-style:italic; margin-left:auto; }
+
+  main { padding:32px 48px 48px; max-width:1300px; margin:0 auto; }
+
+  .sec-lbl { display:flex; align-items:center; gap:12px; margin-bottom:20px; margin-top:36px; }
+  .sec-lbl:first-child { margin-top:0; }
+  .sec-lbl h2 { font-family:'Playfair Display',serif; font-size:17px; font-weight:600; color:var(--dark); white-space:nowrap; }
+  .sec-lbl .ln { flex:1; height:1px; background:var(--border); }
+  .sec-lbl .bdg { font-family:'DM Mono',monospace; font-size:10px; padding:3px 10px; background:var(--dark); color:var(--light-grey); border-radius:2px; letter-spacing:0.1em; white-space:nowrap; }
+
+  .stats-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:8px; }
+  .stat-card { background:var(--dark); border-radius:8px; padding:20px 22px; }
+  .stat-card .num { font-family:'Playfair Display',serif; font-size:30px; color:#fff; line-height:1; }
+  .stat-card .num span { font-size:14px; color:var(--gold); }
+  .stat-card .lbl { font-size:11px; color:var(--light-grey); margin-top:5px; text-transform:uppercase; letter-spacing:0.08em; opacity:0.7; }
+  .stat-card.hl { background:var(--gold); }
+  .stat-card.hl .num { color:var(--dark); }
+  .stat-card.hl .num span { color:var(--dark); opacity:0.7; }
+  .stat-card.hl .lbl { color:var(--dark); opacity:0.6; }
+
+  .year-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; }
+  .yr-card { background:#fff; border:1px solid var(--border); border-radius:8px; overflow:hidden; }
+  .yr-hdr { padding:14px 18px; background:var(--dark); }
+  .yr-hdr .yr { font-family:'Playfair Display',serif; font-size:20px; color:#fff; font-weight:700; }
+  .yr-hdr .ph { font-size:11px; color:var(--gold); text-transform:uppercase; letter-spacing:0.1em; margin-top:2px; }
+  .yr-body { padding:14px 18px; }
+  .yr-focus { font-size:11px; color:var(--text-light); font-style:italic; margin-bottom:12px; line-height:1.5; }
+  .sec-row { display:flex; align-items:center; gap:8px; margin-bottom:7px; }
+  .sec-ic { font-size:13px; width:18px; flex-shrink:0; }
+  .sec-nm { font-size:11px; color:var(--text-mid); width:88px; flex-shrink:0; font-weight:500; }
+  .pbadge { font-family:'DM Mono',monospace; font-size:10px; padding:1px 7px; border-radius:2px; flex-shrink:0; }
+  .p-con { background:var(--con-pale); color:var(--con); }
+  .p-opt { background:var(--opt-pale); color:var(--opt); }
+  .yr-tots { border-top:1px solid var(--border); margin-top:10px; padding-top:10px; }
+  .tot-row { display:flex; justify-content:space-between; margin-bottom:4px; }
+  .tot-lbl { font-size:10px; color:var(--text-light); text-transform:uppercase; letter-spacing:0.07em; }
+  .tot-val { font-family:'DM Mono',monospace; font-size:12px; font-weight:500; }
+  .v-con { color:var(--con); } .v-opt { color:var(--opt); }
+  .ms-list { margin-top:10px; border-top:1px dashed var(--border); padding-top:10px; }
+  .ms-ttl { font-size:10px; font-weight:600; color:var(--mid); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:6px; }
+  .ms-item { font-size:10px; color:var(--text-mid); padding:2px 0; display:flex; gap:6px; line-height:1.4; }
+  .ms-item::before { content:'◆'; color:var(--gold); font-size:7px; flex-shrink:0; margin-top:3px; }
+
+  .chart-wrap { background:#fff; border:1px solid var(--border); border-radius:8px; padding:24px 28px; }
+  .ch-legend { display:flex; flex-wrap:wrap; gap:14px; margin-bottom:16px; }
+  .ch-li { display:flex; align-items:center; gap:7px; font-size:11px; color:var(--text-mid); font-weight:500; }
+  .ch-dot { width:28px; height:3px; border-radius:2px; flex-shrink:0; }
+  canvas { width:100% !important; display:block; }
+
+  .sf-boxes { display:flex; gap:20px; flex-wrap:wrap; margin-bottom:16px; }
+  .sf-box { flex:1; min-width:220px; background:var(--cream); border-radius:6px; padding:14px 18px; border:1px solid var(--border); }
+  .sf-box-ttl { font-size:10px; font-weight:600; color:var(--mid); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+  .sf-row { display:flex; justify-content:space-between; font-size:11px; color:var(--text-mid); padding:3px 0; border-bottom:1px dashed var(--border); line-height:1.6; }
+  .sf-row:last-child { border-bottom:none; }
+  .sf-row strong { color:var(--dark); }
+  .di { display:inline-block; width:10px; height:10px; border-radius:50%; margin-right:6px; vertical-align:middle; }
+
+  .deep-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:12px; }
+  .deep-card { background:var(--cream); border:1px solid var(--border); border-radius:6px; padding:14px 16px; }
+  .deep-ic { font-size:18px; margin-bottom:6px; }
+  .deep-nm { font-size:13px; font-weight:600; color:var(--dark); margin-bottom:8px; font-family:'Playfair Display',serif; }
+  .deep-scen { display:flex; gap:8px; margin-bottom:8px; }
+  .sb { flex:1; border-radius:4px; padding:6px 8px; text-align:center; }
+  .sb-con { background:var(--con-pale); } .sb-opt { background:var(--opt-pale); }
+  .sb-num { font-family:'DM Mono',monospace; font-size:14px; font-weight:500; }
+  .sb-con .sb-num { color:var(--con); } .sb-opt .sb-num { color:var(--opt); }
+  .sb-lbl { font-size:9px; color:var(--text-light); text-transform:uppercase; letter-spacing:0.07em; margin-top:1px; }
+  .deep-fee { font-size:10px; color:var(--text-light); border-top:1px dashed var(--border); padding-top:7px; margin-top:4px; }
+  .deep-fee strong { color:var(--text-mid); }
+
+  footer { padding:14px 48px; border-top:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+  .ft-l { font-family:'Playfair Display',serif; font-size:13px; color:var(--mid); font-weight:600; }
+  .ft-r { font-size:10px; color:var(--text-light); font-family:'DM Mono',monospace; }
+
+  @media(max-width:1024px) { .stats-grid,.year-grid,.deep-grid { grid-template-columns:repeat(2,1fr); } header { flex-direction:column; } .h-right { max-width:100%; } }
+  @media(max-width:640px) { header,main,footer,.scenario-bar { padding-left:20px; padding-right:20px; } .stats-grid,.year-grid,.deep-grid,.sf-boxes { grid-template-columns:1fr; flex-direction:column; } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="h-left">
+    <p>ASLA — Pipeline Intelligence</p>
+    <h1>4-Year Client <span>Pipeline</span> Projection</h1>
+  </div>
+  <div class="h-right">
+    <div class="h-tag">5-Person LA Firm · Annual Cost Reality</div>
+    <ul class="cost-list">
+      <li><span class="bul">◆</span><span>Avg. LA landscape architect salary: <strong>~$90K–$115K</strong> across roles</span></li>
+      <li><span class="bul">◆</span><span>Payroll burden (taxes + benefits): <strong>~40%</strong> on top of salary</span></li>
+      <li><span class="bul">◆</span><span>LA office overhead — rent, software, insurance, marketing: <strong>~$150K–$200K/yr</strong></span></li>
+      <li><span class="bul">◆</span><span>Avg. fully-burdened cost/employee: <strong>~$137K/yr</strong> · Industry overhead rate: <strong>150–175%</strong> of direct labor <span class="src">BetterPros</span></span></li>
+      <li><span class="bul">◆</span><span>Target overhead rate: <strong>130–150%</strong> · Break-even rate: <strong>230–250%</strong> · Target profit margin: <strong style="color:var(--gold);">20%</strong> <span class="src">EntreArchitect</span></span></li>
+    </ul>
+  </div>
+</header>
+
+<div class="scenario-bar">
+  <span class="scen-label">Scenario:</span>
+  <div class="scen-btns">
+    <button class="scen-btn act-con" id="btn-con" onclick="setScenario(&#39;con&#39;)">Conservative</button>
+    <button class="scen-btn" id="btn-opt" onclick="setScenario(&#39;opt&#39;)">Optimistic</button>
+    <button class="scen-btn" id="btn-both" onclick="setScenario(&#39;both&#39;)">Show Both</button>
+  </div>
+  <span class="scen-note" id="scen-desc">Conservative: Measured entry, selective bidding, relationship-first approach</span>
+</div>
+
+<main>
+
+  <div class="sec-lbl"><h2>4-Year Totals at a Glance</h2><div class="ln"></div><div class="bdg">2026–2029</div></div>
+  <div class="stats-grid">
+    <div class="stat-card"><div class="num" id="s-proj">24<span>–56</span></div><div class="lbl">Total Projects (4 Yrs)</div></div>
+    <div class="stat-card"><div class="num" id="s-fee">$4.2M<span>–$8.4M</span></div><div class="lbl">Est. Fee Revenue</div></div>
+    <div class="stat-card"><div class="num">8<span> sectors</span></div><div class="lbl">Active Sectors by Yr 4</div></div>
+    <div class="stat-card hl"><div class="num" id="s-cli">18<span>–25</span></div><div class="lbl">Client Relationships Built</div></div>
+  </div>
+
+  <div class="sec-lbl"><h2>Year-by-Year Phase Breakdown</h2><div class="ln"></div><div class="bdg">Phase Cards</div></div>
+  <div class="year-grid">
+
+    <div class="yr-card">
+      <div class="yr-hdr"><div class="yr">2026</div><div class="ph">Foundation Year</div></div>
+      <div class="yr-body">
+        <div class="yr-focus">Establish credibility. Prequalify with districts and municipalities. Win first anchor projects.</div>
+        <div class="sec-row"><span class="sec-ic">🏫</span><span class="sec-nm">K–12 Schools</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–4 projects">1–2 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🌳</span><span class="sec-nm">Parks &amp; Rec</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–3 projects">1–2 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🎓</span><span class="sec-nm">Colleges</span><span class="pbadge p-con" data-con="0–1 projects" data-opt="1–2 projects">0–1 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🤝</span><span class="sec-nm">Non-Profits</span><span class="pbadge p-con" data-con="1 project" data-opt="1–2 projects">1 project</span></div>
+        <div class="yr-tots">
+          <div class="tot-row"><span class="tot-lbl">Projects</span><span class="tot-val v-con" data-con="3–6" data-opt="6–11">3–6</span></div>
+          <div class="tot-row"><span class="tot-lbl">Est. Fees</span><span class="tot-val v-con" data-con="$450K–$900K" data-opt="$900K–$1.8M">$450K–$900K</span></div>
+          <div class="tot-row"><span class="tot-lbl">New Clients</span><span class="tot-val v-con" data-con="3–5" data-opt="5–9">3–5</span></div>
+        </div>
+        <div class="ms-list"><div class="ms-ttl">Key Milestones</div>
+          <div class="ms-item">Prequalify with LBUSD + LACCD</div>
+          <div class="ms-item">Submit first parks RFQ to City of Long Beach</div>
+          <div class="ms-item">1 non-profit pro-bono for portfolio visibility</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="yr-card" style="border-top:3px solid var(--gold);">
+      <div class="yr-hdr" style="background:#2a2000;"><div class="yr">2027</div><div class="ph" style="color:var(--gold-light);">⚡ Market Shift Year</div></div>
+      <div class="yr-body">
+        <div style="font-size:11px;color:#8a6d1e;background:#fffbe6;padding:8px 10px;border-radius:4px;border-left:3px solid var(--gold);margin-bottom:12px;"><strong>Pivot:</strong> Higher Ed budgets tighten. Corporate accelerates. Redirect BD accordingly.</div>
+        <div class="sec-row"><span class="sec-ic">🏫</span><span class="sec-nm">K–12 Schools</span><span class="pbadge p-con" data-con="2–3 projects" data-opt="3–5 projects">2–3 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🌳</span><span class="sec-nm">Parks &amp; Rec</span><span class="pbadge p-con" data-con="2–3 projects" data-opt="3–4 projects">2–3 projects</span></div>
+        <div class="sec-row" style="opacity:0.5;">
+          <span class="sec-ic">🎓</span><span class="sec-nm" style="text-decoration:line-through;color:#aaa;">Colleges</span>
+          <span class="pbadge" style="background:#f5f5f5;color:#aaa;border:1px solid #ddd;" data-con="0–1 ↓" data-opt="1 ↓">0–1 ↓</span>
+          <span style="font-size:9px;color:#c0392b;font-weight:700;margin-left:4px;">SOFT</span>
+        </div>
+        <div class="sec-row" style="background:#f0faf4;border-radius:4px;padding:2px 4px;">
+          <span class="sec-ic">🏙️</span><span class="sec-nm" style="color:var(--opt);font-weight:700;">Corporate</span>
+          <span class="pbadge" style="background:#e0f5e9;color:var(--opt);border:1px solid #a8dab5;" data-con="1–2 ↑" data-opt="2–4 ↑">1–2 ↑</span>
+          <span style="font-size:9px;color:var(--opt);font-weight:700;margin-left:4px;">SURGE</span>
+        </div>
+        <div class="sec-row"><span class="sec-ic">🏢</span><span class="sec-nm">Institutional</span><span class="pbadge p-con" data-con="0–1 projects" data-opt="1–2 projects">0–1 projects</span></div>
+        <div class="yr-tots">
+          <div class="tot-row"><span class="tot-lbl">Projects</span><span class="tot-val v-con" data-con="5–10" data-opt="10–16">5–10</span></div>
+          <div class="tot-row"><span class="tot-lbl">Est. Fees</span><span class="tot-val v-con" data-con="$850K–$1.7M" data-opt="$1.7M–$3.1M">$850K–$1.7M</span></div>
+          <div class="tot-row"><span class="tot-lbl">New Clients</span><span class="tot-val v-con" data-con="4–7" data-opt="7–12">4–7</span></div>
+        </div>
+        <div class="ms-list"><div class="ms-ttl">Key Milestones</div>
+          <div class="ms-item">First corporate campus project — South Bay</div>
+          <div class="ms-item">Monitor CSU/UC freeze — shift BD to private</div>
+          <div class="ms-item">Enter institutional via Long Beach Memorial</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="yr-card">
+      <div class="yr-hdr"><div class="yr">2028</div><div class="ph">Market Expansion</div></div>
+      <div class="yr-body">
+        <div class="yr-focus">All sectors activating. County-level pursuit begins. Referral network producing. First hire threshold.</div>
+        <div class="sec-row"><span class="sec-ic">🏫</span><span class="sec-nm">K–12 Schools</span><span class="pbadge p-con" data-con="2–4 projects" data-opt="4–6 projects">2–4 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🌳</span><span class="sec-nm">Parks &amp; Rec</span><span class="pbadge p-con" data-con="2–4 projects" data-opt="4–5 projects">2–4 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🎓</span><span class="sec-nm">Colleges</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–4 projects">1–2 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🏢</span><span class="sec-nm">Institutional</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–3 projects">1–2 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🏙️</span><span class="sec-nm">Corporate</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–3 projects">1–2 projects</span></div>
+        <div class="yr-tots">
+          <div class="tot-row"><span class="tot-lbl">Projects</span><span class="tot-val v-con" data-con="7–14" data-opt="14–21">7–14</span></div>
+          <div class="tot-row"><span class="tot-lbl">Est. Fees</span><span class="tot-val v-con" data-con="$1.1M–$2.4M" data-opt="$2.4M–$3.8M">$1.1M–$2.4M</span></div>
+          <div class="tot-row"><span class="tot-lbl">New Clients</span><span class="tot-val v-con" data-con="5–9" data-opt="9–15">5–9</span></div>
+        </div>
+        <div class="ms-list"><div class="ms-ttl">Key Milestones</div>
+          <div class="ms-item">County-level RFQ (LA County Parks)</div>
+          <div class="ms-item">Developer referral network producing leads</div>
+          <div class="ms-item">Revenue hits ~$1.7M — evaluate 6th hire</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="yr-card">
+      <div class="yr-hdr"><div class="yr">2029</div><div class="ph">Scale &amp; Diversify</div></div>
+      <div class="yr-body">
+        <div class="yr-focus">All 8 sectors active. County projects flowing. State-level positioning. 7–8 person team.</div>
+        <div class="sec-row"><span class="sec-ic">🏫</span><span class="sec-nm">K–12 Schools</span><span class="pbadge p-con" data-con="3–5 projects" data-opt="5–7 projects">3–5 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🌳</span><span class="sec-nm">Parks &amp; Rec</span><span class="pbadge p-con" data-con="3–5 projects" data-opt="5–7 projects">3–5 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🎓</span><span class="sec-nm">Colleges</span><span class="pbadge p-con" data-con="2–3 projects" data-opt="3–5 projects">2–3 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🏙️</span><span class="sec-nm">Corporate</span><span class="pbadge p-con" data-con="2–3 projects" data-opt="3–4 projects">2–3 projects</span></div>
+        <div class="sec-row"><span class="sec-ic">🏗️</span><span class="sec-nm">Developer</span><span class="pbadge p-con" data-con="1–2 projects" data-opt="2–4 projects">1–2 projects</span></div>
+        <div class="yr-tots">
+          <div class="tot-row"><span class="tot-lbl">Projects</span><span class="tot-val v-con" data-con="11–20" data-opt="20–32">11–20</span></div>
+          <div class="tot-row"><span class="tot-lbl">Est. Fees</span><span class="tot-val v-con" data-con="$1.9M–$3.8M" data-opt="$3.8M–$7.0M">$1.9M–$3.8M</span></div>
+          <div class="tot-row"><span class="tot-lbl">New Clients</span><span class="tot-val v-con" data-con="6–12" data-opt="12–20">6–12</span></div>
+        </div>
+        <div class="ms-list"><div class="ms-ttl">Key Milestones</div>
+          <div class="ms-item">All 8 sectors have active/completed work</div>
+          <div class="ms-item">First state-level RFQ (CSU/UC system)</div>
+          <div class="ms-item">7–8 person firm — ASLA award submission</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="sec-lbl"><h2>Revenue Potential by Client Channel</h2><div class="ln"></div><div class="bdg">4-Year Growth Arc</div></div>
+  <div class="chart-wrap">
+    <div class="ch-legend" id="ch-leg"><div class="ch-li"><div class="ch-dot" style="background:#3D7EBF"></div><span>Local Government &amp; Municipal</span></div><div class="ch-li"><div class="ch-dot" style="background:#52A471"></div><span>County Projects</span></div><div class="ch-li"><div class="ch-dot" style="background:#1A1A1A"></div><span>State Projects</span></div><div class="ch-li"><div class="ch-dot" style="background:#7B5EA7"></div><span>Federal / Government</span></div><div class="ch-li"><div class="ch-dot" style="background:#D4573C"></div><span>National Firms, Corps &amp; Developers</span></div><div class="ch-li"><div class="ch-dot" style="background:#2B8C8C"></div><span>Program &amp; Facilities Managers</span></div></div>
+    <canvas id="chCanvas" height="300" width="1122"></canvas>
+    <div style="font-size:10px;color:var(--text-light);margin-top:10px;font-style:italic;text-align:center;">Midpoint of conservative–optimistic range · 5-person LA firm · Long Beach / LA market</div>
+  </div>
+
+  <div class="sec-lbl"><h2>Revenue Needed vs. Headcount — Los Angeles</h2><div class="ln"></div><div class="bdg">5-Person Baseline</div></div>
+  <div class="chart-wrap">
+    <div class="sf-boxes">
+      <div class="sf-box">
+        <div class="sf-box-ttl">5-Person LA Firm · Cost Breakdown</div>
+        <div class="sf-row"><span>Avg. blended salary</span><strong>~$95,000</strong></div>
+        <div class="sf-row"><span>+ Payroll burden (40%)</span><strong>~$38,000</strong></div>
+        <div class="sf-row"><span>Fully burdened / person</span><strong>~$133,000</strong></div>
+        <div class="sf-row" style="border-top:1px solid var(--border);margin-top:4px;padding-top:6px;"><span>5-person payroll total</span><strong>~$665,000</strong></div>
+        <div class="sf-row"><span>+ LA office overhead</span><strong>~$180,000</strong></div>
+        <div class="sf-row" style="padding-top:6px;border-top:1px solid var(--border);margin-top:4px;"><span><strong>Break-even revenue needed</strong></span><strong style="color:#c0392b;">~$1,050,000</strong></div>
+        <div class="sf-row"><span><strong>Revenue for 20% profit</strong></span><strong style="color:var(--opt);">~$1,400,000</strong></div>
+      </div>
+      <div class="sf-box">
+        <div class="sf-box-ttl">Hire Trigger · Revenue Thresholds</div>
+        <div class="sf-row"><span><span class="di" style="background:#3D7EBF;"></span>5 staff · Break-even</span><strong>$1.05M</strong></div>
+        <div class="sf-row"><span><span class="di" style="background:#52A471;"></span>5 staff · Healthy profit</span><strong>$1.4M</strong></div>
+        <div class="sf-row"><span><span class="di" style="background:#1A1A1A;"></span>Hire 6th person at</span><strong>~$1.7M</strong></div>
+        <div class="sf-row"><span><span class="di" style="background:#D4573C;"></span>7–8 staff needed at</span><strong>~$2.4M</strong></div>
+        <div class="sf-row"><span><span class="di" style="background:#7B5EA7;"></span>9–10 staff needed at</span><strong>~$3.2M</strong></div>
+        <div class="sf-row"><span><span class="di" style="background:#2B8C8C;"></span>12–15 staff at</span><strong>~$5M+</strong></div>
+      </div>
+    </div>
+    <canvas id="sfCanvas" height="280" width="1122"></canvas>
+    <div style="font-size:10px;color:var(--text-light);margin-top:10px;font-style:italic;text-align:center;">Based on ~$133K fully-burdened cost/employee · LA office overhead ~$180K · 20% profit target · Monograph 2024</div>
+  </div>
+
+  <div class="sec-lbl"><h2>4-Year Totals by Sector</h2><div class="ln"></div><div class="bdg">Sector View</div></div>
+  <div class="deep-grid">
+    <div class="deep-card"><div class="deep-ic">🏫</div><div class="deep-nm">K–12 Schools</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">8–14</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">14–22</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $1.2M–$3.5M over 4 yrs · Avg: $50K–$200K</div></div>
+    <div class="deep-card"><div class="deep-ic">🌳</div><div class="deep-nm">Parks &amp; Recreation</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">8–14</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">14–19</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $1.0M–$2.8M over 4 yrs · Avg: $80K–$250K</div></div>
+    <div class="deep-card" style="border-left:3px solid #e74c3c;"><div class="deep-ic">🎓</div><div class="deep-nm">Colleges &amp; Universities</div>
+      <div style="font-size:10px;color:#c0392b;background:#fef0f0;padding:4px 7px;border-radius:3px;margin-bottom:7px;">↓ <strong>2027 dip</strong> — rebounds 2028–29</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">3–6</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">6–11</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $600K–$2.0M over 4 yrs · Avg: $180K–$500K</div></div>
+    <div class="deep-card"><div class="deep-ic">🤝</div><div class="deep-nm">Non-Profits</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">2–4</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">4–7</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $80K–$350K over 4 yrs · Avg: $30K–$80K</div></div>
+    <div class="deep-card"><div class="deep-ic">🏛️</div><div class="deep-nm">Cultural Institutions</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">1–3</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">3–6</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $150K–$600K over 4 yrs · Avg: $100K–$250K</div></div>
+    <div class="deep-card"><div class="deep-ic">🏢</div><div class="deep-nm">Institutional</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">2–4</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">4–7</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $400K–$1.2M over 4 yrs · Avg: $150K–$400K</div></div>
+    <div class="deep-card" style="border-left:3px solid #52A471;"><div class="deep-ic">🏙️</div><div class="deep-nm">Corporate</div>
+      <div style="font-size:10px;color:#2e7d52;background:#e8f8ef;padding:4px 7px;border-radius:3px;margin-bottom:7px;">↑ <strong>2027 surge</strong> — ESG + South Bay aerospace</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">2–5</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">5–9</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $500K–$2.2M over 4 yrs · Avg: $200K–$550K</div></div>
+    <div class="deep-card"><div class="deep-ic">🏗️</div><div class="deep-nm">Mixed-Use / Developer</div>
+      <div class="deep-scen"><div class="sb sb-con"><div class="sb-num">1–3</div><div class="sb-lbl">Con. Projects</div></div><div class="sb sb-opt"><div class="sb-num">3–6</div><div class="sb-lbl">Opt. Projects</div></div></div>
+      <div class="deep-fee"><strong>Fee Range:</strong> $200K–$800K over 4 yrs · Avg: $80K–$250K</div></div>
+  </div>
+
+</main>
+
+<footer>
+  <div class="ft-l">ASLA — American Society of Landscape Architects</div>
+  <div class="ft-r">4-Year Pipeline Projection · Long Beach / LA Market · 2026–2029</div>
+</footer>
+
+<script>
+'use strict';
+
+var scenario = 'con';
+var years = ['2026','2027','2028','2029'];
+
+var channels = [
+  { label:'Local Government & Municipal',       color:'#3D7EBF', con:[380,520,620,780],  opt:[620,900,1100,1400] },
+  { label:'County Projects',                    color:'#52A471', con:[0,120,380,680],    opt:[0,280,720,1200]   },
+  { label:'State Projects',                     color:'#1A1A1A', con:[0,0,150,420],      opt:[0,0,380,850]      },
+  { label:'Federal / Government',               color:'#7B5EA7', con:[0,0,0,180],        opt:[0,0,120,480]      },
+  { label:'National Firms, Corps & Developers', color:'#D4573C', con:[80,320,580,920],   opt:[200,680,1100,1800]},
+  { label:'Program & Facilities Managers',      color:'#2B8C8C', con:[40,180,380,620],   opt:[120,420,780,1300] }
+];
+
+function getVal(ch, i) {
+  if (scenario === 'con') return ch.con[i];
+  if (scenario === 'opt') return ch.opt[i];
+  return Math.round((ch.con[i] + ch.opt[i]) / 2);
+}
+
+function setScenario(s) {
+  scenario = s;
+  document.getElementById('btn-con').className  = 'scen-btn' + (s==='con'  ? ' act-con'  : '');
+  document.getElementById('btn-opt').className  = 'scen-btn' + (s==='opt'  ? ' act-opt'  : '');
+  document.getElementById('btn-both').className = 'scen-btn' + (s==='both' ? ' act-both' : '');
+  var notes = {
+    con:'Conservative: Measured entry, selective bidding, relationship-first approach',
+    opt:'Optimistic: Aggressive pursuit, strong referral network, multiple concurrent bids',
+    both:'Both scenarios shown — use as a range for session discussion'
+  };
+  document.getElementById('scen-desc').textContent = notes[s];
+
+  var sd = {
+    con: {p:'24<span>–56</span>',  f:'$4.2M<span>–$8.4M</span>', c:'18<span>–25</span>'},
+    opt: {p:'62<span>–104</span>', f:'$12M<span>–$22M</span>',    c:'44<span>–72</span>'},
+    both:{p:'24<span>–104</span>', f:'$4.2M<span>–$22M</span>',   c:'18<span>–72</span>'}
+  }[s] || {p:'24<span>–56</span>',f:'$4.2M<span>–$8.4M</span>',c:'18<span>–25</span>'};
+  document.getElementById('s-proj').innerHTML = sd.p;
+  document.getElementById('s-fee').innerHTML  = sd.f;
+  document.getElementById('s-cli').innerHTML  = sd.c;
+
+  document.querySelectorAll('.pbadge').forEach(function(el) {
+    el.textContent = s==='opt' ? el.dataset.opt : s==='both' ? el.dataset.con+' / '+el.dataset.opt : el.dataset.con;
+    el.className = 'pbadge ' + (s==='opt' ? 'p-opt' : 'p-con');
+  });
+  document.querySelectorAll('.tot-val').forEach(function(el) {
+    el.textContent = s==='opt' ? el.dataset.opt : s==='both' ? el.dataset.con+' / '+el.dataset.opt : el.dataset.con;
+    el.className = 'tot-val ' + (s==='opt' ? 'v-opt' : 'v-con');
+  });
+
+  drawChannel();
+}
+
+function buildLegend() {
+  document.getElementById('ch-leg').innerHTML = channels.map(function(ch) {
+    return '<div class="ch-li"><div class="ch-dot" style="background:'+ch.color+'"></div><span>'+ch.label+'</span></div>';
+  }).join('');
+}
+
+function drawChannel() {
+  var canvas = document.getElementById('chCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = Math.max((canvas.parentElement.clientWidth || 600) - 56, 400);
+  var H = 300;
+  canvas.width = W; canvas.height = H;
+  ctx.clearRect(0,0,W,H);
+
+  var pad = {top:28, right:130, bottom:54, left:70};
+  var cW = W - pad.left - pad.right;
+  var cH = H - pad.top - pad.bottom;
+
+  var maxVal = 0;
+  channels.forEach(function(ch) { years.forEach(function(_,i){ maxVal = Math.max(maxVal, getVal(ch,i)); }); });
+  maxVal = Math.ceil(maxVal/200)*200 || 1800;
+
+  function xP(i) { return pad.left + (i/(years.length-1))*cW; }
+  function yP(v) { return pad.top + cH - (v/maxVal)*cH; }
+
+  [0.2,0.4,0.6,0.8,1].forEach(function(p) {
+    var v = maxVal*p; var y = yP(v);
+    ctx.strokeStyle='#EEEEEE'; ctx.lineWidth=1; ctx.setLineDash([3,3]);
+    ctx.beginPath(); ctx.moveTo(pad.left,y); ctx.lineTo(pad.left+cW,y); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='#AAA'; ctx.font='10px DM Mono,monospace'; ctx.textAlign='right';
+    ctx.fillText(v>=1000?'$'+(v/1000).toFixed(1)+'M':'$'+v+'K', pad.left-8, y+3);
+  });
+
+  ctx.save(); ctx.translate(14,pad.top+cH/2); ctx.rotate(-Math.PI/2);
+  ctx.fillStyle='#AAA'; ctx.font='10px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('Est. Annual Fee Revenue',0,0); ctx.restore();
+
+  years.forEach(function(yr,i) {
+    ctx.strokeStyle='#F2F2F2'; ctx.lineWidth=1; ctx.setLineDash([2,4]);
+    ctx.beginPath(); ctx.moveTo(xP(i),pad.top); ctx.lineTo(xP(i),pad.top+cH); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='#444'; ctx.font='bold 12px Playfair Display,serif'; ctx.textAlign='center';
+    ctx.fillText(yr, xP(i), H-pad.bottom+18);
+    var ph=['Foundation','Mkt Shift','Expansion','Scale Up'][i];
+    ctx.fillStyle='#BBBBBB'; ctx.font='9px DM Sans,sans-serif'; ctx.fillText(ph, xP(i), H-pad.bottom+32);
+  });
+
+  channels.forEach(function(ch) {
+    var vals = years.map(function(_,i){ return getVal(ch,i); });
+    ctx.beginPath(); ctx.strokeStyle=ch.color; ctx.lineWidth=2.5; ctx.lineJoin='round';
+    vals.forEach(function(v,i){ i===0 ? ctx.moveTo(xP(i),yP(v)) : ctx.lineTo(xP(i),yP(v)); });
+    ctx.stroke();
+    vals.forEach(function(v,i) {
+      if(v===0) return;
+      ctx.beginPath(); ctx.arc(xP(i),yP(v),5,0,Math.PI*2); ctx.fillStyle=ch.color; ctx.fill();
+      ctx.beginPath(); ctx.arc(xP(i),yP(v),2.5,0,Math.PI*2); ctx.fillStyle='#fff'; ctx.fill();
+    });
+    var last = vals[vals.length-1];
+    if(last>0) {
+      ctx.fillStyle=ch.color; ctx.font='bold 10px DM Sans,sans-serif'; ctx.textAlign='left';
+      ctx.fillText(last>=1000?'$'+(last/1000).toFixed(1)+'M':'$'+last+'K', pad.left+cW+8, yP(last)+4);
+    }
+  });
+
+  ctx.strokeStyle='#1A1A1A'; ctx.lineWidth=1.5; ctx.setLineDash([6,4]);
+  ctx.beginPath(); ctx.moveTo(pad.left,yP(1500)); ctx.lineTo(pad.left+cW,yP(1500)); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#1A1A1A'; ctx.font='bold 9px DM Sans,sans-serif'; ctx.textAlign='right';
+  ctx.fillText('↑ Consider adding staff', pad.left+cW-4, yP(1500)-5);
+}
+
+function drawStaffing() {
+  var canvas = document.getElementById('sfCanvas');
+  if (!canvas) return;
+  var ctx = canvas.getContext('2d');
+  var W = Math.max((canvas.parentElement.clientWidth || 600) - 56, 400);
+  var H = 280;
+  canvas.width = W; canvas.height = H;
+  ctx.clearRect(0,0,W,H);
+
+  var pad = {top:30, right:40, bottom:58, left:74};
+  var cW = W-pad.left-pad.right;
+  var cH = H-pad.top-pad.bottom;
+  var maxRev = 6000;
+  var maxStaff = 16;
+
+  var curve = [[0,1],[400,2],[700,3],[900,4],[1050,5],[1400,5],[1700,6],[2000,7],[2400,8],[2800,9],[3200,10],[3800,11],[4400,12],[5000,13],[5800,15]];
+
+  function xP(r) { return pad.left+(r/maxRev)*cW; }
+  function yP(s) { return pad.top+cH-((s-1)/(maxStaff-1))*cH; }
+
+  [2,4,6,8,10,12,14].forEach(function(s) {
+    ctx.strokeStyle='#F0F0F0'; ctx.lineWidth=1; ctx.setLineDash([3,3]);
+    ctx.beginPath(); ctx.moveTo(pad.left,yP(s)); ctx.lineTo(pad.left+cW,yP(s)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='#AAA'; ctx.font='10px DM Mono,monospace'; ctx.textAlign='right';
+    ctx.fillText(s+' staff', pad.left-8, yP(s)+3);
+  });
+
+  ctx.save(); ctx.translate(14,pad.top+cH/2); ctx.rotate(-Math.PI/2);
+  ctx.fillStyle='#AAA'; ctx.font='10px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('Number of Employees',0,0); ctx.restore();
+
+  [0,1000,2000,3000,4000,5000,6000].forEach(function(v) {
+    ctx.strokeStyle='#EEEEEE'; ctx.lineWidth=1; ctx.setLineDash([3,3]);
+    ctx.beginPath(); ctx.moveTo(xP(v),pad.top); ctx.lineTo(xP(v),pad.top+cH); ctx.stroke(); ctx.setLineDash([]);
+    ctx.fillStyle='#888'; ctx.font='10px DM Mono,monospace'; ctx.textAlign='center';
+    ctx.fillText(v===0?'$0':'$'+(v/1000).toFixed(0)+'M', xP(v), pad.top+cH+16);
+  });
+  ctx.fillStyle='#AAA'; ctx.font='10px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('Annual Fee Revenue', pad.left+cW/2, H-8);
+
+  ctx.fillStyle='rgba(220,50,50,0.05)';
+  ctx.fillRect(pad.left, yP(5), xP(1050)-pad.left, yP(1)-yP(5));
+  ctx.fillStyle='rgba(82,164,113,0.08)';
+  ctx.fillRect(xP(1050), yP(5.3), xP(1700)-xP(1050), yP(4.7)-yP(5.3));
+
+  ctx.strokeStyle='#e74c3c'; ctx.lineWidth=1.5; ctx.setLineDash([5,4]);
+  ctx.beginPath(); ctx.moveTo(xP(1050),pad.top); ctx.lineTo(xP(1050),pad.top+cH); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#e74c3c'; ctx.font='bold 9px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('Break-even', xP(1050), pad.top-14); ctx.fillText('$1.05M', xP(1050), pad.top-4);
+
+  ctx.strokeStyle='#52A471'; ctx.lineWidth=1.5; ctx.setLineDash([5,4]);
+  ctx.beginPath(); ctx.moveTo(xP(1400),pad.top); ctx.lineTo(xP(1400),pad.top+cH); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle='#52A471'; ctx.font='bold 9px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('20% profit', xP(1400), pad.top-14); ctx.fillText('$1.4M', xP(1400), pad.top-4);
+
+  ctx.fillStyle='rgba(201,168,76,0.1)';
+  ctx.fillRect(pad.left, yP(5.35), cW, yP(4.65)-yP(5.35));
+  ctx.fillStyle='#1A1A1A'; ctx.font='bold 9px DM Sans,sans-serif'; ctx.textAlign='left';
+  ctx.fillText('← 5-person firm zone →', xP(1450), yP(5)+4);
+
+  ctx.beginPath(); ctx.strokeStyle='#2B2B2B'; ctx.lineWidth=2.5; ctx.lineJoin='round';
+  curve.forEach(function(pt,i){ i===0?ctx.moveTo(xP(pt[0]),yP(pt[1])):ctx.lineTo(xP(pt[0]),yP(pt[1])); });
+  ctx.stroke();
+
+  [{r:1050,s:5,c:'#e74c3c'},{r:1700,s:6,c:'#1A1A1A'},{r:2400,s:8,c:'#D4573C'},{r:3200,s:10,c:'#7B5EA7'},{r:5000,s:13,c:'#2B8C8C'}].forEach(function(t) {
+    ctx.beginPath(); ctx.arc(xP(t.r),yP(t.s),6,0,Math.PI*2); ctx.fillStyle=t.c; ctx.fill();
+    ctx.beginPath(); ctx.arc(xP(t.r),yP(t.s),3,0,Math.PI*2); ctx.fillStyle='#fff'; ctx.fill();
+  });
+
+  ctx.beginPath(); ctx.arc(xP(675),yP(5),9,0,Math.PI*2); ctx.fillStyle='#3D7EBF'; ctx.fill();
+  ctx.fillStyle='#fff'; ctx.font='bold 8px DM Sans,sans-serif'; ctx.textAlign='center';
+  ctx.fillText('Y1', xP(675), yP(5)+3);
+
+  [{r:1200,yr:'2027'},{r:1750,yr:'2028'},{r:2850,yr:'2029'}].forEach(function(m) {
+    var pt = curve.slice().reverse().find(function(p){ return p[0]<=m.r; });
+    var s = pt ? pt[1] : 5;
+    ctx.fillStyle='#666'; ctx.font='9px DM Mono,monospace'; ctx.textAlign='center';
+    ctx.fillText(m.yr, xP(m.r), yP(s)-12);
+  });
+
+  var leg=[{c:'#2B2B2B',l:'Staffing curve'},{c:'#e74c3c',l:'Break-even ($1.05M)'},{c:'#52A471',l:'20% profit ($1.4M)'},{c:'#1A1A1A',l:'Hire triggers'},{c:'#3D7EBF',l:'Year 1 position'}];
+  var lx=pad.left;
+  ctx.font='9px DM Sans,sans-serif';
+  leg.forEach(function(item){
+    ctx.fillStyle=item.c; ctx.fillRect(lx,H-14,12,3);
+    ctx.fillStyle='#555'; ctx.textAlign='left'; ctx.fillText(item.l,lx+16,H-10);
+    lx+=ctx.measureText(item.l).width+28;
+  });
+}
+
+buildLegend();
+window.addEventListener('load', function(){ drawChannel(); drawStaffing(); });
+window.addEventListener('resize', function(){ drawChannel(); drawStaffing(); });
+</script>
+
+
+</body></html>

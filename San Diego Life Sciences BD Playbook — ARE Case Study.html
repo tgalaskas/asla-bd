@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<!-- saved from url=(0063)file:///C:/Users/tgala/Downloads/ls-sd-playbook-2026%20(1).html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>San Diego Life Sciences BD Playbook — ARE Case Study</title>
+<link href="./San Diego Life Sciences BD Playbook — ARE Case Study_files/css2" rel="stylesheet">
+<style>
+:root{--g:#81BC00;--gd:#4A7A00;--gm:#6A9C00;--gl:#EBF5D0;--bk:#1A1A1A;--md:#3D3D3D;--lt:#6B6B6B;--bd:#DDDDDD;--pl:#F4F4F4;--wh:#FFFFFF;--navy:#1A3A5C;--rd:#C0392B;--am:#E67E22;--bl:#2471A3;--forest:#0F2A0F;--sand:#F8F4ED;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:'DM Sans',sans-serif;background:var(--pl);color:var(--bk);}
+
+/* HEADER */
+header{background:var(--forest);border-bottom:3px solid var(--g);position:relative;overflow:hidden;}
+header::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(-55deg,transparent,transparent 60px,rgba(129,188,0,0.03) 60px,rgba(129,188,0,0.03) 61px);}
+.hdr{position:relative;z-index:1;padding:22px 48px;display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;}
+.h-badges{display:flex;flex-direction:column;gap:5px;}
+.hbadge{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;letter-spacing:0.13em;text-transform:uppercase;padding:3px 9px;border-radius:2px;}
+.hb1{background:rgba(129,188,0,0.15);border:1px solid rgba(129,188,0,0.3);color:var(--g);}
+.hb2{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);color:rgba(255,255,255,0.45);}
+.h-center{text-align:center;}
+.h-eyebrow{font-family:'DM Mono',monospace;font-size:10px;color:rgba(255,255,255,0.3);letter-spacing:0.16em;text-transform:uppercase;margin-bottom:5px;}
+.h-title{font-family:'Playfair Display',serif;font-size:27px;font-weight:700;color:#fff;line-height:1.15;}
+.h-title em{color:var(--g);font-style:normal;}
+.h-sub{font-size:11px;color:rgba(255,255,255,0.4);margin-top:4px;}
+.h-right{text-align:right;}
+.h-case{font-family:'DM Mono',monospace;font-size:9px;color:rgba(255,255,255,0.3);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:3px;}
+.h-client{font-family:'Playfair Display',serif;font-size:14px;color:var(--g);font-weight:600;}
+.h-proj{font-size:10px;color:rgba(255,255,255,0.4);margin-top:3px;line-height:1.5;}
+
+/* TICKER */
+.ticker{background:#0A1A0A;border-bottom:1px solid rgba(129,188,0,0.15);padding:7px 48px;display:flex;align-items:center;gap:18px;overflow-x:auto;white-space:nowrap;}
+.tk-lbl{font-family:'DM Mono',monospace;font-size:9px;font-weight:700;color:var(--g);text-transform:uppercase;letter-spacing:0.14em;flex-shrink:0;}
+.tk-items{display:flex;gap:14px;}
+.tki{display:flex;align-items:center;gap:5px;font-size:10px;color:rgba(255,255,255,0.55);}
+.tdot{width:6px;height:6px;border-radius:50%;flex-shrink:0;}
+.dr{background:#E74C3C;box-shadow:0 0 5px rgba(231,76,60,0.5);}
+.da{background:#E67E22;box-shadow:0 0 5px rgba(230,126,34,0.4);}
+.dg{background:#81BC00;box-shadow:0 0 5px rgba(129,188,0,0.5);}
+
+/* NAV */
+.pnav{background:var(--bk);padding:0 48px;display:flex;border-bottom:1px solid rgba(255,255,255,0.06);overflow-x:auto;}
+.ptab{display:flex;align-items:center;gap:7px;padding:13px 20px;font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:rgba(255,255,255,0.3);cursor:pointer;border-bottom:3px solid transparent;white-space:nowrap;transition:all 0.2s;}
+.ptab:hover{color:rgba(255,255,255,0.65);}
+.ptab.on{color:#fff;border-bottom-color:var(--g);}
+.pnum{font-family:'DM Mono',monospace;font-size:9px;width:17px;height:17px;border-radius:50%;background:rgba(255,255,255,0.07);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.2s;}
+.ptab.on .pnum{background:var(--g);color:var(--bk);}
+
+main{padding:24px 48px 56px;max-width:1380px;margin:0 auto;}
+.pnl{display:none;}.pnl.on{display:block;}
+
+/* PHASE HERO */
+.phero{background:var(--forest);border-radius:8px;padding:22px 28px;margin-bottom:18px;display:flex;align-items:center;gap:20px;position:relative;overflow:hidden;}
+.phero::after{content:'';position:absolute;right:-10px;top:-10px;width:140px;height:140px;border-radius:50%;background:rgba(129,188,0,0.04);}
+.ph-icon{font-size:38px;flex-shrink:0;}
+.ph-txt{flex:1;}
+.ph-phase{font-family:'DM Mono',monospace;font-size:10px;color:var(--g);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:4px;}
+.ph-title{font-family:'Playfair Display',serif;font-size:25px;color:#fff;font-weight:600;margin-bottom:5px;}
+.ph-desc{font-size:12px;color:rgba(255,255,255,0.55);line-height:1.7;max-width:580px;}
+.ph-badge{background:rgba(129,188,0,0.08);border:1px solid rgba(129,188,0,0.18);border-radius:4px;padding:9px 13px;font-size:11px;color:rgba(255,255,255,0.6);line-height:1.6;font-style:italic;max-width:240px;flex-shrink:0;align-self:flex-start;}
+
+/* GRID */
+.g2{display:grid;grid-template-columns:1fr 1fr;gap:15px;margin-bottom:15px;}
+.g3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:15px;}
+.g4{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:12px;margin-bottom:13px;}
+.span2{grid-column:span 2;}
+
+/* CARD */
+.card{background:var(--wh);border:1px solid var(--bd);border-radius:8px;overflow:hidden;}
+.ch{padding:10px 16px;display:flex;align-items:center;gap:8px;}
+.ch-forest{background:var(--forest);}
+.ch-g{background:var(--g);}
+.ch-gd{background:var(--gd);}
+.ch-gm{background:var(--gm);}
+.ch-bk{background:var(--bk);}
+.ch-rd{background:var(--rd);}
+.ch-am{background:var(--am);}
+.ch-navy{background:var(--navy);}
+.ch-pale{background:var(--gl);border-bottom:1px solid var(--bd);}
+.ch-icon{font-size:13px;}
+.ch-title{font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:#fff;line-height:1.2;}
+.ch-pale .ch-title{color:var(--gd);}
+.ch-sub{font-size:9px;color:rgba(255,255,255,0.45);margin-top:1px;}
+.ch-pale .ch-sub{color:var(--lt);}
+.cb{padding:14px 16px;}
+
+/* SECTION LABEL */
+.slbl{display:flex;align-items:center;gap:11px;margin-bottom:11px;margin-top:2px;}
+.slbl h3{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:var(--bk);white-space:nowrap;}
+.slbl .ln{flex:1;height:1px;background:var(--bd);}
+
+/* CALLOUTS */
+.co{background:var(--gl);border:1px solid var(--g);border-radius:5px;padding:10px 14px;font-size:11px;color:var(--gd);line-height:1.7;margin-bottom:12px;}
+.co strong{color:var(--bk);display:block;margin-bottom:2px;font-size:10px;text-transform:uppercase;letter-spacing:0.07em;}
+.co-dark{background:var(--forest);border:1px solid rgba(129,188,0,0.2);border-radius:5px;padding:10px 14px;font-size:11px;color:rgba(255,255,255,0.75);line-height:1.7;margin-bottom:12px;}
+.co-dark strong{color:var(--g);display:block;margin-bottom:2px;font-size:10px;text-transform:uppercase;letter-spacing:0.07em;}
+.co-warn{background:#FDF4F4;border:1px solid #E8D0D0;border-left:3px solid var(--rd);border-radius:5px;padding:10px 14px;font-size:11px;color:#5A2020;line-height:1.7;margin-bottom:12px;}
+.co-warn strong{color:#7A2020;display:block;margin-bottom:2px;font-size:10px;text-transform:uppercase;letter-spacing:0.07em;}
+.co-amber{background:#FEF9E7;border:1px solid #E8D5B0;border-left:3px solid var(--am);border-radius:5px;padding:10px 14px;font-size:11px;color:#5A3A10;line-height:1.7;margin-bottom:12px;}
+.co-amber strong{color:#7D5010;display:block;margin-bottom:2px;font-size:10px;text-transform:uppercase;letter-spacing:0.07em;}
+
+/* MARKET TIMELINE */
+.mkt3{display:grid;grid-template-columns:1fr 1fr 1fr;border-radius:6px;overflow:hidden;border:1px solid var(--bd);margin-bottom:14px;}
+.mc{padding:13px 14px;}
+.mc.dn{background:#FDF4F4;}
+.mc.md{background:#FEF9E7;border-left:1px solid var(--bd);border-right:1px solid var(--bd);}
+.mc.up{background:var(--gl);}
+.mc-yr{font-family:'DM Mono',monospace;font-size:9px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;margin-bottom:4px;}
+.mc.dn .mc-yr{color:#B83A3A;}.mc.md .mc-yr{color:#7D6608;}.mc.up .mc-yr{color:var(--gd);}
+.mc-h{font-family:'Playfair Display',serif;font-size:13px;font-weight:600;margin-bottom:4px;}
+.mc.dn .mc-h{color:#7A2020;}.mc.md .mc-h{color:#7D6608;}.mc.up .mc-h{color:var(--gd);}
+.mc-b{font-size:10px;color:var(--lt);line-height:1.6;}
+
+/* REVENUE CHART */
+.rw{margin-bottom:12px;}
+.rl{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;color:var(--lt);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:7px;}
+.rbars{display:flex;align-items:flex-end;gap:7px;height:100px;margin-bottom:5px;}
+.rbc{display:flex;flex-direction:column;align-items:center;gap:3px;flex:1;}
+.rb{width:100%;border-radius:3px 3px 0 0;transition:opacity 0.2s;}
+.rb:hover{opacity:0.8;}
+.rb.curr{background:var(--g);}
+.rb.down{background:var(--rd);}
+.rb.flat{background:var(--am);}
+.rb.proj{background:var(--g);opacity:0.5;}
+.rb-v{font-family:'DM Mono',monospace;font-size:10px;font-weight:700;}
+.rb-v.down{color:var(--rd);}.rb-v.flat{color:var(--am);}.rb-v.proj{color:var(--gd);}
+.rb-y{font-family:'DM Mono',monospace;font-size:9px;color:var(--lt);text-align:center;line-height:1.3;}
+.rleg{display:flex;gap:12px;font-size:10px;color:var(--lt);flex-wrap:wrap;}
+.rl-i{display:flex;align-items:center;gap:4px;}
+.rl-d{width:8px;height:8px;border-radius:2px;flex-shrink:0;}
+
+/* DEVELOPER TABLE */
+.dtbl{width:100%;border-collapse:collapse;}
+.dtbl th{padding:7px 10px;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:left;background:var(--bk);color:rgba(255,255,255,0.55);font-family:'DM Mono',monospace;}
+.dtbl td{padding:7px 10px;border-bottom:1px dashed var(--bd);font-size:11px;vertical-align:top;line-height:1.5;}
+.dtbl tr:last-child td{border-bottom:none;}
+.dtbl tr:hover td{background:var(--gl);}
+.abr{display:flex;align-items:center;gap:5px;}
+.abt{height:6px;background:var(--pl);border-radius:3px;overflow:hidden;width:52px;}
+.abf{height:100%;border-radius:3px;}
+.abf.h{background:var(--g);}.abf.m{background:var(--am);}.abf.l{background:#CCC;}
+.dbadge{font-family:'DM Mono',monospace;font-size:9px;padding:2px 5px;border-radius:2px;font-weight:600;}
+.db-act{background:var(--gl);color:var(--gd);}
+.db-sel{background:#FEF9E7;color:#7D5010;}
+.db-pau{background:#FDEDEC;color:var(--rd);}
+
+/* Q LIST */
+.ql{list-style:none;}
+.qi{display:flex;align-items:baseline;gap:8px;padding:7px 0;border-bottom:1px dashed var(--bd);font-size:12px;line-height:1.55;}
+.qi:last-child{border-bottom:none;}
+.qdot{width:17px;height:17px;border-radius:50%;background:var(--gl);border:1px solid var(--bd);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:var(--gd);flex-shrink:0;font-family:'DM Mono',monospace;}
+.qi.ans .qdot{background:var(--g);border-color:var(--gd);color:#fff;}
+.qi.ans{color:var(--gd);}
+.qt{flex:1;}
+.qt strong{display:block;color:var(--bk);margin-bottom:1px;}
+.qi.ans .qt strong{color:var(--gd);}
+.qa{font-size:11px;color:var(--md);margin-top:3px;padding:5px 8px;background:var(--gl);border-radius:3px;border-left:2px solid var(--g);line-height:1.55;}
+.qa.amber{background:#FEF9E7;border-left-color:var(--am);color:#5A3A10;}
+
+/* CHECKLIST */
+.ckl{list-style:none;}
+.cki{display:flex;align-items:flex-start;gap:7px;padding:5px 3px;border-bottom:1px dashed var(--bd);font-size:11px;line-height:1.5;cursor:pointer;border-radius:3px;transition:background 0.1s;}
+.cki:last-child{border-bottom:none;}
+.cki:hover{background:var(--gl);}
+.cki.done{opacity:0.5;}
+.cki.done .ck-t{text-decoration:line-through;}
+.ckb{width:14px;height:14px;border:1.5px solid var(--bd);border-radius:3px;flex-shrink:0;margin-top:1px;display:flex;align-items:center;justify-content:center;background:#fff;transition:all 0.15s;}
+.cki.done .ckb{background:var(--gd);border-color:var(--gd);}
+.cki.done .ckb::after{content:'✓';color:#fff;font-size:9px;font-weight:700;}
+.ck-t{flex:1;}
+.ckbg{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;padding:1px 5px;border-radius:2px;margin-left:4px;}
+.ckbg-ok{background:var(--gl);color:var(--gd);}
+.ckbg-gap{background:#FEF9E7;color:#7D5010;}
+.ckbg-risk{background:#FDEDEC;color:var(--rd);}
+
+/* PERSON CARDS */
+.pgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;}
+.pcard{background:var(--pl);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;}
+.pc-n{font-size:12px;font-weight:600;color:var(--bk);margin-bottom:1px;}
+.pc-r{font-family:'DM Mono',monospace;font-size:9px;color:var(--g);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:5px;}
+.pc-b{font-size:10px;color:var(--lt);line-height:1.55;}
+.pc-tags{display:flex;flex-wrap:wrap;gap:3px;margin-top:5px;}
+.pctag{font-size:9px;font-family:'DM Mono',monospace;padding:1px 5px;border-radius:2px;background:var(--gl);color:var(--gd);}
+
+/* SOCIAL CARDS */
+.sgrid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:10px;margin-bottom:13px;}
+.sc{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:10px 12px;}
+.sc-p{font-family:'DM Mono',monospace;font-size:9px;font-weight:700;padding:2px 5px;border-radius:2px;margin-bottom:5px;display:inline-block;background:#0077B5;color:#fff;}
+.sc-h{font-size:11px;font-weight:600;color:var(--bk);margin-bottom:3px;}
+.sc-b{font-size:10px;color:var(--lt);line-height:1.6;font-style:italic;margin-bottom:5px;}
+.sc-i{font-size:10px;color:var(--gd);padding-top:5px;border-top:1px dashed var(--bd);line-height:1.55;}
+
+/* EVENT TABLE */
+.etbl{width:100%;border-collapse:collapse;}
+.etbl th{padding:7px 10px;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:left;background:var(--forest);color:rgba(255,255,255,0.55);font-family:'DM Mono',monospace;}
+.etbl td{padding:7px 10px;border-bottom:1px dashed var(--bd);font-size:11px;vertical-align:top;line-height:1.5;}
+.etbl tr:last-child td{border-bottom:none;}
+.etbl tr:hover td{background:var(--gl);}
+.ep{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;padding:2px 5px;border-radius:2px;}
+.ep1{background:#FDEDEC;color:var(--rd);}.ep2{background:#FEF9E7;color:#7D5010;}.ep3{background:var(--gl);color:var(--gd);}
+
+/* COMPETITOR TABLE */
+.ctbl{width:100%;border-collapse:collapse;}
+.ctbl th{padding:7px 10px;font-size:10px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;text-align:left;background:var(--bk);color:rgba(255,255,255,0.55);font-family:'DM Mono',monospace;}
+.ctbl td{padding:7px 10px;border-bottom:1px dashed var(--bd);font-size:11px;vertical-align:top;line-height:1.5;}
+.ctbl tr:last-child td{border-bottom:none;}
+.ctbl tr:hover td{background:var(--gl);}
+
+/* TIMELINE */
+.tl{position:relative;padding-left:24px;margin-bottom:13px;}
+.tl::before{content:'';position:absolute;left:7px;top:5px;bottom:5px;width:2px;background:linear-gradient(to bottom,var(--g),rgba(129,188,0,0.15));}
+.tl-i{position:relative;margin-bottom:14px;}
+.tl-dot{position:absolute;left:-19px;top:3px;width:8px;height:8px;border-radius:50%;border:2px solid var(--g);background:var(--wh);}
+.tl-dot.active{background:var(--g);}
+.tl-dot.future{border-style:dashed;}
+.tl-d{font-family:'DM Mono',monospace;font-size:9px;color:var(--g);letter-spacing:0.09em;text-transform:uppercase;margin-bottom:2px;}
+.tl-t{font-size:12px;font-weight:600;color:var(--bk);margin-bottom:2px;}
+.tl-b{font-size:11px;color:var(--lt);line-height:1.6;}
+.tl-a{font-size:11px;color:var(--gd);font-style:italic;margin-top:2px;}
+
+/* WIN BOX */
+.win{background:var(--g);border-radius:8px;padding:16px 20px;margin-bottom:13px;position:relative;overflow:hidden;}
+.win::after{content:'"';position:absolute;right:14px;top:-14px;font-family:'Playfair Display',serif;font-size:100px;color:rgba(255,255,255,0.08);line-height:1;}
+.win-lbl{font-family:'DM Mono',monospace;font-size:10px;font-weight:700;color:rgba(0,0,0,0.4);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:5px;}
+.win-txt{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#fff;line-height:1.55;}
+
+/* TP LIST */
+.tpl{list-style:none;}
+.tpi{display:flex;gap:8px;align-items:flex-start;padding:6px 0;border-bottom:1px dashed var(--bd);font-size:12px;color:var(--md);line-height:1.65;}
+.tpi:last-child{border-bottom:none;}
+.tpn{width:18px;height:18px;border-radius:50%;background:var(--forest);color:var(--g);display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;font-family:'DM Mono',monospace;flex-shrink:0;margin-top:1px;}
+.tpt strong{display:block;color:var(--bk);margin-bottom:1px;font-size:12px;}
+.tpt span{font-size:11px;color:var(--lt);}
+
+/* INSIGHT BOX */
+.ibox{background:var(--forest);border-radius:8px;padding:15px 19px;margin-bottom:13px;}
+.ibox-t{font-family:'Playfair Display',serif;font-size:14px;color:#fff;font-weight:600;margin-bottom:9px;}
+.irow{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.07);font-size:11px;color:rgba(255,255,255,0.7);line-height:1.6;}
+.irow:last-child{border-bottom:none;}
+.ibul{color:var(--g);font-weight:700;flex-shrink:0;font-size:12px;}
+
+/* DISC BOX */
+.disc{background:var(--bk);border-radius:6px;padding:12px 16px;margin-top:4px;margin-bottom:12px;}
+.disc-lbl{font-family:'DM Mono',monospace;font-size:9px;color:var(--g);letter-spacing:0.14em;text-transform:uppercase;margin-bottom:7px;}
+.disc-q{font-size:12px;color:rgba(255,255,255,0.7);line-height:1.7;padding:5px 0;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;gap:7px;}
+.disc-q:last-child{border-bottom:none;}
+.disc-q::before{content:'?';color:var(--g);font-weight:700;font-family:'DM Mono',monospace;font-size:10px;flex-shrink:0;margin-top:2px;}
+
+/* TAKEAWAY */
+.tkaway{background:var(--gl);border:1px solid var(--g);border-radius:6px;padding:11px 14px;margin-top:11px;display:flex;gap:8px;align-items:flex-start;}
+.tka-icon{font-size:14px;flex-shrink:0;}
+.tka-lbl{font-size:10px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:2px;}
+.tka-txt{font-size:11px;color:var(--gd);line-height:1.6;font-weight:500;}
+
+/* TRANSITION */
+.tr-cue{background:var(--g);border-radius:6px;padding:9px 14px;margin-top:13px;display:flex;align-items:center;gap:8px;}
+.tr-arr{font-size:14px;color:#fff;}
+.tr-txt{font-size:12px;color:#fff;font-weight:500;line-height:1.5;}
+.tr-txt strong{display:block;font-size:12px;margin-bottom:1px;}
+
+/* SPEAKER NOTES */
+.sn-sec{margin-top:24px;border-top:2px dashed var(--bd);padding-top:16px;}
+.sn-tog{display:flex;align-items:center;gap:8px;padding:9px 14px;cursor:pointer;background:var(--gl);border:1px solid var(--bd);border-radius:5px;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:var(--gd);letter-spacing:0.07em;text-transform:uppercase;user-select:none;transition:border-color 0.2s;}
+.sn-tog:hover{border-color:var(--g);}
+.sn-arr{margin-left:auto;transition:transform 0.2s;}
+.sn-tog.open .sn-arr{transform:rotate(180deg);}
+.sn-body{display:none;padding-top:14px;}
+.sn-body.open{display:block;}
+.nc{background:#fff;border:1px solid var(--bd);border-radius:7px;overflow:hidden;margin-bottom:11px;}
+.nch{padding:8px 14px;display:flex;align-items:center;gap:7px;}
+.nch.g{background:var(--gd);}.nch.m{background:var(--gm);}.nch.bk{background:var(--bk);}
+.nch-icon{font-size:12px;}
+.nch-title{font-family:'Playfair Display',serif;font-size:14px;font-weight:600;color:#fff;}
+.ncb{padding:13px 17px;}
+.np{font-size:12px;color:var(--md);line-height:1.85;margin-bottom:9px;}
+.np:last-child{margin-bottom:0;}
+.np strong{color:var(--bk);}
+
+/* VISUAL SCORE BARS */
+.vscore{display:flex;align-items:center;gap:8px;margin-bottom:4px;}
+.vs-lbl{font-size:11px;color:var(--bk);width:130px;flex-shrink:0;}
+.vs-track{flex:1;height:8px;background:var(--pl);border-radius:4px;overflow:hidden;}
+.vs-fill{height:100%;border-radius:4px;background:var(--g);}
+.vs-val{font-family:'DM Mono',monospace;font-size:10px;color:var(--lt);width:36px;text-align:right;flex-shrink:0;}
+
+/* KPI STRIP */
+.kpi-strip{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:15px;}
+.kpi-box{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:12px 14px;text-align:center;}
+.kpi-v{font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:var(--bk);line-height:1;}
+.kpi-v.green{color:var(--gd);}
+.kpi-v.red{color:var(--rd);}
+.kpi-l{font-size:10px;color:var(--lt);margin-top:4px;line-height:1.4;}
+.kpi-box.highlight{border-color:var(--g);background:var(--gl);}
+
+/* PROCUREMENT SCENARIOS */
+.proc-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:13px;margin-bottom:15px;}
+.proc-card{border-radius:7px;overflow:hidden;border:1px solid var(--bd);}
+.proc-hdr{padding:10px 14px;display:flex;align-items:center;gap:7px;}
+.proc-hdr.a{background:var(--g);}
+.proc-hdr.b{background:var(--am);}
+.proc-hdr.c{background:var(--rd);}
+.proc-num{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:rgba(255,255,255,0.7);}
+.proc-label{font-family:'Playfair Display',serif;font-size:13px;font-weight:600;color:#fff;}
+.proc-body{padding:11px 14px;background:#fff;font-size:11px;color:var(--md);line-height:1.7;}
+
+/* LANGUAGE MIRROR */
+.lang-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-bottom:14px;}
+.lang-card{background:var(--wh);border:1px solid var(--bd);border-radius:6px;overflow:hidden;}
+.lang-quote{padding:10px 14px;background:var(--forest);font-family:'Playfair Display',serif;font-size:12px;font-style:italic;color:rgba(255,255,255,0.85);line-height:1.6;border-left:3px solid var(--g);}
+.lang-src{font-family:'DM Mono',monospace;font-size:9px;color:var(--g);padding:5px 14px;background:rgba(129,188,0,0.08);display:block;}
+.lang-use{padding:9px 14px;font-size:11px;color:var(--gd);line-height:1.6;}
+.lang-use strong{color:var(--bk);display:block;margin-bottom:2px;font-size:10px;text-transform:uppercase;letter-spacing:0.06em;}
+
+/* LEED CREDITS */
+.leed-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px;}
+.leed-item{background:var(--pl);border-radius:5px;padding:10px 12px;border:1px solid var(--bd);}
+.leed-name{font-family:'DM Mono',monospace;font-size:9px;font-weight:700;color:var(--gd);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:4px;}
+.leed-body{font-size:11px;color:var(--md);line-height:1.6;}
+
+/* NETWORK MAP */
+.net-map{background:var(--bk);border-radius:8px;padding:16px 20px;margin-bottom:13px;}
+.nm-title{font-family:'Playfair Display',serif;font-size:14px;color:#fff;font-weight:600;margin-bottom:11px;}
+.nm-row{display:flex;gap:8px;padding:6px 0;border-bottom:1px solid rgba(255,255,255,0.07);align-items:flex-start;}
+.nm-row:last-child{border-bottom:none;}
+.nm-rank{font-family:'DM Mono',monospace;font-size:11px;font-weight:700;color:var(--g);width:24px;flex-shrink:0;margin-top:1px;}
+.nm-content{flex:1;font-size:11px;color:rgba(255,255,255,0.7);line-height:1.6;}
+.nm-content strong{color:#fff;display:block;margin-bottom:1px;font-size:12px;}
+
+/* CALENDAR */
+.cal-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-bottom:13px;}
+.cal-item{background:var(--wh);border:1px solid var(--bd);border-radius:6px;padding:10px 14px;display:flex;gap:12px;align-items:flex-start;}
+.cal-month{font-family:'DM Mono',monospace;font-size:9px;font-weight:700;color:var(--g);letter-spacing:0.1em;text-transform:uppercase;width:80px;flex-shrink:0;margin-top:2px;}
+.cal-title{font-size:12px;font-weight:600;color:var(--bk);margin-bottom:3px;}
+.cal-body{font-size:11px;color:var(--lt);line-height:1.6;}
+.cal-action{font-size:11px;color:var(--gd);font-style:italic;margin-top:3px;}
+
+/* FOOTER */
+footer{padding:10px 48px;border-top:1px solid var(--bd);display:flex;justify-content:space-between;align-items:center;background:var(--wh);}
+.ft-l{font-family:'Playfair Display',serif;font-size:13px;color:var(--gd);font-weight:600;}
+.ft-r{font-size:10px;color:var(--lt);font-family:'DM Mono',monospace;}
+
+.toast{position:fixed;bottom:18px;right:18px;background:var(--bk);color:#fff;padding:9px 15px;border-radius:5px;font-size:12px;border-left:3px solid var(--g);box-shadow:0 6px 20px rgba(0,0,0,0.2);transform:translateY(60px);opacity:0;transition:all 0.3s;z-index:1000;}
+.toast.show{transform:translateY(0);opacity:1;}
+
+@media(max-width:1100px){.g3,.g4,.sgrid,.mkt3,.proc-grid,.lang-grid,.leed-grid,.kpi-strip{grid-template-columns:1fr 1fr;}.pgrid{grid-template-columns:1fr 1fr;}}
+@media(max-width:700px){main,footer{padding-left:20px;padding-right:20px;}.hdr{grid-template-columns:1fr;text-align:center;padding:16px 20px;}.pnav{padding:0 14px;}.ticker{padding:7px 20px;}.g2,.g3,.g4,.sgrid,.mkt3,.proc-grid,.lang-grid,.leed-grid,.kpi-strip{grid-template-columns:1fr;}.phero{flex-direction:column;}.ph-badge{max-width:100%;}.pgrid{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+<header>
+  <div class="hdr">
+    <div class="h-badges">
+      <div class="hbadge hb1">🔬 Life Sciences · San Diego</div>
+      <div class="hbadge hb2">BD Playbook · ASLA 2026</div>
+    </div>
+    <div class="h-center">
+      <div class="h-eyebrow">Landscape Architecture · Business Development</div>
+      <h1 class="h-title">San Diego Life Sciences <em>BD Playbook</em></h1>
+      <div class="h-sub">Scout → Engage → Position → Capture → Retain · Fully worked through a real target client</div>
+    </div>
+    <div class="h-right">
+      <div class="h-case">Live Case Study</div>
+      <div class="h-client">Alexandria Real Estate Equities</div>
+      <div class="h-proj">Campus Point by Alexandria<br>466,598 RSF · BMS Build-to-Suit<br>2026 Construction · 2028 Delivery</div>
+    </div>
+  </div>
+</header>
+<div class="ticker">
+  <div class="tk-lbl">📡 Market</div>
+  <div class="tk-items">
+    <div class="tki"><div class="tdot dr"></div>NIH Funding — Under Pressure</div>
+    <div class="tki"><div class="tdot dr"></div>Tariff Uncertainty — High</div>
+    <div class="tki"><div class="tdot da"></div>National Lab Vacancy — 21.4% (CBRE Q1 2026)</div>
+    <div class="tki"><div class="tdot da"></div>Interest Rates — Elevated</div>
+    <div class="tki"><div class="tdot dg"></div>San Diego ARE Occupancy — 97.2% ↑</div>
+    <div class="tki"><div class="tdot dg"></div>Campus Point — 98.8% + Largest Lease in ARE History</div>
+    <div class="tki"><div class="tdot dg"></div>No Confirmed LA on Any ARE SD Project — Gap Open</div>
+    <div class="tki"><div class="tdot dg"></div>LEED/ESG/Fitwel Demand — Accelerating</div>
+  </div>
+</div>
+<div class="pnav">
+  <div class="ptab on" id="tb-mkt" onclick="show(&#39;mkt&#39;,this)"><span class="pnum">⊕</span>Market</div>
+  <div class="ptab" id="tb-sc" onclick="show(&#39;sc&#39;,this)"><span class="pnum">1</span>Scout</div>
+  <div class="ptab" id="tb-en" onclick="show(&#39;en&#39;,this)"><span class="pnum">2</span>Engage</div>
+  <div class="ptab" id="tb-po" onclick="show(&#39;po&#39;,this)"><span class="pnum">3</span>Position</div>
+  <div class="ptab" id="tb-ca" onclick="show(&#39;ca&#39;,this)"><span class="pnum">4</span>Capture</div>
+  <div class="ptab" id="tb-re" onclick="show(&#39;re&#39;,this)"><span class="pnum">5</span>Retain</div>
+</div>
+<main>
+<!-- ═══════════ MARKET TAB ═══════════ -->
+<div class="pnl on" id="pnl-mkt">
+  <div class="phero">
+    <div class="ph-icon">🔬</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Before You Begin — Market Context</div>
+      <div class="ph-title">The 2026–2028 Window</div>
+      <div class="ph-desc">Headwinds are real nationally — but San Diego is the exception. 97.2% occupancy, the largest lease in Alexandria's 31-year history just executed at Campus Point, and no confirmed landscape architect on any ARE San Diego project. This is not a slow market for Southern California firms who move now.</div>
+    </div>
+    <div class="ph-badge">"Headwinds are when the best BD firms separate themselves. Everyone else goes quiet — and that silence is your opportunity."</div>
+  </div>
+
+  <!-- KPI STRIP -->
+  <div class="kpi-strip">
+    <div class="kpi-box highlight">
+      <div class="kpi-v green">97.2%</div>
+      <div class="kpi-l">ARE San Diego Occupancy — Highest of Any Market</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-v">466K</div>
+      <div class="kpi-l">RSF BMS Build-to-Suit Breaking Ground 2026</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-v green">$0</div>
+      <div class="kpi-l">Confirmed LA Firms on ARE San Diego Projects</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-v">19.9M</div>
+      <div class="kpi-l">RSF Future Entitled ARE Pipeline — San Diego Included</div>
+    </div>
+    <div class="kpi-box">
+      <div class="kpi-v red">21.4%</div>
+      <div class="kpi-l">National Lab Vacancy (CBRE Q1 2026) — SD Bucking Trend</div>
+    </div>
+  </div>
+
+  <!-- TIMELINE -->
+  <div class="mkt3">
+    <div class="mc dn">
+      <div class="mc-yr">⬇ 2026 — Headwind Year</div>
+      <div class="mc-h">Contraction</div>
+      <div class="mc-b">NIH grant freezes stall early-stage biotech. National lab vacancy at 21.4%. ARE Boston fell to 86.4% occupancy. Developers pausing speculative starts. <strong>BUT San Diego at 97.2% is expanding.</strong> Campus Point BMS groundbreaking 2026. Most competitors go quiet. Maximum relationship-building window — use it.</div>
+    </div>
+    <div class="mc md">
+      <div class="mc-yr">→ 2027 — Transition Year</div>
+      <div class="mc-h">Stabilization</div>
+      <div class="mc-b">Vacancy absorbs nationally. Pipeline deliveries taper — few projects started in 2025–26 deliver in 2027. VC funding steady. Pharma M&amp;A picks up ("M&amp;A is the lifeblood of this industry" — Hallie Kuhn, ARE). <strong>Teams positioned in 2026 start receiving calls</strong> as developers re-engage architects for 2028 pipeline. Pre-construction typically starts 18–24 months before groundbreaking.</div>
+    </div>
+    <div class="mc up">
+      <div class="mc-yr">⬆ 2028 — Uptick Year</div>
+      <div class="mc-h">Recovery</div>
+      <div class="mc-b">Campus Point BMS delivers (466K RSF). ARE's 19.9M RSF future pipeline activates. New ground-up starts accelerate in strongest markets. <strong>Firms with ARE relationships built in 2026 win this work.</strong> Firms that waited in 2026 start from zero against firms who've been showing up for two years. The gap is real and it compounds.</div>
+    </div>
+  </div>
+
+  <div class="g2">
+    <!-- REVENUE CHART -->
+    <div class="card">
+      <div class="ch ch-forest"><span class="ch-icon">📊</span><div><div class="ch-title">Life Science Revenue Projection</div><div class="ch-sub">Illustrative · 5-person SoCal LA firm targeting ARE San Diego</div></div></div>
+      <div class="cb">
+        <div class="rw">
+          <div class="rl">Annual Life Science Revenue (Illustrative Range)</div>
+          <div class="rbars">
+            <div class="rbc"><div class="rb-v">$320K</div><div class="rb curr" style="height:80%;"></div><div class="rb-y">2025<br>Baseline</div></div>
+            <div class="rbc"><div class="rb-v down">$240K</div><div class="rb down" style="height:60%;"></div><div class="rb-y">2026<br>Headwind</div></div>
+            <div class="rbc"><div class="rb-v flat">$310K</div><div class="rb flat" style="height:77%;"></div><div class="rb-y">2027<br>Stabilize</div></div>
+            <div class="rbc"><div class="rb-v proj">$520K</div><div class="rb proj" style="height:100%;"></div><div class="rb-y">2028<br>Uptick</div></div>
+            <div class="rbc"><div class="rb-v proj">$740K</div><div class="rb proj" style="height:100%;opacity:0.38;"></div><div class="rb-y">2029<br>Growth</div></div>
+          </div>
+          <div class="rleg">
+            <div class="rl-i"><div class="rl-d" style="background:var(--g);"></div>Current/Growth</div>
+            <div class="rl-i"><div class="rl-d" style="background:var(--rd);"></div>Contraction</div>
+            <div class="rl-i"><div class="rl-d" style="background:var(--am);"></div>Stabilization</div>
+            <div class="rl-i"><div class="rl-d" style="background:var(--g);opacity:0.45;"></div>Projected (relationship-dependent)</div>
+          </div>
+        </div>
+        <div style="font-size:10px;color:var(--lt);font-style:italic;line-height:1.6;margin-top:6px;">2028–29 recovery is entirely contingent on BD investment made in 2026. Firms that reduce BD effort during headwinds typically miss the recovery window entirely. San Diego's market strength means your 2026 contraction should be shallower than the national average — but only if you're still investing.</div>
+      </div>
+    </div>
+
+    <!-- DEVELOPER LANDSCAPE -->
+    <div class="card">
+      <div class="ch ch-bk"><span class="ch-icon">🏢</span><div><div class="ch-title">Life Science Developer Landscape — San Diego</div><div class="ch-sub">Who's building, who's pausing — and why ARE is the primary target</div></div></div>
+      <div class="cb" style="padding:0;">
+        <div style="overflow-x:auto;">
+          <table class="dtbl">
+            <thead><tr><th>Developer</th><th>SD Activity</th><th>Status</th><th>LA Opportunity</th></tr></thead>
+            <tbody>
+              <tr>
+                <td><strong>Alexandria Real Estate</strong><br><span style="font-size:10px;color:var(--lt);">NYSE: ARE · Pasadena HQ · 2 hrs</span></td>
+                <td><div class="abr"><div class="abt"><div class="abf h" style="width:100%;"></div></div><span style="font-size:10px;font-family:&#39;DM Mono&#39;,monospace;">Very High</span></div></td>
+                <td><span class="dbadge db-act">Active &amp; Expanding</span></td>
+                <td style="font-size:10px;color:var(--gd);"><strong>Primary Target.</strong> 97.2% occ · BMS build-to-suit breaking ground · No confirmed LA on any SD project · $6.35B committed pipeline · Pasadena HQ accessible</td>
+              </tr>
+              <tr>
+                <td><strong>IQHQ</strong><br><span style="font-size:10px;color:var(--lt);">Private · San Diego-based</span></td>
+                <td><div class="abr"><div class="abt"><div class="abf h" style="width:80%;"></div></div><span style="font-size:10px;font-family:&#39;DM Mono&#39;,monospace;">High</span></div></td>
+                <td><span class="dbadge db-act">Active</span></td>
+                <td style="font-size:10px;color:var(--md);">RaDD waterfront district downtown SD · $1.7B · Urban waterfront LA; different profile than ARE campus work. Secondary target.</td>
+              </tr>
+              <tr>
+                <td><strong>Healthpeak Properties</strong><br><span style="font-size:10px;color:var(--lt);">NYSE: DOC · Denver HQ</span></td>
+                <td><div class="abr"><div class="abt"><div class="abf m" style="width:60%;"></div></div><span style="font-size:10px;font-family:&#39;DM Mono&#39;,monospace;">Medium</span></div></td>
+                <td><span class="dbadge db-sel">Selective</span></td>
+                <td style="font-size:10px;color:var(--md);">Active in SD but selective new starts in 2026. Confirmed at Bisnow SoCal Life Sciences alongside ARE. Worth tracking.</td>
+              </tr>
+              <tr>
+                <td><strong>BioMed Realty</strong><br><span style="font-size:10px;color:var(--lt);">Private · Blackstone · SD-based</span></td>
+                <td><div class="abr"><div class="abt"><div class="abf m" style="width:55%;"></div></div><span style="font-size:10px;font-family:&#39;DM Mono&#39;,monospace;">Medium</span></div></td>
+                <td><span class="dbadge db-sel">Active / Cautious</span></td>
+                <td style="font-size:10px;color:var(--md);">Private — harder to track pipeline. ARE's closest SD competitor. Secondary target once ARE relationship established.</td>
+              </tr>
+              <tr>
+                <td><strong>Kilroy Realty</strong><br><span style="font-size:10px;color:var(--lt);">NYSE: KRC · Los Angeles HQ</span></td>
+                <td><div class="abr"><div class="abt"><div class="abf l" style="width:35%;"></div></div><span style="font-size:10px;font-family:&#39;DM Mono&#39;,monospace;">Lower</span></div></td>
+                <td><span class="dbadge db-pau">Repositioning</span></td>
+                <td style="font-size:10px;color:var(--lt);">Slower pace in 2026. Office-to-life-science conversion strategy. Watch for 2027 activity as market stabilizes.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="co" style="margin:11px 11px;"><strong>Why ARE Over the Others</strong>Only ARE has: a publicly documented $6.35B committed pipeline, an accessible Pasadena HQ for a SoCal firm, named SD development team contacts, the highest SD occupancy (97.2%), AND a confirmed gap — no landscape architect on any ARE San Diego project. IQHQ is interesting but opaque. BioMed is private. ARE is your highest-intelligence, highest-confidence, highest-upside target.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADWIND vs OPPORTUNITY -->
+  <div class="g2">
+    <div class="card">
+      <div class="ch ch-rd"><span class="ch-icon">⚠️</span><div><div class="ch-title">The National Headwinds — Why Most Competitors Are Quiet</div></div></div>
+      <div class="cb">
+        <ul class="tpl">
+          <li class="tpi"><div class="tpn">1</div><div class="tpt"><strong>NIH Funding Freeze.</strong><span>Proposed cuts and continuing resolution uncertainty stall early-stage academic and government-backed research expansions. NIH funding is the upstream fuel for biotech hiring — and biotech hiring drives lab space demand. ARE's government tenant base (NIH/GSA) is under direct pressure.</span></div></li>
+          <li class="tpi"><div class="tpn">2</div><div class="tpt"><strong>Tariff Uncertainty.</strong><span>Construction material costs already elevated; tariffs on imported steel, aluminum, and manufactured components add unpredictability. Developers delaying groundbreaking decisions until cost models stabilize. This extends the pre-construction phase — exactly when landscape architects should be engaged.</span></div></li>
+          <li class="tpi"><div class="tpn">3</div><div class="tpt"><strong>Elevated Interest Rates.</strong><span>Higher cost of capital makes development math harder. REITs like ARE are focused on reducing non-income-producing assets (from 20% to 11–16% of gross assets by end of 2026) rather than starting new projects aggressively. Selective, funded projects continue — generic market development pauses.</span></div></li>
+          <li class="tpi"><div class="tpn">4</div><div class="tpt"><strong>Lab Space Glut (National).</strong><span>21.4% vacancy nationally. Supply delivered 2023–2025 is still being absorbed. Greater Boston's vacancy spike (86.4% ARE occupancy) is the most acute. <strong>San Diego does not share this problem</strong> — 97.2% occupancy means developers are still building here.</span></div></li>
+          <li class="tpi"><div class="tpn">5</div><div class="tpt"><strong>Global Uncertainty.</strong><span>FDA leadership changes, drug pricing pressure, and geopolitical risk create cautious pharma operating environments. "Lingering conservatism" (Bisnow quoting ARE, Jan 2025) dampens leasing velocity nationally — but San Diego's supply-demand balance insulates it.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch ch-g"><span class="ch-icon">🌱</span><div><div class="ch-title">Why San Diego Is Different — And Why Now Is Right</div></div></div>
+      <div class="cb">
+        <div class="co-dark"><strong>The Contrarian Principle</strong>Headwind markets are relationship-building markets. Your competitors are focused on existing work. Decision-makers are less busy. The firms that show up now are the ones who get called first when the market turns. This happened after 2008. It happened after COVID. It will happen again in 2028.</div>
+        <ul class="tpl">
+          <li class="tpi"><div class="tpn">→</div><div class="tpt"><strong>Active committed pipeline doesn't stop.</strong><span>ARE's $6.35B pipeline includes pre-committed projects that don't pause for market headwinds. Campus Point BMS (466K RSF, 16-year lease, $102B market cap tenant) is as committed as it gets. LEED-required landscape work never pauses — it's contractually tied to certification.</span></div></li>
+          <li class="tpi"><div class="tpn">→</div><div class="tpt"><strong>Re-leasing generates exterior refresh budgets.</strong><span>ARE has $71M in 2026 lease expirations nationally. Vacant spaces get exterior upgrades to attract tenants. Entry plazas, campus amenity enhancements, and landscape refreshes are active spending categories — often engaging an LA directly with the development team, not through a prime architect.</span></div></li>
+          <li class="tpi"><div class="tpn">→</div><div class="tpt"><strong>LEED and Fitwel are non-negotiable.</strong><span>90% of ARE's top 20 tenants have net-zero commitments. Campus Point BMS specs call for LEED Gold + Fitwel + 100% electrification. These certifications require landscape architect-delivered site credits regardless of market conditions.</span></div></li>
+          <li class="tpi"><div class="tpn">→</div><div class="tpt"><strong>Architect primes are available.</strong><span>During market slowdowns, the Genslers and HDRs of the world are easier to reach. These primes assemble ARE project teams — including the LA. Now is the time to build those relationships while their calendars have room.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-mkt" onclick="togNotes(&#39;mkt&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-mkt">
+      <div class="nc">
+        <div class="nch g"><span class="nch-icon">🎙️</span><div class="nch-title">Opening — Name the Headwind, Then Flip It</div></div>
+        <div class="ncb">
+          <p class="np">Start here: <strong>"The life science real estate market is having a rough stretch nationally. Lab space vacancy is at a six-year high. NIH funding is under political pressure. If you're wondering whether this is the right time to be talking about pursuing life science work — that's exactly the right question to ask."</strong></p>
+          <p class="np">Then flip it: <strong>"And the answer is yes — for precisely that reason."</strong> San Diego is the one market that didn't follow the national script. 97.2% occupancy. The largest lease in Alexandria's 31-year history just executed at Campus Point. Construction begins in 2026. Someone is going to design that outdoor environment. That person is either in this room — or they're not.</p>
+          <p class="np">Walk through the revenue chart deliberately. The 2028–29 steep recovery line only exists for firms who invest in BD in 2026. Ask the room: <strong>"Think back to 2009 or 2020. What happened to the firms that kept showing up when everyone else went quiet?"</strong> That's the pattern.</p>
+        </div>
+      </div>
+      <div class="disc">
+        <div class="disc-lbl">Discussion Prompts</div>
+        <div class="disc-q">Has your firm ever pulled back on BD during a market downturn? What happened to your pipeline when the market turned — and how long did it take to rebuild?</div>
+        <div class="disc-q">Of the five developers on the SD landscape map, which one does your firm have any existing relationship with? Even a first-degree connection counts — where does it start?</div>
+        <div class="disc-q">What relationships do you currently have in San Diego's life science ecosystem? What would adding two new conversations this quarter require?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway</div><div class="tka-txt">The headwind is real nationally. The San Diego exception is real locally. The 2026 window to position your firm is open right now — precisely because your competitors are focused on surviving rather than preparing. The rest of this playbook shows exactly how to use that window.</div></div></div>
+      <div class="tr-cue"><div class="tr-arr">→</div><div class="tr-txt"><strong>Transition to Phase 1 — Scout</strong>Market context established. Now let's look at the specific opportunity: Campus Point by Alexandria — the largest lease in ARE's history. Is it real? Is it funded? Is it winnable?</div></div>
+    </div>
+  </div>
+</div><!-- /market -->
+<!-- ═══════════ SCOUT TAB ═══════════ -->
+<div class="pnl" id="pnl-sc">
+  <div class="phero">
+    <div class="ph-icon">🔭</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Phase 1 of 5 — Scout</div>
+      <div class="ph-title">Is It Real?</div>
+      <div class="ph-desc">Intelligence before investment. Before spending a single hour on pursuit, confirm the opportunity is real, funded, and winnable. Every scouting question below is answered for the Campus Point by Alexandria opportunity — this is what good scouting looks like when you've done the research.</div>
+    </div>
+    <div class="ph-badge">"A project talked about for three years without confirmed funding is not a project. It is a wish."</div>
+  </div>
+
+  <div class="co"><strong>The Target Opportunity</strong>Campus Point by Alexandria Megacampus™ · University Town Center, San Diego · 466,598 RSF build-to-suit for Bristol Myers Squibb · 16-year lease executed July 2025 · ARE's largest lease in 31-year history · Construction commencing 2026 · Delivery 2028 · Targeting LEED Gold + Fitwel + 100% electrification · Adjacent existing 1.3M RSF at 98.8% occupancy · ARE's own press release: "expansive terrace," "seamlessly blending indoor and outdoor spaces," "elevated amenity experience that enables the recruitment and retention of mission-critical talent."</div>
+
+  <div class="slbl"><h3>Research: Is It Real?</h3><div class="ln"></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">🔍</span><div><div class="ch-title">Funding &amp; Reality Check</div><div class="ch-sub">Pre-filled · ARE 10-K + press release verified</div></div></div>
+      <div class="cb">
+        <ul class="ql">
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Is it funded and confirmed stable?</strong><div class="qa">✓ YES. 16-year lease with BMS (A2/A rated, $102.6B market cap). Confirmed in ARE's $6.35B committed pipeline per 10-K. Largest lease in ARE's 31-year history. Funding risk: near zero — this project does not get cancelled.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>What's the timing — when are consultants engaged?</strong><div class="qa">Construction commences 2026, delivery 2028. Prime architect typically engaged 18–24 months before groundbreaking = late 2024/early 2025. LA subconsultant engaged when architect assembles their team — this may already be underway. Existing 1.3M RSF campus has continuous refresh scope opportunities ongoing.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Who are the key players?</strong><div class="qa">Daniel J. (ARE Regional Market Director SD, named in BMS press release). Hallie Kuhn, PhD (EVP Capital Markets, SD ecosystem focus). Prime architect: not publicly confirmed — likely Gensler SD or HDR San Diego. ARE Pasadena HQ: 26 N. Euclid Ave, accessible from SoCal.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Who is the likely competition for the LA role?</strong><div class="qa">No LA firm publicly confirmed on any ARE San Diego project — the gap is open. Known competitors in market: SWA Group (LA office), OLIN (LA office), Hargreaves Jones (SF). Surfacedesign and Bionic are confirmed ARE LA firms — but both are SF-based serving Mission Bay only, 500 miles from Campus Point.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Is the scope realistic for a 5-person firm?</strong><div class="qa">466K RSF new build + 1.3M RSF adjacent campus = large. As subconsultant to a prime, scope is manageable. Best entry point: existing campus refresh scopes at Torrey Pines, Sorrento Mesa, or UTC are smaller, may engage LA directly with ARE's development team — lower barrier, better first ARE project.</div></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">⚖️</span><div><div class="ch-title">Assessment: Can You Win It?</div><div class="ch-sub">Honest answers required — no glossing over the amber flags</div></div></div>
+      <div class="cb">
+        <ul class="ql">
+          <li class="qi"><div class="qdot">A</div><div class="qt"><strong>Do you have a relationship with a decision maker or prime architect?</strong><div class="qa amber">⚠ LIKELY NOT YET — but fixable. The prime architect for Campus Point BMS is not publicly confirmed. Gensler SD and HDR are the strongest candidates. If you have any existing relationship with either firm's life science studio, start there now. If not — this is your first action item before any proposal is attempted.</div></div></li>
+          <li class="qi"><div class="qdot">B</div><div class="qt"><strong>Is your experience directly related to life science campus work?</strong><div class="qa amber">⚠ DEPENDS. Do you have life science campus landscape work in your portfolio? A LEED-certified site with lab-adjacent programming? "We've done corporate campuses" is not the same as "we designed the outdoor amenity environment for [comparable life science campus] and delivered LEED Gold site credits." Be honest — then close the gap or adjust the pursuit.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Is this strategically right for your firm?</strong><div class="qa">✓ YES — if life science is a target sector. Winning any ARE project, even a smaller campus refresh, establishes the credential that opens the door to 19.9M RSF of future Megacampus work. The most strategic client relationship available in SoCal life science real estate right now.</div></div></li>
+          <li class="qi ans"><div class="qdot">✓</div><div class="qt"><strong>Clear geographic advantage?</strong><div class="qa">✓ YES. Campus Point is 110 miles from Torrance. Both confirmed ARE LA firms (Surfacedesign, Bionic) are 500+ miles away in San Francisco. Regular site visits, SD industry events, and ARE development team meetings are all realistic. Local presence is a genuine, documentable competitive advantage.</div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>Go / No-Go Checklist — Campus Point by Alexandria</h3><div class="ln"></div></div>
+  <div class="card" style="margin-bottom:15px;">
+    <div class="ch ch-forest"><span class="ch-icon">✅</span><div><div class="ch-title">Scouting Decision Checklist — Check Off What You Can Confirm</div><div class="ch-sub">Tap items to mark done · Progress saved this session</div></div></div>
+    <div class="cb">
+      <div class="g2" style="margin-bottom:0;">
+        <ul class="ckl">
+          <li class="cki done" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Opportunity funded and confirmed <span class="ckbg ckbg-ok">✓ 10-K + Press Release</span></span></li>
+          <li class="cki done" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Timing confirmed — construction 2026, delivery 2028 <span class="ckbg ckbg-ok">✓ Confirmed</span></span></li>
+          <li class="cki done" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">SD LA gap verified — no competitor locked in <span class="ckbg ckbg-ok">✓ Gap confirmed open</span></span></li>
+          <li class="cki done" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Geographic advantage confirmed vs. SF competitors <span class="ckbg ckbg-ok">✓ 110 mi vs. 500 mi</span></span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Prime architect identified — Gensler SD or HDR <span class="ckbg ckbg-gap">⚠ Confirm which</span></span></li>
+        </ul>
+        <ul class="ckl">
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Life science campus experience assessed honestly <span class="ckbg ckbg-gap">⚠ Portfolio audit</span></span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">LEED site credit delivery capability documented <span class="ckbg ckbg-risk">⚠ Required — non-negotiable</span></span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Biocom SD or NAIOP SD membership in progress</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">ARE LinkedIn followed and first engagement made</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Intelligence written down and briefed to team</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-sc" onclick="togNotes(&#39;sc&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-sc">
+      <div class="nc"><div class="nch g"><span class="nch-icon">🔭</span><div class="nch-title">Opening — "Is This Real?" Exercise</div></div>
+        <div class="ncb"><p class="np">Ask: <strong>"How many of you have spent significant time pursuing a project — writing the proposal, teaming — only to find out the funding wasn't confirmed, or the decision was already made?"</strong> Let hands go up. That's what scouting prevents. Every fact on this slide traces to a public document. This is what scouting looks like when you've done the research before investing pursuit energy.</p>
+        <p class="np">The two amber flags — prime architect relationship and life science portfolio — are where most firms stumble. Don't skip them. If the answer is "no, we don't have that relationship," the next question is: "do we have time to build it before the team is locked?" That's the real go/no-go moment — not "is the project real?" but "are WE ready?"</p></div>
+      </div>
+      <div class="disc"><div class="disc-lbl">Discussion Prompts</div>
+        <div class="disc-q">Does anyone in this room have an existing relationship with Gensler San Diego's life science practice or HDR's San Diego lab group? That person is your BD lead for this pursuit — identify them now.</div>
+        <div class="disc-q">What one life science campus project in your portfolio is most directly comparable to Campus Point? Can you articulate why in one sentence — specific project type, LEED certification, tenant profile?</div>
+        <div class="disc-q">What would it take to get into a Biocom San Diego event in the next 60 days? Who in this room has a contact who could facilitate an introduction?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway</div><div class="tka-txt">This opportunity is as confirmed and funded as it gets. The only question is whether your firm is positioned to compete for it. The items marked amber on the checklist are your action list — not reasons to walk away.</div></div></div>
+      <div class="tr-cue"><div class="tr-arr">→</div><div class="tr-txt"><strong>Transition to Phase 2 — Engage</strong>The opportunity is real and confirmed. Now: who are you talking to, and how do you show up as a resource — not a vendor — before any RFP exists?</div></div>
+    </div>
+  </div>
+</div><!-- /scout -->
+
+
+<!-- ═══════════ ENGAGE TAB ═══════════ -->
+<div class="pnl" id="pnl-en">
+  <div class="phero">
+    <div class="ph-icon">🤝</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Phase 2 of 5 — Engage</div>
+      <div class="ph-title">Understand Them</div>
+      <div class="ph-desc">Relationships are built before any RFP exists. Know how ARE is organized, what they care about, what language they use, and where they show up. The firms that win ARE work are the ones whose names come up in conversation before the RFP drops — show up as a resource, not a vendor.</div>
+    </div>
+    <div class="ph-badge">"Real engagement is intelligence-gathering wrapped in genuine interest. You are not there to sell — you are there to understand and be remembered."</div>
+  </div>
+
+  <div class="slbl"><h3>How ARE Is Organized — Map the Decision Tree</h3><div class="ln"></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ch ch-navy"><span class="ch-icon">🗂️</span><div><div class="ch-title">ARE San Diego — Who Matters for Campus Point</div><div class="ch-sub">Relationship targets in priority order for a SoCal LA firm</div></div></div>
+      <div class="cb">
+        <div class="pgrid">
+          <div class="pcard">
+            <div class="pc-n">Hallie Kuhn, PhD</div>
+            <div class="pc-r">EVP Capital Markets · SD Ecosystem Lead</div>
+            <div class="pc-b">Most accessible senior ARE person for SD. PhD credentials — speaks biotech science fluently. Presents VC/M&amp;A funding data on every earnings call. Active in Biocom SD. Your best entry point into ARE's San Diego world without a cold approach.</div>
+            <div class="pc-tags"><span class="pctag">Biocom SD</span><span class="pctag">Life Science Events</span><span class="pctag">ULI SD</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pc-n">Daniel J.</div>
+            <div class="pc-r">Regional Market Director · San Diego</div>
+            <div class="pc-b">Named in the BMS press release as ARE SD lead. Manages leasing, acquisitions, and development for SD region. Day-to-day contact for Campus Point. Harder to access cold — warm intro through Biocom or NAIOP SD is the most reliable path.</div>
+            <div class="pc-tags"><span class="pctag">NAIOP SD</span><span class="pctag">Direct Development</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pc-n">Eleni Reed</div>
+            <div class="pc-r">SVP Head of Sustainability · Pasadena HQ</div>
+            <div class="pc-b">Leads ARE's LEED and ESG strategy. 54% of ARE revenue from LEED-certified properties. Won 2024 Nareit Sustainable Design Impact Award. <strong>Most accessible ARE contact for LA firms</strong> — LEED and biophilic design are the natural intersection. 2-hr drive from Torrance.</div>
+            <div class="pc-tags"><span class="pctag">USGBC</span><span class="pctag">I2SL</span><span class="pctag">Nareit Sustainability</span></div>
+          </div>
+          <div class="pcard">
+            <div class="pc-n">Prime Architect (TBC)</div>
+            <div class="pc-r">Likely Gensler SD or HDR San Diego</div>
+            <div class="pc-b">Not publicly confirmed for Campus Point. <strong>This is your most important relationship to build.</strong> The LA subconsultant is on the architect's team — not ARE's direct hire. One established relationship with Gensler SD's life science studio lead is worth more than 10 cold emails to ARE.</div>
+            <div class="pc-tags"><span class="pctag">Priority #1</span><span class="pctag">Life Science Studio Lead</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch ch-forest"><span class="ch-icon">💡</span><div><div class="ch-title">What ARE Cares About Right Now</div><div class="ch-sub">From 10-K · press releases · earnings calls · CR report · LinkedIn</div></div></div>
+      <div class="cb">
+        <ul class="tpl">
+          <li class="tpi"><div class="tpn">1</div><div class="tpt"><strong>Talent recruitment as the metric — not "amenities."</strong><span>ARE no longer uses the word "amenities." They use "environments that enable the recruitment and retention of mission-critical talent." Campus Point BMS press release, July 2025. Lilly Gateway Labs announcement. Their earnings calls. Mirror this language exactly — not a paraphrase.</span></div></li>
+          <li class="tpi"><div class="tpn">2</div><div class="tpt"><strong>LEED, Fitwel, and net-zero commitments.</strong><span>90% of ARE's top 20 tenants have net-zero goals. 54% of ARE revenue from LEED-certified properties. Campus Point BMS specifically targets LEED Gold + Fitwel + 100% electrification. LEED site credits need a landscape architect to deliver them — this is your formal role in their sustainability platform.</span></div></li>
+          <li class="tpi"><div class="tpn">3</div><div class="tpt"><strong>Occupancy defense and re-leasing pressure.</strong><span>Boston at 86.4% — ARE's biggest financial risk right now. Even SD's strong numbers are actively managed. Outdoor amenity quality is explicitly how ARE justifies premium rents in investor presentations and lease renewals. It's in their 10-K. It's in their earnings calls.</span></div></li>
+          <li class="tpi"><div class="tpn">4</div><div class="tpt"><strong>Mental health and biophilic wellness.</strong><span>ARE's signature social cause since 2021. OneFifteen addiction recovery, NIH biomarker research partnership, annual Alexandria Summit on Mental Health in DC. Restorative outdoor spaces, walking paths, biophilic design — your deliverables — align directly with their organizational mission and content pillars.</span></div></li>
+          <li class="tpi"><div class="tpn">5</div><div class="tpt"><strong>Trustworthiness and long-term relationship value.</strong><span>Named Newsweek Most Trustworthy Company three consecutive years. 84% of ARE's leasing came from existing tenants. BMS has been an ARE tenant for 25+ years. ARE selects consultants who demonstrate consistent reliability and commitment — not the lowest bidder or the flashiest portfolio.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>Social Media — What They Post and How to Engage Meaningfully</h3><div class="ln"></div></div>
+  <div class="sgrid">
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">Campus Amenity Announcements</div><div class="sc-b">"...a nutritious grab-and-go café with garden seating, a destination restaurant, large event lawn, high-tech meeting venues, and a restorative walking path." — Lilly Gateway Labs SD, Sept 2025</div><div class="sc-i">→ Comment with insight about outdoor programming for life science campuses. Use their language. Show you read it carefully — not just a like.</div></div>
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">LEED / Sustainability Milestones</div><div class="sc-b">LEED Platinum at 325 Binney + 15 Necco. 18% GHG reduction 2022–2024. GRESB Green Star designation (8 consecutive years). Posts when CR Report drops June–July annually.</div><div class="sc-i">→ "The LEED Platinum at 15 Necco required remarkable stormwater coordination — how did the site team approach bioretention at that scale?" = signals genuine expertise.</div></div>
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">Community &amp; Campus Life</div><div class="sc-b">"This afternoon, our NYC campus community gathered for a #solareclipse viewing party. An amazing shared experience of awe and wonder." — High-engagement outdoor moment post.</div><div class="sc-i">→ Engage when ARE posts outdoor campus moments — the algorithm shows it to their development team. Comment thoughtfully about shared outdoor experience and community.</div></div>
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">Mental Health Month — May</div><div class="sc-b">Annual multi-post campaign: Alexandria Summit on Mental Health, NIH partnership, OneFifteen updates. Heavy LinkedIn push every May — their signature content moment.</div><div class="sc-i">→ Publish content on biophilic design and mental health outcomes (restorative environments reduce cortisol). Time it to May when ARE's team is in this content mode.</div></div>
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">CR Report Drop — June/July</div><div class="sc-b">Annual Corporate Responsibility Report generates weeks of content. ARE's team is in "mission and values" mode. 2024 report released June 25, 2025 — predictably annual.</div><div class="sc-i">→ Pre-read ARE's supplemental sustainability data. Day-one engagement with a LEED or Labs2Zero comment puts you ahead of everyone who reads it a week later.</div></div>
+    <div class="sc"><div class="sc-p">LinkedIn</div><div class="sc-h">Leasing Milestone Announcements</div><div class="sc-b">"Its distinctive design features an expansive terrace that serves as a central gathering place, seamlessly blending indoor and outdoor spaces." — Campus Point BMS, July 2025</div><div class="sc-i">→ Share these posts to your network with commentary. It signals to ARE that you're tracking their business at a strategic level — not just waiting for their RFP.</div></div>
+  </div>
+
+  <div class="slbl"><h3>Where They Show Up — Events to Attend</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:15px;">
+    <table class="etbl">
+      <thead><tr><th>Event</th><th>When / Where</th><th>ARE Presence</th><th>Your Action</th><th>Priority</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Bisnow International Life Sciences &amp; Biotech Conference</strong></td><td>September annually · San Diego · 2-Day</td><td>ARE confirmed attendee/speaker. Joel Marcus + Hallie Kuhn typical. 2026 = 4th annual in SD. Confirmed alongside IQHQ, Healthpeak, BioMed.</td><td>Register early. Attend the 2-hr cocktail reception. Ask a smart question about SD VC pipeline or BMS expansion — not a pitch.</td><td><span class="ep ep1">🔴 Top Priority</span></td></tr>
+        <tr><td><strong>Bisnow SoCal Life Sciences Conference</strong></td><td>April annually · San Diego · Pacific Center</td><td>ARE confirmed 2025 alongside IQHQ, Healthpeak, BioMed, Oxford, Longfellow. Mix of development staff and executives.</td><td>Attend for ARE's SD development team contacts. Secondary: meet BioMed and IQHQ teams for market intelligence.</td><td><span class="ep ep1">🔴 Top Priority</span></td></tr>
+        <tr><td><strong>Biocom San Diego Events</strong></td><td>Year-round · San Diego · Multiple formats</td><td>Hallie Kuhn and ARE's SD team embedded in Biocom ecosystem. ARE is a primary real estate partner for SD biotech companies.</td><td>Join Biocom as affiliate or sponsor. Attend quarterly events. Most direct non-transactional access to ARE's SD team in the city.</td><td><span class="ep ep1">🔴 Top Priority</span></td></tr>
+        <tr><td><strong>ULI San Diego</strong></td><td>Year-round · San Diego · Chapters + committees</td><td>ARE SD development staff confirmed at ULI local chapter events. ARE active in product councils and committee work.</td><td>Join ULI SD. Volunteer for Life Sciences product council. Build working relationships over months — not transactional minutes at a cocktail hour.</td><td><span class="ep ep1">🔴 Top Priority</span></td></tr>
+        <tr><td><strong>NAIOP San Diego Chapter</strong></td><td>Year-round · Monthly lunches + events</td><td>ARE confirmed NAIOP SD participant. Also where Gensler SD and HDR attend — your prime architect targets are here.</td><td>NAIOP membership. Monthly luncheons. Critical for both ARE development contacts AND the prime architect relationships that get you on their project teams.</td><td><span class="ep ep2">🟡 High Value</span></td></tr>
+        <tr><td><strong>I2SL Annual Conference</strong></td><td>September · Rotating US cities</td><td>ARE sustainability team (Eleni Reed) attends. HOK S+T practice lead is a confirmed speaker. Lab building energy and LEED focus.</td><td>Build relationships with ARE sustainability team and LEED-focused architects (HOK, Flad) who get engaged on ARE projects. Bring a Labs2Zero question.</td><td><span class="ep ep2">🟡 High Value</span></td></tr>
+        <tr><td><strong>USGBC / GreenBuild</strong></td><td>Annual · Various US cities</td><td>ARE's 54% LEED revenue base = active USGBC community presence. Eleni Reed's team is active in LEED professional circles.</td><td>Connect with ARE sustainability contacts in shared LEED context. Frame around specific site credit delivery experience — not general sustainability messaging.</td><td><span class="ep ep3">🟢 Strategic</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="card" style="margin-bottom:15px;">
+    <div class="ch ch-gd"><span class="ch-icon">📋</span><div><div class="ch-title">Engagement Checklist — Track Your Progress</div><div class="ch-sub">Tap to mark done · Session progress saved</div></div></div>
+    <div class="cb">
+      <div class="g2" style="margin-bottom:0;">
+        <ul class="ckl">
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">ARE LinkedIn followed — company + Hallie Kuhn + Eleni Reed</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Gensler SD life science studio lead identified and connected</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">HDR San Diego lab architecture lead identified</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Biocom SD membership or event registration completed</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Bisnow ILS San Diego (September) registered</span></li>
+        </ul>
+        <ul class="ckl">
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">ULI San Diego chapter joined or first event attended</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">ARE Q4 earnings call listened to (free: investor.are.com)</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">2024 ARE Corporate Responsibility Report read (sustainability section)</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">First thoughtful LinkedIn comment on ARE post completed (not just a like)</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Internal team briefed on ARE — pipeline, language, contacts, gaps</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-en" onclick="togNotes(&#39;en&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-en">
+      <div class="nc"><div class="nch g"><span class="nch-icon">💬</span><div class="nch-title">Opening — Engagement Is Not Pitching</div></div>
+        <div class="ncb"><p class="np">Most firms think of outreach as a pitch dressed up as a meeting. <strong>Real engagement is intelligence-gathering wrapped in genuine interest.</strong> You're not there to sell. You're there to understand — and to be remembered as someone who asks smart questions.</p>
+        <p class="np">The social media section is critical. ARE's LinkedIn content tells you exactly what they care about — in their own words. When you walk into a conversation having read their CR report and engaged thoughtfully with their LEED Platinum announcement — you are already in a different category from every firm that shows up cold with a capabilities deck. The LinkedIn engagement calendar has three peak windows: CR Report (June–July), Mental Health Month (May), Bisnow ILS San Diego (September). These are the moments when ARE's team is most active and most accessible.</p></div>
+      </div>
+      <div class="disc"><div class="disc-lbl">Discussion Prompts</div>
+        <div class="disc-q">Who in this room has attended a Biocom San Diego event? What was the ARE presence like — how were the conversations different from a traditional AEC networking event?</div>
+        <div class="disc-q">Think of a time you engaged with a potential client on LinkedIn before meeting them. Did it change the tone of the first conversation? What did you say?</div>
+        <div class="disc-q">What's one specific thing in ARE's 2024 CR Report you could bring up naturally in a conversation with Eleni Reed about the Campus Point sustainability program?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway</div><div class="tka-txt">Show up where ARE shows up. Read what they publish. Engage with what they post. When you meet someone from ARE's SD team, you're not introducing yourself — you're continuing a conversation that's already been happening. That's the goal.</div></div></div>
+      <div class="tr-cue"><div class="tr-arr">→</div><div class="tr-txt"><strong>Transition to Phase 3 — Position</strong>You understand the client. Now: how do you differentiate your firm against SF-based competitors who have more ARE experience — before the RFP drops?</div></div>
+    </div>
+  </div>
+</div><!-- /engage -->
+
+
+<!-- ═══════════ POSITION TAB ═══════════ -->
+<div class="pnl" id="pnl-po">
+  <div class="phero">
+    <div class="ph-icon">🎯</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Phase 3 of 5 — Position</div>
+      <div class="ph-title">Set Your Strategy</div>
+      <div class="ph-desc">By the time the RFP drops, your strategy should already be written. Know your win statement, know your competitors' weaknesses, know the procurement sequence, and know which AEC partners get you into the ARE ecosystem fastest. If you're reading the RFP for the first time on the day it drops — you're already behind.</div>
+    </div>
+    <div class="ph-badge">"Win strategy is set before the RFP drops. If you're starting your positioning work when the RFP arrives, you've already lost the relationship advantage."</div>
+  </div>
+
+  <div class="win">
+    <div class="win-lbl">Win Strategy Statement — Complete This Before Writing a Single Proposal Word</div>
+    <div class="win-txt">"We should win this because we are the only Southern California landscape architecture firm with [life science campus LEED expertise + specific comparable project] — close enough to Campus Point to serve as a true local partner, fluent enough in ARE's LEED and Fitwel language to deliver their certification targets without a learning curve, and present enough in SD's life science community to already know the architects and engineers assembling this team."</div>
+  </div>
+
+  <div class="slbl"><h3>Competitive Analysis — Know Your Opponents Before They Know Your Strategy</h3><div class="ln"></div></div>
+  <div style="overflow-x:auto;background:var(--wh);border:1px solid var(--bd);border-radius:8px;margin-bottom:15px;">
+    <table class="ctbl">
+      <thead><tr><th>LA Firm</th><th>Strengths vs. ARE</th><th>Weaknesses for SD Campus Point</th><th>Your Strategic Answer</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Surfacedesign, Inc.</strong><br><span style="font-size:10px;color:var(--lt);">SF-based · Confirmed ARE client</span></td>
+          <td style="font-size:11px;">Direct ARE client (Pierpoint Lane, Mission Bay). Award-winning (Chicago Athenaeum, 2022). LEED Gold. Established ARE relationship.</td>
+          <td style="font-size:11px;color:#7A3A10;">500 miles from SD. No confirmed ARE San Diego project. SF-centric. Travel costs billed on subconsultant fee. Cannot attend NAIOP SD, Biocom, ULI SD regularly.</td>
+          <td style="font-size:11px;color:var(--gd);">You are local. Regular site visits, SD industry events, and ARE development team meetings are all realistic without billing travel. Local = deeper relationship + faster response.</td>
+        </tr>
+        <tr>
+          <td><strong>Bionic</strong><br><span style="font-size:10px;color:var(--lt);">SF-based · Confirmed ARE client</span></td>
+          <td style="font-size:11px;">Confirmed ARE client (1700 Owens St, Mission Bay, 2024). LEED Gold target. Bay Area life science embedded.</td>
+          <td style="font-size:11px;color:#7A3A10;">Same geographic limitation as Surfacedesign. No SD ARE project. Boutique capacity — may not be available at 466K RSF build-to-suit scale.</td>
+          <td style="font-size:11px;color:var(--gd);">Same local presence argument. Position on local accessibility AND equivalent LEED performance. You can deliver the same certification outcomes with a team that can be on-site in 2 hours.</td>
+        </tr>
+        <tr>
+          <td><strong>SWA Group</strong><br><span style="font-size:10px;color:var(--lt);">LA office · SD presence</span></td>
+          <td style="font-size:11px;">LA office serves SoCal market. Large team capacity for this project scale. Strong corporate campus and tech campus portfolio.</td>
+          <td style="font-size:11px;color:#7A3A10;">No confirmed ARE project anywhere. Generalist positioning. Are they fluent in I2SL Labs2Zero scoring, Fitwel outdoor credit requirements, and ARE's specific LEED platform? Unclear.</td>
+          <td style="font-size:11px;color:var(--gd);">SWA is large but not specialized. Your life science fluency — ARE language, LEED lab expertise, CR report familiarity, Labs2Zero literacy — differentiates from a capable but generic competitor.</td>
+        </tr>
+        <tr>
+          <td><strong>OLIN</strong><br><span style="font-size:10px;color:var(--lt);">LA office · Campus scale</span></td>
+          <td style="font-size:11px;">Highly respected nationally. LA office serves SoCal. Large-scale campus and public realm portfolio. Immediate prestige credential.</td>
+          <td style="font-size:11px;color:#7A3A10;">OLIN is overscaled for a subconsultant role — they typically prime or co-lead. If they pursue this, the competitive landscape changes entirely and you need a different strategy.</td>
+          <td style="font-size:11px;color:var(--gd);">If OLIN enters, compete on relationship depth + LEED specialty + ARE-specific intelligence, not design prestige. OLIN wins on brand — you win on specificity, embedded relationships, and local commitment.</td>
+        </tr>
+        <tr>
+          <td><strong>Hargreaves Jones</strong><br><span style="font-size:10px;color:var(--lt);">SF + Boston offices</span></td>
+          <td style="font-size:11px;">30+ years campus and waterfront work. SF office. Nationally respected for large-scale campus environments.</td>
+          <td style="font-size:11px;color:#7A3A10;">No SD presence. 500+ miles from Campus Point. No confirmed ARE relationship of any kind. SF-centric like Surfacedesign and Bionic.</td>
+          <td style="font-size:11px;color:var(--gd);">Same local presence argument as SF competitors. You can be more responsive, more embedded in SD's ARE ecosystem, and more committed to the long-term relationship that ARE values.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- LA competitive score visual -->
+  <div class="slbl"><h3>Competitive Score — How Your Firm Stacks Up on What ARE Values</h3><div class="ln"></div></div>
+  <div class="g2" style="margin-bottom:15px;">
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">📊</span><div><div class="ch-title" style="color:var(--gd);">Your Firm vs. Confirmed ARE LA Firms</div><div class="ch-sub">Rate your firm on dimensions ARE actually cares about (1–10)</div></div></div>
+      <div class="cb">
+        <div style="margin-bottom:14px;">
+          <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:9px;font-weight:700;color:var(--lt);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">Your Firm (self-assess honestly)</div>
+          <div class="vscore"><span class="vs-lbl">Life science portfolio</span><div class="vs-track"><div class="vs-fill" style="width:50%;"></div></div><span class="vs-val">?/10</span></div>
+          <div class="vscore"><span class="vs-lbl">LEED site credit fluency</span><div class="vs-track"><div class="vs-fill" style="width:60%;"></div></div><span class="vs-val">?/10</span></div>
+          <div class="vscore"><span class="vs-lbl">ARE-specific knowledge</span><div class="vs-track"><div class="vs-fill" style="width:85%;background:var(--g);"></div></div><span class="vs-val">9/10</span></div>
+          <div class="vscore"><span class="vs-lbl">SD geography / proximity</span><div class="vs-track"><div class="vs-fill" style="width:95%;background:var(--g);"></div></div><span class="vs-val">10/10</span></div>
+          <div class="vscore"><span class="vs-lbl">SD life science network</span><div class="vs-track"><div class="vs-fill" style="width:30%;"></div></div><span class="vs-val">?/10</span></div>
+          <div class="vscore"><span class="vs-lbl">Prime arch relationship</span><div class="vs-track"><div class="vs-fill" style="width:25%;"></div></div><span class="vs-val">?/10</span></div>
+        </div>
+        <div style="font-size:10px;color:var(--lt);font-style:italic;line-height:1.6;">Green bars show confirmed advantages. Question marks are your action items — each one is closable with a deliberate 2026 BD investment.</div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">📊</span><div><div class="ch-title" style="color:var(--gd);">Surfacedesign / Bionic (Confirmed ARE LA Firms)</div><div class="ch-sub">Where your confirmed competitors are strong — and where they're not</div></div></div>
+      <div class="cb">
+        <div style="margin-bottom:14px;">
+          <div style="font-family:&#39;DM Mono&#39;,monospace;font-size:9px;font-weight:700;color:var(--lt);letter-spacing:0.08em;text-transform:uppercase;margin-bottom:8px;">Surfacedesign + Bionic (SF-based confirmed ARE LA firms)</div>
+          <div class="vscore"><span class="vs-lbl">Life science portfolio</span><div class="vs-track"><div class="vs-fill" style="width:90%;background:var(--g);"></div></div><span class="vs-val">9/10</span></div>
+          <div class="vscore"><span class="vs-lbl">LEED site credit fluency</span><div class="vs-track"><div class="vs-fill" style="width:90%;background:var(--g);"></div></div><span class="vs-val">9/10</span></div>
+          <div class="vscore"><span class="vs-lbl">ARE-specific knowledge</span><div class="vs-track"><div class="vs-fill" style="width:95%;background:var(--g);"></div></div><span class="vs-val">10/10</span></div>
+          <div class="vscore"><span class="vs-lbl">SD geography / proximity</span><div class="vs-track"><div class="vs-fill" style="width:10%;background:var(--rd);"></div></div><span class="vs-val">1/10</span></div>
+          <div class="vscore"><span class="vs-lbl">SD life science network</span><div class="vs-track"><div class="vs-fill" style="width:15%;background:var(--rd);"></div></div><span class="vs-val">2/10</span></div>
+          <div class="vscore"><span class="vs-lbl">Prime arch relationship (SD)</span><div class="vs-track"><div class="vs-fill" style="width:20%;background:var(--rd);"></div></div><span class="vs-val">2/10</span></div>
+        </div>
+        <div style="font-size:10px;color:var(--lt);font-style:italic;line-height:1.6;">Red bars are their SD-specific weaknesses. These are your competitive openings — but only if you actively exploit them through local presence and relationship-building.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>AEC Partners — Who Gets You Into the ARE Project Team</h3><div class="ln"></div></div>
+  <div class="g2">
+    <div class="card">
+      <div class="ch ch-forest"><span class="ch-icon">🏢</span><div><div class="ch-title">Prime Architects — San Diego Priority Targets</div><div class="ch-sub">Build these relationships before the RFP · The LA is on the architect's team</div></div></div>
+      <div class="cb">
+        <ul class="tpl">
+          <li class="tpi"><div class="tpn">1</div><div class="tpt"><strong>Gensler San Diego — Life Science Studio</strong><span>Largest architecture firm in the world, in every ARE market. SD office is a major life science and corporate campus player — virtually certain to be engaged on some ARE SD project. Action: Identify the Gensler SD life science studio lead. Coffee meeting before they're in pursuit mode. Ask about their current SD life science pipeline — not about your firm.</span></div></li>
+          <li class="tpi"><div class="tpn">2</div><div class="tpt"><strong>HDR — San Diego Office</strong><span>Ranked #2 laboratory architecture firm nationally (BD+C Giants 400). SD office near ARE's Torrey Pines and UTC campuses — directly adjacent to Campus Point. Same play as Gensler: identify the lab architecture lead, establish a working relationship before any RFP exists. Don't wait until an RFP creates the pressure.</span></div></li>
+          <li class="tpi"><div class="tpn">3</div><div class="tpt"><strong>Flad Architects</strong><span>#1 laboratory architecture firm nationally. Active in SD market. If engaged on a Campus Point scope, a SoCal LA sub with local presence is attractive. Monitor their project announcements in the SD market — construction press, ENR Southwest, Bisnow SD coverage.</span></div></li>
+        </ul>
+      </div>
+    </div>
+    <div class="card">
+      <div class="ch ch-gm"><span class="ch-icon">⚙️</span><div><div class="ch-title">Engineering Partners — Confirmed ARE Ecosystem</div><div class="ch-sub">ARE's confirmed engineers can open project team doors</div></div></div>
+      <div class="cb">
+        <ul class="tpl">
+          <li class="tpi"><div class="tpn">1</div><div class="tpt"><strong>Thornton Tomasetti — San Diego Office</strong><span>Confirmed structural engineer on TWO ARE Mission Bay projects. Repeat engagement = preferred vendor status. If they're on the Campus Point team, you want to be their recommended LA subconsultant. High-value target — they're already trusted by ARE's development team and know how ARE works.</span></div></li>
+          <li class="tpi"><div class="tpn">2</div><div class="tpt"><strong>Arup — San Diego Office</strong><span>Confirmed façade engineer on ARE's 1700 Owens St (Mission Bay, 2024). SD office active in life science. Sustainability focus aligns with ARE's LEED targets. Knowing Arup's SD team gives you a warm introduction path to ARE project teams on high-performance buildings.</span></div></li>
+          <li class="tpi"><div class="tpn">3</div><div class="tpt"><strong>Truebeck Construction</strong><span>Confirmed GC on two ARE Mission Bay projects. Bay Area-based but active in CA life science market. GCs influence subconsultant selection during construction — a Truebeck relationship is another path into ARE project work, especially on existing campus refresh scopes.</span></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>Procurement Sequence — Which Scenario Are You In?</h3><div class="ln"></div></div>
+  <div class="co-amber"><strong>Critical Reality — LA Firms Are Almost Always in the Second Wave</strong>The prime architect (Gensler SD, HDR) is selected by ARE first. The landscape architect is assembled by the prime — not directly hired by ARE — for most new campus projects. Know which scenario you're in before investing pursuit resources. The existing campus refresh scopes (Torrey Pines, Lilly Gateway Labs area) may be the exception where ARE engages an LA directly.</div>
+  <div class="proc-grid">
+    <div class="proc-card">
+      <div class="proc-hdr a"><div class="proc-num">A</div><div class="proc-label">Long Lead — Prime Not Yet Engaged</div></div>
+      <div class="proc-body"><strong style="color:var(--gd);">Best position — you're in this right now.</strong> The prime architect for Campus Point BMS is not publicly confirmed. Build relationships with Gensler SD and HDR now — before they're in pursuit mode. When the prime is selected and starts assembling their sub team, you want to be their first call for landscape. Use 2026 to establish these relationships while calendars have room.</div>
+    </div>
+    <div class="proc-card">
+      <div class="proc-hdr b"><div class="proc-num">B</div><div class="proc-label">Prime Shortlisted or Selected</div></div>
+      <div class="proc-body"><strong style="color:#7D5010;">React quickly.</strong> When ARE announces a prime architect appointment for Campus Point, congratulate them — this is a legitimate, warm reason to reach out and open the conversation. Conduct your go/no-go for each shortlisted prime. Which team is most likely to win, and where do you add the most value to their team?</div>
+    </div>
+    <div class="proc-card">
+      <div class="proc-hdr c"><div class="proc-num">C</div><div class="proc-label">Existing Campus Refresh — Best First Project</div></div>
+      <div class="proc-body"><strong style="color:var(--rd);">Best entry point for a first ARE project.</strong> The existing 1.3M RSF at Campus Point and re-leasing activity at Torrey Pines (Lilly Gateway Labs already delivered with "event lawn" and "walking path") generate smaller refresh scopes. Lower barrier, may engage LA directly with ARE's development team. A smaller project win is the credential that opens the door to the BMS build-to-suit.</div>
+    </div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-po" onclick="togNotes(&#39;po&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-po">
+      <div class="nc"><div class="nch g"><span class="nch-icon">📍</span><div class="nch-title">The Win Statement Exercise — Do This Out Loud</div></div>
+        <div class="ncb"><p class="np">Ask the room to complete the win statement out loud. Not on paper — out loud. <strong>"We should win this because we are the only firm that..."</strong> If the answer is generic ("we are collaborative and client-focused"), you don't have a strategy. If it's specific ("we are the only SoCal LA firm with a confirmed LEED Platinum life science campus project AND an existing relationship with Gensler SD's life science studio"), you have something to build on.</p>
+        <p class="np">Walk through the competitive score bars side by side. The key insight: Surfacedesign and Bionic score nearly perfect everywhere except SD geography and SD network. Those red bars are your openings. But they only become your advantage if you're actively filling them — showing up at Biocom, at NAIOP, at ULI SD, building the Gensler relationship. If you're not present, the red bars don't matter.</p></div>
+      </div>
+      <div class="disc"><div class="disc-lbl">Discussion Prompts</div>
+        <div class="disc-q">Complete the win statement for Campus Point out loud right now. Is it specific enough that it could only apply to ARE's SD Campus Point — or is it generic enough to apply to any client in any city?</div>
+        <div class="disc-q">Of Gensler SD and HDR, which is more likely to be engaged on Campus Point? What would you need to do in the next 30 days to establish a working relationship with their life science studio?</div>
+        <div class="disc-q">What is the existing campus refresh scope most likely to be your firm's first ARE project — not the BMS build-to-suit, but a smaller landscape enhancement? What does that project look like and how would you even know it exists?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway</div><div class="tka-txt">Local presence + life science specificity = your competitive advantage. Local presence only works if you're physically present in SD's life science community. Specificity only works if your portfolio and language are tailored to life science, not generic campus work. Position on both — and the SF-based competitors' advantage disappears.</div></div></div>
+      <div class="tr-cue"><div class="tr-arr">→</div><div class="tr-txt"><strong>Transition to Phase 4 — Capture</strong>Strategy is set. Now write a proposal that sounds like it was written for ARE — not for a generic client who happens to be building a lab building.</div></div>
+    </div>
+  </div>
+</div><!-- /position -->
+<!-- ═══════════ CAPTURE TAB ═══════════ -->
+<div class="pnl" id="pnl-ca">
+  <div class="phero">
+    <div class="ph-icon">✍️</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Phase 4 of 5 — Capture</div>
+      <div class="ph-title">Write to Win</div>
+      <div class="ph-desc">Move from "Me" to "You." Write for ARE specifically — not about your firm generally. Mirror their language exactly. Lead with LEED, Fitwel, talent recruitment, and the indoor-outdoor connection. 50% of RFP responses are generic. Be the other 50% by using the research you've already done.</div>
+    </div>
+    <div class="ph-badge">"Your competitor leads with 'collaborative, client-centered approach.' You lead with 'seamlessly blending indoor and outdoor spaces to enable the recruitment of mission-critical talent.' ARE recognizes the difference immediately."</div>
+  </div>
+
+  <div class="slbl"><h3>ARE's Own Language — Use It Back to Them Verbatim</h3><div class="ln"></div></div>
+  <div class="co-dark"><strong>Mirror Their Words — Not Paraphrases</strong>ARE has told you exactly what they care about in press releases, earnings calls, CR reports, and LinkedIn posts. Every phrase below is sourced from a public ARE document. Selection panels recognize familiar language and respond to it — it signals you understand their business, not just their project specs.</div>
+
+  <div class="lang-grid">
+    <div class="lang-card">
+      <div class="lang-quote">"Elevated amenity experience that enables the recruitment and retention of mission-critical talent to advance next-generation discoveries."</div>
+      <div class="lang-src">Campus Point BMS Press Release · July 2025</div>
+      <div class="lang-use"><strong>How to use it</strong>Replace "outdoor amenities" entirely. Frame every design decision around this phrase — your walking path enables talent recruitment. Your terrace enables retention. Your event lawn enables the social connectivity that drives discovery. Never say "amenities" again in an ARE proposal.</div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-quote">"Seamlessly blending indoor and outdoor spaces that serves as a central gathering place for the innovation community."</div>
+      <div class="lang-src">Campus Point BMS Press Release · July 2025</div>
+      <div class="lang-use"><strong>How to use it</strong>An explicit design priority they've named publicly. Describe specifically how your landscape design achieves this — not just promises it. What transitions, materials, programming, and spatial relationships deliver this seamless connection?</div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-quote">"Restorative walking path" · "Large event lawn" · "Garden seating" · "Destination restaurant with outdoor dining."</div>
+      <div class="lang-src">Lilly Gateway Labs SD Announcement · Sept 2025</div>
+      <div class="lang-use"><strong>How to use it</strong>ARE names outdoor elements specifically as headline amenities — not as generic landscaping. Use this same specificity in your design narrative. Name the spaces you're proposing with the same level of intentionality they use in press releases.</div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-quote">"Vibrant Megacampus ecosystem that supports the entire life science value chain."</div>
+      <div class="lang-src">ARE Annual Report · Recurring language</div>
+      <div class="lang-use"><strong>How to use it</strong>Use "Megacampus ecosystem" when referring to Campus Point — not just "campus." It signals you understand ARE's brand strategy and their thesis about why clustering matters. A small word choice that signals a large amount of research.</div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-quote">"Targeting LEED Gold Core &amp; Shell and Fitwel certifications, and 100% building electrification."</div>
+      <div class="lang-src">Campus Point BMS Build-to-Suit Specs · 2025</div>
+      <div class="lang-use"><strong>How to use it</strong>Name these three certifications explicitly and describe how your landscape design delivers credits toward each. If you can't name specific LEED v4 site credits and Fitwel outdoor requirements, you're not speaking ARE's technical language.</div>
+    </div>
+    <div class="lang-card">
+      <div class="lang-quote">"Making a positive and lasting impact on the world by enabling life-changing science and technology."</div>
+      <div class="lang-src">ARE Mission Statement · All Press Releases</div>
+      <div class="lang-use"><strong>How to use it</strong>Frame your firm's work in mission language. Not "we design beautiful landscapes." Instead: "We create outdoor environments that advance the mission-critical work happening inside these buildings — and we have the LEED credentials to prove it."</div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>LEED &amp; Fitwel Credits — Name Them or Don't Submit</h3><div class="ln"></div></div>
+  <div class="co-warn"><strong>Non-Negotiable for Any ARE Proposal</strong>If your proposal does not name specific LEED v4 Site &amp; Water credits and Fitwel outdoor space requirements, it reads as generic. ARE's sustainability team reads every proposal. They will know immediately whether you understand lab-building LEED or not. This is the single most differentiating technical capability you can demonstrate — and the most common gap in LA firm proposals for life science work.</div>
+
+  <div class="leed-grid">
+    <div class="leed-item">
+      <div class="leed-name">LEED SS — Stormwater Management</div>
+      <div class="leed-body">Bioretention planters, permeable paving, on-site water quality treatment. Campus Point is in a region with water quality regulatory requirements. Name the credit, name the strategy, name the measurable outcome. Show you've done this before — with documentation.</div>
+    </div>
+    <div class="leed-item">
+      <div class="leed-name">LEED SS — Heat Island Reduction</div>
+      <div class="leed-body">Native shade trees, cool paving strategies (SRI values), green roofs, reflective hardscape. SD climate creates heat island risk — your design mitigates it. Name specific SRI values for the paving materials you're proposing. Don't be vague on this credit.</div>
+    </div>
+    <div class="leed-item">
+      <div class="leed-name">LEED SS — Open Space + Site Assessment</div>
+      <div class="leed-body">Outdoor access for occupants — the "restorative walking path" and "event lawn" ARE already named ARE your deliverables for these credits. Show how your design maximizes these credits while delivering ARE's stated amenity vision. The overlap is your narrative.</div>
+    </div>
+    <div class="leed-item">
+      <div class="leed-name">LEED WE — Water Efficient Landscaping</div>
+      <div class="leed-body">Native and adapted plant species, efficient irrigation design, potable water reduction targets. San Diego's drought context makes this credit especially visible to the development team. Show your native plant palette and irrigation strategy explicitly.</div>
+    </div>
+    <div class="leed-item">
+      <div class="leed-name">Fitwel — Outdoor Spaces (Credits 11–14)</div>
+      <div class="leed-body">Fitwel certifies buildings on occupant health outcomes. Outdoor spaces supporting physical activity and mental restoration are scored credits. ARE named Fitwel in BMS specs — describe specifically how your design delivers Fitwel credits, not just LEED. These are different frameworks; both matter.</div>
+    </div>
+    <div class="leed-item">
+      <div class="leed-name">I2SL Labs2Zero — Energy Reduction Contribution</div>
+      <div class="leed-body">ARE tracks building energy performance using this lab-specific scoring system (averaged 74/100 in 2024). Your landscape design contributes through shading strategies that reduce building cooling loads and HVAC demand. Note this explicitly — it demonstrates sector-specific literacy beyond standard LEED.</div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>Fee Strategy — Headwind Market, Premium Client</h3><div class="ln"></div></div>
+  <div class="co-amber"><strong>Do Not Compete on Price Against ARE — They Are Not Price-Sensitive on LEED Delivery</strong>In a headwind market, the instinct is to sharpen the pencil. Resist it. ARE is not selecting the lowest bidder for a $6.35B portfolio. They are selecting the firm that can reliably deliver LEED Gold, Fitwel, and an outdoor environment that helps BMS recruit PhD-level scientists from around the world. Pricing too low signals you don't understand the scope — or that you'll cut corners when budget pressure hits.</div>
+  <div class="g3">
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">💲</span><div><div class="ch-title" style="color:var(--gd);">Price to LEED Value</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">LEED certification failure costs far more than your fee. Frame your fee as LEED delivery insurance: "Our team has delivered LEED Gold/Platinum site credits on [X projects] without a single credit shortfall or certification delay. That reliability is what your fee is paying for — not hours, but outcomes."</div>
+    </div>
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">📍</span><div><div class="ch-title" style="color:var(--gd);">Local Presence = Billable Savings</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">An SF-based LA firm bills travel expenses for every site visit to Campus Point. You don't. Frame it as responsiveness first, cost second: "Our San Diego–accessible team can be on-site within 2 hours of a call from ARE's development team — without travel costs and without scheduling constraints."</div>
+    </div>
+    <div class="card">
+      <div class="ch ch-pale"><span class="ch-icon">🎯</span><div><div class="ch-title" style="color:var(--gd);">Scope Clarity Protects Margin</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">Life science campus projects generate enormous change order exposure — phasing changes, TI coordination, utility conflicts, tenant-driven modifications. Define precisely what is and is not included. Document your change order process in the proposal. Don't absorb ARE's development complexity for free.</div>
+    </div>
+  </div>
+
+  <div class="slbl"><h3>Proposal Checklist — Before You Submit Anything to ARE</h3><div class="ln"></div></div>
+  <div class="card" style="margin-bottom:15px;">
+    <div class="ch ch-bk"><span class="ch-icon">✅</span><div><div class="ch-title">Capture Readiness — Check All Before Submitting</div><div class="ch-sub">Tap to mark done · Every unchecked item is a competitive weakness</div></div></div>
+    <div class="cb">
+      <div class="g2" style="margin-bottom:0;">
+        <ul class="ckl">
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Win strategy statement written and reviewed by team</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">ARE language audit: "amenities" replaced with "talent recruitment" framing</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">BMS press release language quoted or paraphrased in proposal</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Specific LEED v4 site credits named with delivery strategy</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Fitwel outdoor space credits addressed explicitly</span></li>
+        </ul>
+        <ul class="ckl">
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Labs2Zero / I2SL energy contribution mentioned</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Local presence advantage quantified (site visits, no travel billing)</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Fee includes LEED credit delivery as defined outcome, not hourly estimate</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Scope exclusions clearly documented — change order process described</span></li>
+          <li class="cki" onclick="ck(this)"><div class="ckb"></div><span class="ck-t">Comparable life science project: LEED certification + outdoor scope documented</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-ca" onclick="togNotes(&#39;ca&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-ca">
+      <div class="nc"><div class="nch g"><span class="nch-icon">📝</span><div class="nch-title">Opening — The Language Test</div></div>
+        <div class="ncb"><p class="np">Ask the room: <strong>"Pull up any proposal your firm submitted in the last 6 months. Read the first paragraph out loud. Does it say 'collaborative, client-centered approach with deep commitment to design excellence'? Or does it say something that could only apply to this specific client, this project, and this moment in the market?"</strong></p>
+        <p class="np">The language guide on this page is not a trick. Every phrase traces to an ARE press release, earnings call, or CR report. Using these phrases verbatim tells ARE's selection panel one thing: this firm did the research. They read the BMS announcement. They know the Fitwel specs. They understand our mission — not just our project data sheet. That recognition is what wins shortlists.</p>
+        <p class="np">The LEED credit section is a test you can deliver to the room: <strong>"How many of you know the specific SRI requirements for LEED Heat Island credit? How many can name what Fitwel outdoor space credits require for certification?"</strong> If the answer is "not many," that's the capability gap to close before submitting to ARE. It's a closable gap — but not by submitting a generic proposal and hoping they don't notice the missing specificity.</p></div>
+      </div>
+      <div class="disc"><div class="disc-lbl">Discussion Prompts</div>
+        <div class="disc-q">Read the first paragraph of your firm's standard capability statement. Replace every "we" with ARE's name. Does the sentence still make sense — or does it only describe your firm and not their needs?</div>
+        <div class="disc-q">What would you need to add to your team's capabilities — or document from existing projects — to be able to name specific LEED v4 site credits and Fitwel outdoor space credits by number in an ARE proposal?</div>
+        <div class="disc-q">How would you frame a fee that is 15–20% higher than your competitors — and make it feel like the better value?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway</div><div class="tka-txt">ARE doesn't need a landscape architect. They need a firm that speaks LEED, knows Fitwel, understands the difference between "outdoor amenities" and "environments that enable the recruitment of mission-critical talent," and can deliver without a learning curve. Write every sentence to prove you're that firm.</div></div></div>
+      <div class="tr-cue"><div class="tr-arr">→</div><div class="tr-txt"><strong>Transition to Phase 5 — Retain</strong>Whether you win the BMS build-to-suit or start with a smaller campus refresh, keeping the ARE relationship is more valuable than winning any single project. ARE holds 19.9M RSF of future San Diego pipeline.</div></div>
+    </div>
+  </div>
+</div><!-- /capture -->
+
+
+<!-- ═══════════ RETAIN TAB ═══════════ -->
+<div class="pnl" id="pnl-re">
+  <div class="phero">
+    <div class="ph-icon">🌱</div>
+    <div class="ph-txt">
+      <div class="ph-phase">Phase 5 of 5 — Retain</div>
+      <div class="ph-title">Stay Connected</div>
+      <div class="ph-desc">One project won is the credential for the next. ARE holds 19.9M RSF of future entitled Megacampus development — and 84% of their leasing came from existing relationships. The goal is not a single project. It's becoming Alexandria's preferred Southern California landscape architect for the next decade of Campus Point development.</div>
+    </div>
+    <div class="ph-badge">"84% of ARE's leasing activity in the last 12 months came from existing tenants. They chose BMS for a 16-year, 466K RSF deal because of a 25+ year relationship. They value firms that stay."</div>
+  </div>
+
+  <!-- ANNUAL CALENDAR -->
+  <div class="slbl"><h3>Annual Engagement Calendar — Stay Visible Without Being Annoying</h3><div class="ln"></div></div>
+  <div class="cal-grid">
+    <div class="cal-item"><div class="cal-month">January</div><div><div class="cal-title">ARE Q4 Earnings Call — Annual Strategy Briefing</div><div class="cal-body">Free webcast at investor.are.com. Joel Marcus, Peter Moglia, and Hallie Kuhn speak 90 minutes on market outlook, SD pipeline, and specific campus priorities. Take notes. You'll know what to talk about with ARE's SD team for the next six months — before your competitors have read any summary.</div><div class="cal-action">→ Listen to the call. Write down 3 things specifically relevant to Campus Point or San Diego. Use them in your next ARE or Gensler SD contact.</div></div></div>
+    <div class="cal-item"><div class="cal-month">April</div><div><div class="cal-title">Bisnow SoCal Life Sciences Conference — San Diego</div><div class="cal-body">ARE confirmed in 2025 attendance alongside IQHQ, Healthpeak, BioMed, Oxford. Your best opportunity to have a natural conversation with ARE's SD development staff in a genuinely non-transactional setting before the cocktail conversation feels like networking.</div><div class="cal-action">→ Register early. Prepare one smart question from your January earnings call notes. Ask it — don't pitch. Exchange contact information, follow up within 48 hours.</div></div></div>
+    <div class="cal-item"><div class="cal-month">May</div><div><div class="cal-title">Mental Health Month — ARE's Signature Content Campaign</div><div class="cal-body">ARE's highest-output LinkedIn month. Multiple posts about mental health awareness, NIH partnership, OneFifteen recovery center. Biophilic design, restorative outdoor spaces, and wellness-focused landscapes align directly with their cause platform — this is your content intersection.</div><div class="cal-action">→ Publish one piece connecting your outdoor design work to mental health outcomes. Share ARE's content with a relevant comment. Tag Eleni Reed on a wellness landscape post.</div></div></div>
+    <div class="cal-item"><div class="cal-month">June–July</div><div><div class="cal-title">CR Report Drop — Peak ARE Content Window</div><div class="cal-body">ARE's annual Corporate Responsibility Report generates weeks of LinkedIn activity. ARE's team is in "mission and values" mode — this is when they're most receptive to LEED and sustainability conversations. Day-one engagement signals you're tracking their business year-round.</div><div class="cal-action">→ Pre-read ARE's supplemental sustainability data before the report drops. Day-one LinkedIn comment on LEED or GHG achievement puts you ahead of everyone who reads it a week later.</div></div></div>
+    <div class="cal-item"><div class="cal-month">September</div><div><div class="cal-title">Bisnow International Life Sciences &amp; Biotech Conference — San Diego</div><div class="cal-body">Two-day conference. ARE confirmed attendee and speaker annually. Joel Marcus and Hallie Kuhn have both appeared. The two-hour cocktail reception is your single highest-ROI networking moment of the year. 2026 = 4th annual in San Diego — this event is growing.</div><div class="cal-action">→ Register early. Attend both days + evening reception. Prepare two conversation starters from Q2 earnings call and your May/June LinkedIn engagement. Walk in knowing faces and knowing their recent announcements.</div></div></div>
+    <div class="cal-item"><div class="cal-month">Q4</div><div><div class="cal-title">Annual Check-In — Set Up the Next Year's Conversation</div><div class="cal-body">Year-end is a natural moment to reach out. What happened on Campus Point in 2026? What's on ARE's 2027 SD agenda? What can you share — a relevant project completion, a LEED insight, a Biocom connection — that has value for them before you ask for anything?</div><div class="cal-action">→ Send a year-end note to ARE SD contacts, Gensler SD, and HDR contacts. No pitch. Share something relevant and specific. Propose a Q1 coffee or site walk to set up the next year.</div></div></div>
+  </div>
+
+  <!-- NETWORK MAP -->
+  <div class="slbl"><h3>Long-Term Network Target List — Build This Over 24 Months</h3><div class="ln"></div></div>
+  <div class="net-map">
+    <div class="nm-title">🌿 Your San Diego Life Science Relationship Map — Priority-Ordered</div>
+    <div class="nm-row"><div class="nm-rank">1</div><div class="nm-content"><strong>Gensler SD Life Science Studio Lead</strong>The single most valuable relationship for ARE project access in San Diego. When Gensler is on an ARE SD project, they choose their LA subconsultant. Being known, trusted, and available to Gensler SD puts you on every ARE project they win in this market. One coffee meeting per quarter. Invite them to walk a site you're working on. Refer a project their way if the opportunity comes up.</div></div>
+    <div class="nm-row"><div class="nm-rank">2</div><div class="nm-content"><strong>HDR San Diego Lab Architecture Lead</strong>Same play as Gensler, independent path. HDR's SD office focuses heavily on research and lab buildings in the UTC/Torrey Pines corridor — directly adjacent to ARE's core SD campuses. Build this relationship independently so you have two separate paths to any ARE SD project team.</div></div>
+    <div class="nm-row"><div class="nm-rank">3</div><div class="nm-content"><strong>Hallie Kuhn, ARE EVP (SD Ecosystem)</strong>Long game — not a first-meeting relationship. Build through Biocom events and LinkedIn engagement first. When you have two or three substantive interactions on record, a coffee invitation has context. Ask about the SD life science VC environment — her area of deep expertise — not about your firm.</div></div>
+    <div class="nm-row"><div class="nm-rank">4</div><div class="nm-content"><strong>Eleni Reed, ARE SVP Sustainability (Pasadena)</strong>Most accessible senior ARE contact for a SoCal firm — and she's 2 hours from Torrance. LEED, ESG, and biophilic design are the natural intersection. USGBC and I2SL events are her circuit. A thoughtful conversation at GreenBuild about Labs2Zero scoring opens more doors than a cold email about Campus Point.</div></div>
+    <div class="nm-row"><div class="nm-rank">5</div><div class="nm-content"><strong>Biocom San Diego Community</strong>Not a single person but an ecosystem. The biotech scientists, founders, and investors who attend Biocom events are ARE's current and future tenants. Being known in this community as a thoughtful landscape architect who understands life science mission — not just the buildings — makes you memorable to the real estate developers who serve them.</div></div>
+    <div class="nm-row"><div class="nm-rank">6</div><div class="nm-content"><strong>Thornton Tomasetti San Diego</strong>Confirmed on two ARE Mission Bay projects. If they're on the Campus Point BMS team, you want them to know and recommend you. Build a working relationship with their SD structural team — bring them coffee, know who they are before you need them to know who you are. Engineering referrals to landscape subs are common on complex life science campuses.</div></div>
+  </div>
+
+  <!-- THREE CLOSE-OUT RULES -->
+  <div class="slbl"><h3>Three Things. Every Project. No Exceptions.</h3><div class="ln"></div></div>
+  <div class="g3">
+    <div class="card">
+      <div class="ch ch-g"><span class="ch-icon">1</span><div><div class="ch-title">Request a Debrief</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">Whether you win or lose, ask for a debrief. ARE's development team will tell you exactly what differentiated the winning firm — and what you need to fix. Most clients are surprised when consultants ask. That surprise is itself a differentiator — it signals you're serious about continuous improvement, not just the next pitch.</div>
+    </div>
+    <div class="card">
+      <div class="ch ch-gm"><span class="ch-icon">2</span><div><div class="ch-title">Ask for a Reference or Introduction</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">After a successful delivery, ask for a reference letter AND an introduction. "Is there someone at Gensler SD or HDR you'd feel comfortable introducing us to?" The warm intro is worth more than any cold outreach campaign. Ask when the relationship is warm — not six months after the project closes and the relationship has gone dormant.</div>
+    </div>
+    <div class="card">
+      <div class="ch ch-gd"><span class="ch-icon">3</span><div><div class="ch-title">Schedule the Next Touchpoint</div></div></div>
+      <div class="cb" style="font-size:12px;color:var(--md);line-height:1.7;">Book a 6-month check-in before you leave the final project meeting. ARE's 19.9M RSF future SD pipeline means there will always be a next conversation to have. Don't let the relationship go dormant. The next project begins in this conversation — not in a prospecting call 18 months later.</div>
+    </div>
+  </div>
+
+  <!-- CLOSING VISUAL -->
+  <div class="ibox" style="margin-top:4px;">
+    <div class="ibox-t">🔭 The Long View — Why This Investment Compounds</div>
+    <div class="irow"><span class="ibul">→</span><span>ARE holds entitled land for <strong>19.9 million additional RSF</strong> of future Megacampus development across their seven AAA cluster markets. San Diego is one of their top two active markets. That pipeline represents decades of landscape architecture work — at premium LEED-required quality levels. The firm that establishes itself as ARE's preferred SD landscape architect in 2026 doesn't just win one project. They win a relationship that compounds over time as ARE's SD campus grows from 1.3M RSF toward its long-term entitled footprint.</span></div>
+    <div class="irow"><span class="ibul">→</span><span><strong>84% of ARE's leasing came from existing tenant relationships.</strong> This is not a real estate statistic — it is a relationship statistic. ARE built a 466K RSF, 16-year, $102B-tenant deal on a 25+ year relationship with BMS. They value firms that show up consistently, deliver reliably, and stay committed — not transactional vendors who appear when there's a bid and disappear when the project closes.</span></div>
+    <div class="irow"><span class="ibul">→</span><span>The <strong>2026 headwind window is the relationship-building window.</strong> Most of your competitors are quiet right now. ARE's development team has more time for conversations. The primes (Gensler SD, HDR) have more room in their calendars for coffee meetings. The Biocom events are less crowded with vendors competing for attention. This is the optimal moment to plant the seeds that compound into 2028 project wins.</span></div>
+    <div class="irow"><span class="ibul">→</span><span>Every action on the checklists in this playbook — from following ARE on LinkedIn to attending Bisnow ILS in September to having one coffee with Gensler SD's life science studio lead — is a seed. <strong>Seeds planted in 2026 grow into relationships in 2027 and projects in 2028.</strong> The firms that skip the planting and wait for the harvest are the ones who watch other firms win the recovery.</span></div>
+  </div>
+
+  <div class="sn-sec">
+    <div class="sn-tog" id="snt-re" onclick="togNotes(&#39;re&#39;)">📋 Presenter Notes <span class="sn-arr">▾</span></div>
+    <div class="sn-body" id="snb-re">
+      <div class="nc"><div class="nch g"><span class="nch-icon">🌱</span><div class="nch-title">Closing the Session — The Long Game</div></div>
+        <div class="ncb"><p class="np">End the session with the scale of the opportunity. <strong>"ARE holds entitled land for 19.9 million additional RSF of future Megacampus development. That's not a one-project opportunity. That's a decade of landscape architecture work at the highest quality level in the industry."</strong> The firm that establishes itself as ARE's preferred Southern California landscape architect in 2026 doesn't just win Campus Point. They win a relationship that multiplies.</p>
+        <p class="np">The engagement calendar is not a marketing plan. It is a discipline. The firms that show up at Biocom every quarter, engage with ARE's LinkedIn every month, and attend Bisnow every September are not doing it because it's fun. They're doing it because consistency is the only thing that converts a name in someone's memory into the first call when a project goes to procurement.</p>
+        <p class="np">Close with the commitment ask: <strong>"What is one specific thing you will do in the next two weeks to move closer to the ARE San Diego ecosystem? Name the action. Name the person. Name the date."</strong> Get answers from the room. Write them down. That's your playbook in action.</p></div>
+      </div>
+      <div class="disc"><div class="disc-lbl">Closing Discussion Prompts</div>
+        <div class="disc-q">What is one specific BD action you will take in the next two weeks to move closer to the ARE San Diego ecosystem? Name the action, name the person, name the date — and say it out loud to the room.</div>
+        <div class="disc-q">Think of your most valuable existing client relationship. What does the pattern of how you built it have in common with the retain strategy described here — and what's missing from your current approach with ARE?</div>
+        <div class="disc-q">If you imagine a conversation with ARE's SD development team in September 2027 — what do you want them to already know about your firm? What do you need to do between now and then to make that true?</div>
+      </div>
+      <div class="tkaway"><div class="tka-icon">💡</div><div><div class="tka-lbl">Key Takeaway — Closing the Playbook</div><div class="tka-txt">Every phase — Scout, Engage, Position, Capture, Retain — is a discipline, not a talent. The firms that win in the 2028 life science recovery are the ones that start showing up in 2026. Not because the market is perfect — but because it isn't, and everyone else has gone quiet. Pick one action. Start this week. Build from there. That is the entire playbook.</div></div></div>
+    </div>
+  </div>
+</div><!-- /retain -->
+
+</main>
+
+<footer>
+  <div class="ft-l">San Diego Life Sciences BD Playbook · Alexandria Real Estate Case Study · ASLA 2026</div>
+  <div class="ft-r">Scout → Engage → Position → Capture → Retain · All data sourced from ARE 10-K FY2025 + public records</div>
+</footer>
+
+<div class="toast" id="toast">✓ Saved</div>
+
+<script>
+'use strict';
+function show(id, el) {
+  document.querySelectorAll('.pnl').forEach(function(p){ p.classList.remove('on'); });
+  document.querySelectorAll('.ptab').forEach(function(t){ t.classList.remove('on'); });
+  document.getElementById('pnl-'+id).classList.add('on');
+  el.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function togNotes(id) {
+  var b = document.getElementById('snb-'+id);
+  var t = document.getElementById('snt-'+id);
+  var open = b.classList.contains('open');
+  b.classList.toggle('open', !open);
+  t.classList.toggle('open', !open);
+}
+function ck(item) {
+  item.classList.toggle('done');
+  try {
+    var done = [];
+    document.querySelectorAll('.cki.done').forEach(function(el){
+      done.push(el.querySelector('.ck-t').textContent.trim().slice(0,50));
+    });
+    sessionStorage.setItem('sdp_ck', JSON.stringify(done));
+    var t = document.getElementById('toast');
+    t.classList.add('show');
+    setTimeout(function(){ t.classList.remove('show'); }, 1400);
+  } catch(e){}
+}
+window.addEventListener('load', function(){
+  try {
+    var saved = JSON.parse(sessionStorage.getItem('sdp_ck')||'[]');
+    document.querySelectorAll('.cki').forEach(function(el){
+      var k = el.querySelector('.ck-t').textContent.trim().slice(0,50);
+      if (saved.indexOf(k) !== -1) el.classList.add('done');
+    });
+  } catch(e){}
+});
+</script>
+
+
+</body></html>
