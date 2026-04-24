@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BD Intelligence — Access</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --g: #81BC00; --gd: #5A8A00;
+  --bk: #111111; --md: #555555; --lt: #999999;
+  --bd: #E6E6E6; --wh: #FFFFFF;
+}
+html, body {
+  height: 100%;
+  font-family: 'DM Sans', sans-serif;
+  background: var(--wh);
+  color: var(--bk);
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 100vh;
+}
+
+/* LEFT PANEL */
+.left {
+  border-right: 1px solid var(--bd);
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.logo {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px; font-weight: 500;
+  letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--bk);
+}
+.logo span { color: var(--g); }
+.left-content { flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 48px 0; }
+.left-kicker {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--g);
+  margin-bottom: 24px;
+}
+.left-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3.5vw, 48px);
+  font-weight: 700; line-height: 1.1;
+  letter-spacing: -0.02em; color: var(--bk);
+  margin-bottom: 20px;
+}
+.left-title em { font-style: italic; color: var(--g); }
+.left-desc {
+  font-size: 14px; font-weight: 300;
+  line-height: 1.85; color: var(--md);
+  max-width: 380px;
+}
+.left-meta {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; color: var(--lt);
+  letter-spacing: 0.08em;
+  line-height: 1.8;
+}
+
+/* RIGHT PANEL */
+.right {
+  padding: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: var(--wh);
+}
+.right-inner { max-width: 360px; }
+.form-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--lt); margin-bottom: 32px;
+  display: block;
+}
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px; font-weight: 700;
+  line-height: 1.2; letter-spacing: -0.02em;
+  color: var(--bk); margin-bottom: 8px;
+}
+.form-sub {
+  font-size: 13px; font-weight: 300;
+  color: var(--lt); line-height: 1.7;
+  margin-bottom: 36px;
+}
+.input-wrap { position: relative; margin-bottom: 14px; }
+.pw-input {
+  width: 100%;
+  padding: 14px 16px;
+  font-family: 'DM Mono', monospace;
+  font-size: 14px; letter-spacing: 0.1em;
+  border: 1px solid var(--bd);
+  border-radius: 2px;
+  background: var(--wh);
+  color: var(--bk);
+  outline: none;
+  transition: border-color 0.15s;
+  -webkit-appearance: none;
+}
+.pw-input:focus { border-color: var(--g); }
+.pw-input.error { border-color: #C0392B; }
+.pw-input::placeholder { color: var(--lt); letter-spacing: 0.05em; font-size: 12px; }
+.toggle-pw {
+  position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%);
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--lt);
+  cursor: pointer; letter-spacing: 0.08em;
+  text-transform: uppercase; user-select: none;
+  transition: color 0.15s;
+}
+.toggle-pw:hover { color: var(--bk); }
+.error-msg {
+  font-size: 11px; color: #C0392B;
+  font-weight: 400; margin-bottom: 14px;
+  display: none; padding-left: 2px;
+}
+.error-msg.show { display: block; }
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px; font-weight: 500;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--wh); background: var(--bk);
+  border: none; border-radius: 2px;
+  cursor: pointer; transition: background 0.15s;
+}
+.submit-btn:hover { background: var(--g); }
+.submit-btn:active { transform: scale(0.99); }
+.form-note {
+  margin-top: 24px;
+  font-size: 11px; font-weight: 300;
+  color: var(--lt); line-height: 1.7;
+  padding-top: 24px;
+  border-top: 1px solid var(--bd);
+}
+
+/* WHAT'S INSIDE */
+.contents {
+  margin-top: 40px;
+  padding-top: 32px;
+  border-top: 1px solid var(--bd);
+}
+.contents-label {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--lt);
+  margin-bottom: 16px;
+}
+.content-item {
+  display: flex; align-items: baseline;
+  gap: 10px; padding: 7px 0;
+  border-bottom: 1px solid var(--bd);
+  font-size: 12px;
+}
+.content-item:last-child { border-bottom: none; }
+.ci-num {
+  font-family: 'DM Mono', monospace;
+  font-size: 9px; color: var(--g);
+  flex-shrink: 0; width: 20px;
+}
+.ci-name { color: var(--bk); font-weight: 400; }
+.ci-desc { color: var(--lt); font-size: 11px; font-weight: 300; margin-left: auto; text-align: right; }
+
+/* LOADING STATE */
+.submit-btn.loading { background: var(--g); pointer-events: none; }
+.submit-btn.loading::after { content: '...'; }
+
+/* SHAKE ANIMATION */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-6px); }
+  40% { transform: translateX(6px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+.shake { animation: shake 0.35s ease; }
+
+/* FADE IN */
+@keyframes fadeIn { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+.left { animation: fadeIn 0.5s ease both; }
+.right { animation: fadeIn 0.5s 0.1s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
+  body { grid-template-columns: 1fr; }
+  .left { display: none; }
+  .right { padding: 48px 32px; min-height: 100vh; justify-content: center; }
+  .right-inner { max-width: 100%; }
+}
+@media (max-width: 480px) {
+  .right { padding: 32px 24px; }
+}
+</style>
+</head>
+<body>
+
+<!-- LEFT PANEL -->
+<div class="left">
+  <div class="logo">BD<span>.</span>Intelligence</div>
+
+  <div class="left-content">
+    <div class="left-kicker">ASLA Workshop · 2026</div>
+    <h1 class="left-title">San Diego Life Sciences <em>BD Playbook</em></h1>
+    <p class="left-desc">A research-grounded business development platform built for landscape architecture firms pursuing life science campus clients — with Alexandria Real Estate Equities as the live case study.</p>
+  </div>
+
+  <div class="left-meta">
+    ASLA Business Development Workshop · 2026<br>
+    For workshop participants only.<br>
+    All data sourced from public filings and industry records.
+  </div>
+</div>
+
+<!-- RIGHT PANEL -->
+<div class="right">
+  <div class="right-inner">
+    <span class="form-label">Workshop Access</span>
+    <h2 class="form-title">Enter your access code</h2>
+    <p class="form-sub">Use the access code provided at the beginning of the workshop session.</p>
+
+    <div class="input-wrap">
+      <input
+        type="password"
+        id="pw-input"
+        class="pw-input"
+        placeholder="Access code"
+        autocomplete="off"
+        autocorrect="off"
+        autocapitalize="off"
+        spellcheck="false"
+        onkeydown="if(event.key==='Enter') checkPassword()"
+      >
+      <span class="toggle-pw" id="toggle" onclick="toggleVisibility()">Show</span>
+    </div>
+
+    <div class="error-msg" id="error-msg">Incorrect access code. Please try again.</div>
+
+    <button class="submit-btn" id="submit-btn" onclick="checkPassword()">
+      Access Platform
+    </button>
+
+    <p class="form-note">
+      This platform is for registered ASLA workshop participants only. If you need access, contact your workshop coordinator.
+    </p>
+
+    <!-- WHAT'S INSIDE -->
+    <div class="contents">
+      <div class="contents-label">What's inside</div>
+      <div class="content-item">
+        <span class="ci-num">01</span>
+        <span class="ci-name">ARE Client Profile</span>
+        <span class="ci-desc">FY 2025 10-K analysis</span>
+      </div>
+      <div class="content-item">
+        <span class="ci-num">02</span>
+        <span class="ci-name">AEC Ecosystem</span>
+        <span class="ci-desc">Consultants &amp; partners</span>
+      </div>
+      <div class="content-item">
+        <span class="ci-num">03</span>
+        <span class="ci-name">BD Playbook</span>
+        <span class="ci-desc">San Diego pursuit guide</span>
+      </div>
+      <div class="content-item">
+        <span class="ci-num">04</span>
+        <span class="ci-name">Market Dashboard</span>
+        <span class="ci-desc">Sector priority analysis</span>
+      </div>
+      <div class="content-item">
+        <span class="ci-num">05</span>
+        <span class="ci-name">Pipeline Projection</span>
+        <span class="ci-desc">Revenue &amp; growth model</span>
+      </div>
+      <div class="content-item">
+        <span class="ci-num">06</span>
+        <span class="ci-name">BD Field Guide</span>
+        <span class="ci-desc">Pursuing &amp; winning work</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ── SET YOUR PASSWORD HERE ──
+  var PASSWORD = 'asla2026';
+  // ───────────────────────────
+
+  function checkPassword() {
+    var input = document.getElementById('pw-input');
+    var error = document.getElementById('error-msg');
+    var btn = document.getElementById('submit-btn');
+    var val = input.value.trim().toLowerCase();
+
+    if (val === PASSWORD.toLowerCase()) {
+      btn.classList.add('loading');
+      btn.textContent = 'Accessing';
+      sessionStorage.setItem('bd_access', 'granted');
+      setTimeout(function() {
+        window.location.href = 'index.html';
+      }, 600);
+    } else {
+      input.classList.add('error', 'shake');
+      error.classList.add('show');
+      input.value = '';
+      input.focus();
+      setTimeout(function() {
+        input.classList.remove('shake');
+      }, 400);
+    }
+  }
+
+  function toggleVisibility() {
+    var input = document.getElementById('pw-input');
+    var toggle = document.getElementById('toggle');
+    if (input.type === 'password') {
+      input.type = 'text';
+      toggle.textContent = 'Hide';
+    } else {
+      input.type = 'password';
+      toggle.textContent = 'Show';
+    }
+  }
+
+  // Clear error on typing
+  document.getElementById('pw-input').addEventListener('input', function() {
+    this.classList.remove('error');
+    document.getElementById('error-msg').classList.remove('show');
+  });
+
+  // Check if already authenticated
+  if (sessionStorage.getItem('bd_access') === 'granted') {
+    window.location.href = 'index.html';
+  }
+</script>
+</body>
+</html>
